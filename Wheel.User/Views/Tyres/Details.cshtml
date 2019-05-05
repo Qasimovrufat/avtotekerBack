@@ -1,0 +1,213 @@
+﻿@using res = Wheel.User.Properties.Resources
+@{
+    var tyre = @Model.tyreDetails;
+
+}
+<div id="main" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="main_content col-sm-9 col-sm-push-3">
+                <div itemscope="" itemtype="http://schema.org/Product" class="product-scope">
+                    <meta itemprop="url" content="/tyres/Details/?id=@tyre.Id">
+                    <meta itemprop="image" content="/adminpr/@(tyre.Images.Count > 0 ? tyre.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")">
+                    <div class="product_wrap">
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-5 product_images">
+                                <img id="elevatezoom_big" src="/adminpr/@(tyre.Images.Count > 0 ? tyre.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")" alt="4pcs Universal Car Auto 3D Brembo Style Disc Brake Caliper Covers Front And Rear Blue" data-zoom-image="/adminpr/@(Model.tyreDetails.Images.Count > 0 ? Model.tyreDetails.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png?v=1433860250")" />
+                                @if (tyre.Images.Count > 1)
+                                {
+                                    <div id="elevatezoom_gallery">
+                                        @foreach (var image in tyre.Images)
+                                        {
+                                            <a href="#" data-id="@image.Id" data-image="/adminpr/@image.Path" data-zoom-image="@image.Path">
+                                                <img src="/adminpr/@image.Path" alt="@tyre.BrandName / @tyre.ModelName" />
+                                            </a>
+                                        }
+                                    </div>
+                                }
+
+                            </div>
+                            <div class="col-sm-12 col-md-7 col-lg-7">
+                                <h2 class="tyre-heading" lang="en">
+                                    <span class="visible-xs-block visible-sm-inline visible-md-inline visible-lg-inline" lang="en">@tyre.BrandName</span>
+                                    <span class="text-pre-muted">@tyre.ModelName</span>
+                                    <br>
+                                    <span class="text-muted">@tyre.Width/@tyre.Height<span>R</span>@tyre.Radius</span>
+                                    <span class="money priceUSD" style="display:none"> $@((tyre.Sale).ToString("0"))</span>
+                                    <span class="money priceAZN"> @(((tyre.Sale) * Model.currency).ToString("0"))<i class="manat">m</i></span>
+                                    @if (tyre.Price > tyre.Sale)
+                                    {
+                                        <span class="money priceUSD compare-at-price">$@tyre.Price.ToString("0")</span>
+                                        <span class="money priceAZN compare-at-price">@((tyre.Price * Model.currency).ToString("0"))<i class="manat">m</i></span>
+                                    }
+                                   
+                                </h2>
+                                <p class="text-muted text-justify tyre-description" data-more="Read more" data-less="Close" style="max-height: none;">
+                                    @Html.Raw(@tyre.Description)
+                                </p>
+                                <div class="tyre-info row sm-grid">
+                                    <div class="col-md-6">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">@res.dWidth <span class="pull-right"> @tyre.Width</span></li>
+                                            <li class="list-group-item">@res.dRadius <span class="pull-right"> @tyre.Radius</span></li>
+                                            <li class="list-group-item">@res.dHeight<span class="pull-right"> @tyre.Height</span></li>                                                                                 
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">@res.stockRemain<span class="pull-right"> @tyre.Stok</span></li>  
+                                            <li class="list-group-item">@res.dUsage <span class="pull-right"> @tyre.usedByText</span></li>
+                                            <li class="list-group-item">@res.dSeason <span class="pull-right"> @tyre.isWinterByText</span></li>
+                                        </ul> 
+                                    </div> 
+                                    @if(tyre.ModelDescription?.Length>0)
+                                    {
+                                        <div class="col-md-12">
+                                            <ul class="list-group">
+                                                <li class="list-group-item"><span> @tyre.ModelDescription</span></li>
+                                            </ul>
+                                           
+                                        </div>
+                                    }
+                                     
+                                </div>
+
+                                
+                                <p><br></p>
+                            </div>
+
+
+                        </div><!-- /.row -->
+                    </div><!-- /.product_wrap -->
+                </div>
+                @if (Model.tyres.tyreList.Count > 0)
+                {
+                <div class="widget_related_products">
+
+                    <h3>@res.dRelated</h3>
+
+                    <div class="widget_content">
+                        <ul class="row product_listing_main product_listing_related">
+                            @foreach (var related in Model.tyres.tyreList)
+                            {
+                                <li class="wow col-sm-3 product product__@related.Id animated" style="visibility: visible; height:304px;">
+                                    <div class="product_wrapper">
+                                        <div class="product_img">
+                                            <a href="/tyres/details/?id=@related.Id" title="360 FORGED® - MESH 8 Custom Painted Close-Up">
+                                            <img style="height: 151px" src="/adminpr/@(related.Images.Count>0 ? related.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")" alt="@related.ModelName"></a>
+                                        </div>
+                                        <div class="product_info">
+                                            <div class="product_name"><a href="/tyres/details/?id=@related.Id" title="@related.BrandName @related.ModelName">@related.BrandName @related.ModelName</a></div>
+                                            <div class="product_price">
+                                                <span class="money priceUSD" style="display:none"> $@related.Price.ToString("0")</span>
+                                                <span class="money priceAZN">@((related.Price * Model.currency).ToString("0"))<i class="manat">m</i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+
+                </div>
+                }
+                <script>
+                    jQuery(function ($) {
+                        /* product image zoom */
+                        $(window).load(function () {
+                            $("#elevatezoom_big").elevateZoom({
+                                gallery: "elevatezoom_gallery",
+                                zoomType: "window",
+                                scrollZoom: true,
+                                zoomWindowFadeIn: 500,
+                                zoomLensFadeIn: 500,
+                                imageCrossfade: true,
+                                zoomWindowWidth: 345,
+                                zoomWindowHeight: 345,
+                                zoomWindowOffetx: 12,
+                                zoomWindowOffety: 0,
+                                borderSize: 1,
+                                borderColour: "#d9d9d9"
+                            });
+                        });
+
+                        /* big image fancybox */
+                        $("#elevatezoom_big").bind("click", function () {
+                            var ez = $('#elevatezoom_big').data('elevateZoom');
+                            $.fancybox(ez.getGalleryList());
+                            return false;
+                        });
+
+                        /* thumbs slider */
+                        $('#elevatezoom_gallery').bxSlider({
+                            infiniteLoop: true,
+                            minSlides: 1,
+                            maxSlides: 3,
+                            moveSlides: 1,
+                            slideWidth: 101,
+                            slideMargin: 12,
+                            pager: false,
+                            prevText: '',
+                            nextText: ''
+                        });
+                    });
+                </script>
+
+
+                <script>
+
+                    var selectCallback = function (variant, selector) {
+                        if (variant && variant.available) {
+                            jQuery('#add-to-cart').removeAttr('disabled').removeClass('disabled'); // remove unavailable class from add-to-cart button, and re-enable button
+
+                            if (variant.price < variant.compare_at_price) {
+                                jQuery('#product_price .price').addClass('product_price_sale').html('<span class="money">' + Shopify.formatMoney(variant.price, "${{amount}}") + '</span><span class="money compare-at-price">' + Shopify.formatMoney(variant.compare_at_price, "${{amount}}") + '</span>');
+                            }
+                            else {
+                                jQuery('#product_price .price').html('<span class="money">' + Shopify.formatMoney(variant.price, "${{amount}}") + '</span>');
+                            };
+                        }
+                        else {
+                            jQuery('#add-to-cart').addClass('disabled').attr('disabled', 'disabled'); // set add-to-cart button to unavailable class and disable button
+
+                            var message = variant ? "Sold Out" : "Unavailable";
+                            jQuery('#product_price .price').text(message);
+                        };
+
+                        if (variant && variant.featured_image) {
+                            var originalImage = $("#elevatezoom_big");
+                            var newImage = variant.featured_image;
+                            var element = originalImage[0];
+
+                            Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+                                jQuery('#elevatezoom_big').attr('src', newImageSizedSrc).attr('data-zoom-image', newImageSizedSrc);
+
+                                jQuery("#elevatezoom_gallery a").each(function () {
+                                    if (jQuery(this).attr('data-zoom-image').replace(/\?v=.*/, '') == newImageSizedSrc.replace(/\?v=.*/, '')) {
+                                        jQuery(this).trigger('click');
+                                    };
+                                });
+                            });
+                        };
+                    };
+
+                    jQuery(document).ready(function ($) {
+                        //new Shopify.OptionSelectors("product-select",
+                        //{
+                        //    product: { "id": 891526723, "title": "4pcs Universal Car Auto 3D Brembo Style Disc Brake Caliper Covers Front And Rear Blue", "handle": "4pcs-universal-car-auto-3d-brembo-style-disc-brake-caliper-covers-front-and-rear-blue", "description": "\u003cp\u003eJoin the club and bring wheels \u0026amp; tyres shopping to the whole new level. We keep track of the latest web design trends and try hard to keep our estore up-to-date and modern. It is designed in such a way that nothing will distract you from the items worth your attention. Do you need assistance to come up with the product that will perfectly fit your particular vehicle? The days of walking into a wheel shop are over.\u003c\/p\u003e", "published_at": "2015-06-09T10:31:23-04:00", "created_at": "2015-06-09T10:31:32-04:00", "vendor": "TYRES", "type": "Brakes", "tags": ["Dolor"], "price": 16900, "price_min": 16900, "price_max": 16900, "available": true, "price_varies": false, "compare_at_price": null, "compare_at_price_min": 0, "compare_at_price_max": 0, "compare_at_price_varies": false, "variants": [{ "id": 2484029827, "title": "Default Title", "option1": "Default Title", "option2": null, "option3": null, "sku": "", "requires_shipping": true, "taxable": true, "featured_image": null, "available": true, "name": "4pcs Universal Car Auto 3D Brembo Style Disc Brake Caliper Covers Front And Rear Blue", "public_title": null, "options": ["Default Title"], "price": 16900, "weight": 0, "compare_at_price": null, "inventory_quantity": 99, "inventory_management": "shopify", "inventory_policy": "deny", "barcode": null }], "images": ["\/\/cdn.shopify.com\/s\/files\/1\/0889\/3312\/products\/4pcs_universal_car_auto_3d_brembo_style_disc_brake_caliper_covers_front_and_rear_blue_1.png?v=1433860292", "#\/\/cdn.shopify.com\/s\/files\/1\/0889\/3312\/products\/4pcs_universal_car_auto_3d_brembo_style_disc_brake_caliper_covers_front_and_rear_blue_2.png?v=1433860292", "#\/\/cdn.shopify.com\/s\/files\/1\/0889\/3312\/products\/4pcs_universal_car_auto_3d_brembo_style_disc_brake_caliper_covers_front_and_rear_blue_3.png?v=1433860292", "\/\/cdn.shopify.com\/s\/files\/1\/0889\/3312\/products\/4pcs_universal_car_auto_3d_brembo_style_disc_brake_caliper_covers_front_and_rear_blue_4.png?v=1433860292"], "featured_image": "\/\/cdn.shopify.com\/s\/files\/1\/0889\/3312\/products\/4pcs_universal_car_auto_3d_brembo_style_disc_brake_caliper_covers_front_and_rear_blue_1.png?v=1433860292", "options": ["Title"], "content": "\u003cp\u003eJoin the club and bring wheels \u0026amp; tyres shopping to the whole new level. We keep track of the latest web design trends and try hard to keep our estore up-to-date and modern. It is designed in such a way that nothing will distract you from the items worth your attention. Do you need assistance to come up with the product that will perfectly fit your particular vehicle? The days of walking into a wheel shop are over.\u003c\/p\u003e" },
+                        //    onVariantSelected: selectCallback,
+                        //    enableHistoryState: true
+                        //});
+                    });
+                </script>
+            </div>
+            @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div>
+@section script{
+    <script>
+
+    </script>
+}

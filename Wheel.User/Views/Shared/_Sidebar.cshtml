@@ -1,0 +1,244 @@
+﻿@using res = Wheel.User.Properties.Resources
+<div class="sidebar col-sm-3 sidebar_left col-sm-pull-9">
+
+    <div class="sidebar_widget_s sidebar_widget__collections">
+        <h3 class="widget_header">@res.search @res.tyres</h3>
+
+        <div class="widget_content col-md-12">
+            <form id="searchbytyres" action="/tyres/" method="GET">
+
+                <div class="row">
+                    <select class="selectpicker" name="BrandId" id="BrandId" data-live-search="true" data-width="100%"></select>
+                </div>
+                <br />
+                <div class="row">
+                    <select class="selectpicker clear" name="ModelId" id="ModelId" data-live-search="true" data-width="100%"></select>
+                </div>
+                <br />
+                <div class="row">
+                    <select class="selectpicker clear" name="Width" id="WidthId" data-live-search="true" data-width="100%"></select>
+                </div>
+                <br />
+                <div class="row">
+                    <select class="selectpicker clear" name="Height" id="HeightId" data-live-search="true" data-width="100%"></select>
+                </div>
+                <br />
+
+
+                <div class="row">
+                    <select class="selectpicker clear" name="Radius" id="RadiusId" data-live-search="true" data-width="100%"></select>
+                </div>
+                <br />
+                <div class="row">
+                    <select class="selectpicker" name="Usage" id="UsageId" data-live-search="true" data-width="100%">
+                        <option selected value="">@res.pleaseSelect @res.usage</option>
+                        <option value="true">@res.used</option>
+                        <option value="false">@res.unused</option>
+                    </select>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">@res.price</div>
+                    <div class="col-md-8">
+                        <input id="price" name="priceArray" type="text" placeholder="price" data-slider-id="price" class="price-slider" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="5" data-slider-value="[0,1000]" />
+                    </div></div>
+                <br />
+                <br />
+                <div class="row">
+                    <button type="button" class="btn btn-warning btn-default btn-block" id="tyreSearchButton">
+                        @res.search
+                    </button>
+                </div>
+                <br />
+            </form>
+        </div>
+    </div>
+
+
+
+
+</div>
+@section script{
+
+}
+    <script>
+            $.fn.serializeObject = function () {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function () {
+                    if (o[this.name]) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+            // Instantiate a slider
+            var mySlider = $("#price").slider({
+               // tooltip: 'always',
+                tooltip_position: 'bottom',
+
+            }).on("slideStop", function (slideEvt) { refreshList(); });
+
+
+            $("#searchbytyres select").change(function () {
+                refreshList($(this));
+            });
+
+            $("#tyreSearchButton").click(function () {
+                $("#searchbytyres").submit();
+            })
+            function refreshList(e) {
+
+                var formData = $("#searchbytyres").serializeObject();
+                //console.log(e)
+
+                console.dir(formData);
+                $.ajax({
+                    url: "/json/searchbytyres",
+                    type: "GET",
+                    data: formData,
+                    success: function (response) {
+                        $(".selectpicker.clear").html("");
+                        if (!e) {
+                            for (var i = 0; i < response.brand.length; i++) {
+                                $("#BrandId").append('<option value="' + response.brand[i].Id + '">' + response.brand[i].Name + '</option>');
+                            }
+                        }
+                            for (var i = 0; i < response.model.length; i++) {
+                                $("#ModelId").append('<option value="' + response.model[i].Id + '">' + response.model[i].Name + '</option>');
+                            }
+                            for (var i = 0; i < response.width.length; i++) {
+                                $("#WidthId").append('<option value="' + response.width[i].Id + '">' + response.width[i].Name + '</option>');
+                            }
+                            for (var i = 0; i < response.height.length; i++) {
+                                $("#HeightId").append('<option value="' + response.height[i].Id + '">' + response.height[i].Name + '</option>');
+                            }
+                            for (var i = 0; i < response.radius.length; i++) {
+                                $("#RadiusId").append('<option value="' + response.radius[i].Id + '">' + response.radius[i].Name + '</option>');
+                            }
+
+                            //for (var i = 0; i < response.usage.length; i++) {
+                            //    $("#UsageId").append('<option value="' + response.usage[i].Id + '">' + response.usage[i].Name + '</option>');
+                            //}
+
+                            $('#BrandId').val(formData.BrandId);
+                            $('#ModelId').val(formData.ModelId);
+                            $('#WidthId').val(formData.Width);
+                            $('#HeightId').val(formData.Height);
+                            $('#RadiusId').val(formData.Radius);
+                            $('#UsageId').val(formData.Usage);
+                        //todo set selecetd item
+                        $(".selectpicker").selectpicker("refresh");
+                    }
+                })
+            }
+            $(document).ready(function () {
+                refreshList();               
+            })
+
+            $("#BrandIdCar").change(function () {
+                $("#ModelIdCar").html('<option selected disabled value="0">@res.pleaseSelect @res.model</option>');
+                $("#YearCar").html('<option selected disabled value="0">@res.pleaseSelect @res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0">@res.pleaseSelect @res.car</option>');
+                var id = $(this).val();
+               // if (id != 0) {
+                    $.ajax({
+                        url: "/Json/listModels",
+                        data: "id=" + id,
+                        type: "GET",
+                        success: function (result) {
+                            $.each(result.model, function (index, model) {
+                                $("#ModelIdCar").append('<option value="' + model.Id + '">' + model.Name + '</option>');
+                            });
+                            $("#ModelIdCar").removeAttr("disabled");
+                            $("#ModelIdCar").selectpicker("refresh");
+
+                        }
+                    })
+              //  }
+              //  else
+              //  {
+              //      $("#ModelIdCar").addAttr("disabled");
+              //  }
+            });
+
+            $("#ModelIdCar").change(function () {
+                $("#YearCar").html('<option selected disabled value="0">@res.pleaseSelect @res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0">@res.pleaseSelect @res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listYears",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.year, function (index, year) {
+                            $("#YearCar").append('<option value="' + year.Id + '">' + year.Year + '</option>');
+                        });
+                        $("#YearCar").removeAttr("disabled");
+                        $("#YearCar").selectpicker("refresh");
+
+                    }
+                })
+            });
+
+            $("#YearCar").change(function () {
+                $("#BanCar").html('<option selected disabled value="0">@res.pleaseSelect @res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listBans",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.ban, function (index, ban) {
+                            $("#BanCar").append('<option value="' + ban.Id + '">' + ban.Name + '</option>');
+                        });
+                        $("#BanCar").removeAttr("disabled");
+                        $("#BanCar").selectpicker("refresh");
+
+                    }
+                })
+            });
+
+            $("#BanCar").change(function () {
+                var id = $(this).val();
+                var frontTyre = [];
+                var rearTyre = [];
+                $.ajax({
+                    url: "/Json/listWheels",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.wheel, function (index, wheel) {
+                            var wheels = JSON.parse(wheel.wheels);
+                            $.each(wheels, function (i, tyres) {
+                                $.each(tyres, function (index, tyre) {
+                                    $.each(tyre, function (ind, thisTyre) {
+                                        $.each(thisTyre.front, function (tindex, front) {
+                                            // frontTyre.push({ width: front.tire_width[0], height: front.tire_aspect_ratio[0], radius: front.rim_diameter[0] });
+                                            if (front.tire_width[0] != "") {
+                                                frontTyre.push('<li><a class="btn btn-default" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
+                                            }//console.log(frontTyre)
+                                        })
+                                        $.each(thisTyre.rear, function (tindex, rear) {
+                                            //rearTyre.push({ width: rear.tire_width[0], height: rear.tire_aspect_ratio[0], radius: rear.rim_diameter[0] });
+                                            if (rear.tire_width[0] != "") {
+                                                rearTyre.push('<li><a  class="btn btn-default"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
+                                            }// console.log(rearTyre)
+                                        })
+                                    })
+                                })
+
+                            })
+                        });
+                        $("#frontPanel").html(frontTyre.join(" "));
+                        $("#rearPanel").html(rearTyre.join(" "));
+                        $("#newCarModal").modal( { backdrop: false });
+                    }
+                })
+            });
+    </script>

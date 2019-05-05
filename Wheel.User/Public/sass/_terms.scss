@@ -1,0 +1,51 @@
+#terms{
+    padding-top: 47px;
+    .box{
+        border: 1px solid #9797974a;
+        padding: 38px 34px;
+        margin-bottom: 47px;
+                border-radius: 24px;
+                @include transition(all 0.4s ease-in-out);
+     .icon{
+         margin-bottom: 23px;
+        i{
+            font-size: 47px;
+            color: $blue;
+            @include transition(all 0.4s ease-in-out);
+        }
+        .fa-phone{
+            transform: rotateY(180deg);
+
+        }
+
+     }   
+     .title{
+         p{
+             font-size: 14px;
+             line-height: 25px;
+             color: #4A4A4A;
+             font-weight: 800;
+             @include transition(all 0.4s ease-in-out);
+         }
+     }     
+     .content{
+        p{
+            font-size: 14px;
+            line-height: 25px;
+            color: #4A4A4A;
+            font-weight: 500;
+            @include transition(all 0.4s ease-in-out);
+        }
+    }    
+    &:hover{
+        background: $blue;
+        box-shadow: 0 0 10px 0 rgba(0,47,183,0.59);
+        .icon i{
+            color: $white;
+        }
+        p{
+            color: $white;
+        }
+    }       
+    }
+}

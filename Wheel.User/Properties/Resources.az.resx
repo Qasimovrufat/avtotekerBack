@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutUs" xml:space="preserve">
+    <value>Haqqımızda</value>
+  </data>
+  <data name="brand" xml:space="preserve">
+    <value>Marka</value>
+  </data>
+  <data name="campaign" xml:space="preserve">
+    <value>Kampaniyalar</value>
+  </data>
+  <data name="car" xml:space="preserve">
+    <value>Avtomobil</value>
+  </data>
+  <data name="catalog" xml:space="preserve">
+    <value>Kataloq</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Əlaqə</value>
+  </data>
+  <data name="createAccount" xml:space="preserve">
+    <value>Qeydiyyat</value>
+  </data>
+  <data name="customTyres" xml:space="preserve">
+    <value>XÜSUSİ Şinlər</value>
+  </data>
+  <data name="dHeight" xml:space="preserve">
+    <value>Hündürlüyü (%)</value>
+  </data>
+  <data name="dRadius" xml:space="preserve">
+    <value>Diametri (Düym)</value>
+  </data>
+  <data name="dRelated" xml:space="preserve">
+    <value>Oxşar məhsullar</value>
+  </data>
+  <data name="dSeason" xml:space="preserve">
+    <value>Bu qış təkəridir?</value>
+  </data>
+  <data name="dStock" xml:space="preserve">
+    <value>Ümumi təkərlərin sayı</value>
+  </data>
+  <data name="dUsage" xml:space="preserve">
+    <value>Vəziyyəti</value>
+  </data>
+  <data name="dWidth" xml:space="preserve">
+    <value>Eni (mm)</value>
+  </data>
+  <data name="easyReturn" xml:space="preserve">
+    <value>Geri qaytarma imkanı</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="fbUrl" xml:space="preserve">
+    <value>https://www.facebook.com/Avtoteker.az/</value>
+  </data>
+  <data name="featured" xml:space="preserve">
+    <value>Qarışıq</value>
+  </data>
+  <data name="featuredProducts" xml:space="preserve">
+    <value>Xüsusi məhsullar</value>
+  </data>
+  <data name="findWheelTyre" xml:space="preserve">
+    <value>Təkər &amp; Şin tapın</value>
+  </data>
+  <data name="first" xml:space="preserve">
+    <value>İlk</value>
+  </data>
+  <data name="forAll" xml:space="preserve">
+    <value>bütün nəqliyyat vasitələri üçün</value>
+  </data>
+  <data name="fourSeason" xml:space="preserve">
+    <value>Dörd fəsil</value>
+  </data>
+  <data name="guaranteed" xml:space="preserve">
+    <value>100% zəmanətli</value>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>Hündürlük</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Ana səhifə</value>
+  </data>
+  <data name="homePage" xml:space="preserve">
+    <value>Ana Səhifə</value>
+  </data>
+  <data name="last" xml:space="preserve">
+    <value>Axır</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Daxil ol</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Çıxış</value>
+  </data>
+  <data name="menuCatalog" xml:space="preserve">
+    <value>Kataloq</value>
+  </data>
+  <data name="menuNew" xml:space="preserve">
+    <value>YENİ</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>Mesaj</value>
+  </data>
+  <data name="messageError" xml:space="preserve">
+    <value>Mesaj göndərərkən xəta baş verdi</value>
+  </data>
+  <data name="messageSuccess" xml:space="preserve">
+    <value>Mesajınız müvəfəqiyyətlə göndərildi</value>
+  </data>
+  <data name="model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="more" xml:space="preserve">
+    <value>Ətraflı</value>
+  </data>
+  <data name="newModels" xml:space="preserve">
+    <value>Yeni modellər</value>
+  </data>
+  <data name="newTyre" xml:space="preserve">
+    <value>Yeni təkər</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Növbəti</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Xeyr</value>
+  </data>
+  <data name="oldTyre" xml:space="preserve">
+    <value>Köhnə təkər</value>
+  </data>
+  <data name="orderNewToOld" xml:space="preserve">
+    <value>Yenidən köhnəyə</value>
+  </data>
+  <data name="orderOldToNew" xml:space="preserve">
+    <value>Könhədən yeniə</value>
+  </data>
+  <data name="orderPirceHtL" xml:space="preserve">
+    <value>Qiymət: əvvəlcə baha</value>
+  </data>
+  <data name="orderPriceLtH" xml:space="preserve">
+    <value>Qiymət: əvvəlcə uzuc</value>
+  </data>
+  <data name="ourServices" xml:space="preserve">
+    <value>XİDMƏTLƏRİMİZ</value>
+  </data>
+  <data name="page" xml:space="preserve">
+    <value>Səhifə</value>
+  </data>
+  <data name="phoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="pleaseSelect" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pre" xml:space="preserve">
+    <value>Əvvəlki</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Qiymət</value>
+  </data>
+  <data name="productsOf" xml:space="preserve">
+    <value>məhsul</value>
+  </data>
+  <data name="radius" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="sale" xml:space="preserve">
+    <value>Endirim</value>
+  </data>
+  <data name="satisfaction" xml:space="preserve">
+    <value>razı</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Axtar</value>
+  </data>
+  <data name="seeAll" xml:space="preserve">
+    <value>Bütün məhsulları baxın</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>Göndər</value>
+  </data>
+  <data name="servicesText1" xml:space="preserve">
+    <value>Avtomobiliniz üçün istədiyiniz keyfiyyətdə və ölçüdə şin əldə etmək bizimlə daha asandır. Şirkətimiz maksimum yüksək keyfiyyətə malik şinləri sizin sifarişləriniz əsasında çox qısa müddətdə Avropa ve Asiya ölkələrindən birbaşa təmin edir. Əgər sizdə yuksək keyfiyyət tərəfdarısınızsa onda bizə müraciət edin. Müştərilərimizin istənilən vaxt bizimlə əlaqə saxlaya bilməsi üçün biz istirahətsiz daimi fəaliyyətdəyik və həftənin istənilən günü bizə müraciət edə bilərsiniz. Mağazamızın fəaliyyət saatı 9:00-19:00</value>
+  </data>
+  <data name="servicesText2" xml:space="preserve">
+    <value>Siz çağırın..biz gələrik. Əziz müştərilərimiz,artıq məsafələr sizi məmnun etməyimizə mane deyil. Azərbaycan Respublikasının istənilən bölgəsindən zəng və ya online vasitələrlə müraciət etməyiniz kifayətdir. Biz istədiyiniz məhsulu rahatlığınızın təmini məqsədi ilə ünvanlarınıza catdırma fəaliyyəti ilə də məsğuluq.bu hələ son deyil, eyni zamanda avtomobilinizin şinlərinin balans olunub dəyişdirilməsi prosesi də profesional personallarımız tərəfindən maksimum keyfiyyət etalonuna əməl edilməklə həyata keçiriləcək..son dərəcə yüksək texnika ilə balanslaşdırmanın dəqiqliyinə zəmanət veririk.</value>
+  </data>
+  <data name="servicesText3" xml:space="preserve">
+    <value>Sizləri düşünərək şirkətimizin online fəaliyyətinə start verdik.Hörmətli müştərilərimiz, məqsədimiz sizin üçün tez bir zamanda,heç bir əlavə məsrəf xərcləmədən istədiyiniz zaman istədiyiniz məhsulu əldə etmə imkanını yaratmaqdır. Sayt vasitəsilə siz axtardığınız məhsulun bazada olub olmamasını müəyyənləşdirə, bizimlə əlaqə qura, müxtəlif kampaniyalar haqqında tez bir zamanda məlumat əldə və ən əsası heç bir yol qət etmədən online şəkildə istədiyiniz məhsulu sifariş edə bilərsiniz. Bizim saytdan istifadə etməkdə sərhədsizsiniz. Çünki bizim üçün sərhəd sizsiniz</value>
+  </data>
+  <data name="servicesTitle1" xml:space="preserve">
+    <value>ŞİNLƏRİN SATIŞI</value>
+  </data>
+  <data name="servicesTitle2" xml:space="preserve">
+    <value>Balans və Çatdırılma</value>
+  </data>
+  <data name="servicesTitle3" xml:space="preserve">
+    <value>Sayt haqqında</value>
+  </data>
+  <data name="sevenDay" xml:space="preserve">
+    <value>7 Gün</value>
+  </data>
+  <data name="shopNow" xml:space="preserve">
+    <value>Alışverişə başla</value>
+  </data>
+  <data name="show" xml:space="preserve">
+    <value>Göstər</value>
+  </data>
+  <data name="showTyres" xml:space="preserve">
+    <value>Kampaniya təkərləri göstər</value>
+  </data>
+  <data name="siteName" xml:space="preserve">
+    <value>Avto təkər</value>
+  </data>
+  <data name="siteSlogan" xml:space="preserve">
+    <value>Bütün ölçülərdə təkərlərin tək ünvanı</value>
+  </data>
+  <data name="sortBy" xml:space="preserve">
+    <value>Sıralama</value>
+  </data>
+  <data name="stockRemain" xml:space="preserve">
+    <value>Anbarda qalıq</value>
+  </data>
+  <data name="summer" xml:space="preserve">
+    <value>Yay</value>
+  </data>
+  <data name="twitterUrl" xml:space="preserve">
+    <value>https://www.instagram.com/avtoteker17/</value>
+  </data>
+  <data name="tyres" xml:space="preserve">
+    <value>Təkərlər</value>
+  </data>
+  <data name="tyresHome" xml:space="preserve">
+    <value>TƏKƏRLƏRİ</value>
+  </data>
+  <data name="unused" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="usage" xml:space="preserve">
+    <value>Vəziyyəti</value>
+  </data>
+  <data name="used" xml:space="preserve">
+    <value>İşlənmiş</value>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>Göstər</value>
+  </data>
+  <data name="viewAll" xml:space="preserve">
+    <value>Bütün kolleksiyanı göstər</value>
+  </data>
+  <data name="width" xml:space="preserve">
+    <value>En</value>
+  </data>
+  <data name="winter" xml:space="preserve">
+    <value>Qış</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Bəli</value>
+  </data>
+  <data name="yourName" xml:space="preserve">
+    <value>Adınız</value>
+  </data>
+  <data name="ytUrl" xml:space="preserve">
+    <value>http://youtube.com</value>
+  </data>
+</root>

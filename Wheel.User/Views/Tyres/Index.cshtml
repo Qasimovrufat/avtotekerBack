@@ -1,0 +1,208 @@
+﻿@using res = Wheel.User.Properties.Resources
+@using set = Wheel.User.Properties.Settings
+<div id="main" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="main_content col-sm-9 col-sm-push-3" id="aMain" >
+
+                <h2 class="page_heading">@res.tyres</h2>
+                <!-- products sorting -->
+                <div class="product_listing_controls">                   
+                    <div class="sort_by">
+                        <label>@res.sortBy</label>
+
+                        <select id="sort_by_select" class="form-control" name="order">
+                            <option value="" >@res.featured</option>                            
+                            <option value="price">@res.orderPriceLtH</option>
+                            <option value="priceDesc">@res.orderPriceHtL</option>
+                            <option value="id">@res.orderOldToNew</option>
+                            <option value="idDesc">@res.orderNewToOld</option>
+                            <option value="brandAsc" selected="selected">@res.brand</option>
+                        </select>
+                    </div>
+
+                    <div class="show_products">
+                        <label>@res.show</label>
+                        <select id="show_products_select" class="form-control" name="total">
+                            <option value="6" selected="selected">6</option>
+                            <option value="9">9</option>
+                            <option value="15">15</option>
+                            <option value="1000">@res.viewAll</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="page" id="pr_page" value="1" />
+                </div>
+
+                <div id="product_listing_preloader" style="display: none;">
+                    <p></p>
+                </div>
+
+                <div id="collection_sorted" style="opacity: 1;">
+                    <!-- products listing -->
+                    <div class="product_listing_main row">                   
+
+                    </div>
+
+                    <!-- pagination -->
+                    <div class="product_listing_controls">
+
+                        <p class="products_count">
+                            
+                        </p>
+                        
+                        <div id="pagination">
+                            
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div>
+@section script{
+    <script>
+        $('#paginations').bootpag({
+            total: 5,
+            //page: 2,
+            maxVisible: 2,
+            //leaps: true,
+            //firstLastUse: true,
+            //first: '←',
+            //last: '→',
+            //wrapClass: 'pagination',
+            //activeClass: 'active',
+            //disabledClass: 'disabled',
+            //nextClass: 'next',
+            //prevClass: 'prev',
+            //lastClass: 'last',
+            //firstClass: 'first'
+        }).on("page", function (event, num) {
+            $(".content4").html("@res.page " + num); // or some ajax content loading...
+        });
+
+        var getTyresList = function () {
+            $("#product_listing_preloader").show();
+            var row = 1;
+            var tyreDiv="";
+            var products_select = $("#show_products_select").val();
+            var sort_by = $("#sort_by_select").val();
+            var prPage = $("#pr_page").val();
+            $.ajax({
+                url: "/Json/listTyres",
+                type: "GET",
+                data: location.search.split('?')[1] + "&total=" + products_select + "&order=" + sort_by+"&page="+prPage,
+                success: function (result) {
+                    var thisPage = parseInt(result.page);
+                    $(".products_count").html(products_select * (thisPage - 1) + 1 + "&nbsp;–&nbsp;" + (products_select * thisPage > result.total ? result.total : products_select * thisPage) + "&nbsp;@res.productsOf " + result.total);
+                    var pagination = "";
+                    var mathTotal = Math.ceil(result.total/products_select);
+                    //console.log(thisPage);
+                    if (thisPage > 1) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + (thisPage - 1) + '" title="">« @res.pre</a></span>';
+                    var i = 1;
+                    var  max = mathTotal;
+                    if(mathTotal>8){
+                        i=thisPage-4;
+                        max = thisPage+4;
+                        if(i<1){
+                            max += max-i;
+                            i=1;
+                        }
+                        if(max>mathTotal)
+                        {
+                            i -= max-mathTotal;
+                            max= mathTotal;
+                        }
+                       // console.log(i)
+                        //console.log(max)
+                        if (thisPage > 1) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + 1 + '" title="">@res.first</a></span>';
+                        for (;i <= max; i++)
+                        {
+                            pagination = pagination + '<span class="page';
+                            if (i == thisPage) pagination = pagination + ' current">' + i + '</span>';
+                            else pagination = pagination + '"><a href="#aMain" data-id="' + i + '" title="">' + i + '</a></span>';
+                        }
+                        if (thisPage <mathTotal) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + mathTotal + '" title="">@res.last</a></span>';
+
+                    }
+                    else {
+                        for (;i <= mathTotal; i++)
+                        {
+                            pagination = pagination + '<span class="page';
+                            if (i == thisPage) pagination = pagination + ' current">' + i + '</span>';
+                            else pagination = pagination + '"><a href="#aMain" data-id="' + i + '" title="">' + i + '</a></span>';
+                        }
+                    }
+
+
+                    // console.log(i + '-' + thisPage);
+                    if (thisPage+1 != i) pagination = pagination + '<span class="next"><a href="#aMain"  data-id="' + (thisPage + 1) + '" title="">@res.next »</a></span>';
+                    $("#pagination").html(pagination)
+                    $.each(result.tyres, function (index, tyre) {
+                        //console.log(tyre);
+                        var sale= "";
+                        var cur =("@((Model.currency).ToString("0.00"))").replace(",",".");
+                        if (row == 4) row = 1;
+                        //console.log(tyre.Sale)
+                       // console.log(tyre.Price)
+                        if (tyre.Price > tyre.Sale) {                            
+                           // sale = '<span class="money priceAZN compare-at-price">' + (parseFloat(tyre.Sale) * parseFloat(cur)).toFixed(0) + '</span>';
+                           // console.log(sale);
+                        }
+                        tyreDiv = tyreDiv + '<div class="wow product col-sm-4 product_collection item3_' + row + ' animated" style="visibility: visible;">' +
+                               '<div class="product_wrapper">' +
+                                   '<div class="product_img">' +
+                                       '<a href="/tyres/details/?id=' + tyre.Id + '">' +
+                                           '<img src="/adminpr/' + (tyre.Images.length ? tyre.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png") + '" alt="' + tyre.ModelName + '">' +
+                                           //'<span class="product_badge new">New</span>'+
+                                       '</a>' +
+                                       '<div class="product_img_hover">' +
+                                           '<form method="post" action="/tyres/Details?id=' + tyre.Id + '">' +
+                                               '<button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i><span>@res.more</span></button>' +
+                                           '</form>' +
+                                       '</div>' +
+                                   '</div>' +
+                                   '<div class="product_info">' +
+                                       '<div class="product_name">' +
+                                           '<a href="/tyres/Details/?id=' + tyre.Id + '">' + tyre.BrandName + ' <i class="fa fa-arrow-right" style="font-size: 14px;vertical-align: text-top;"></i> ' + tyre.ModelName + '   ' + tyre.Width + '/' + tyre.Height + 'R' + tyre.Radius + '</a>' +
+                                       '</div>' +
+                                       '<div class="product_price col-md-12 ">' +
+                                           ' <span class="money priceUSD" style="display:none"> $' + tyre.Price.toFixed(0) + '</span>' +
+                                            '<span class="money priceAZN col-md-3" style="display:block"> ' + (parseFloat(tyre.Price-tyre.Price*tyre.Sale/100) * parseFloat(cur)).toFixed(0) + '<i class="manat">m</i></span>' +
+                                          //  sale +
+                                            '<a class="btn btn-alt pull-right col-md-5" href="/tyres/Details?id=' + tyre.Id + '">@res.view</a>' +
+                                       '</div>' +
+                                   '</div>' +
+                               '</div>' +
+                           '</div>'
+                        row++;
+                    });
+                    $("#product_listing_preloader").hide();
+                    $(".product_listing_main").html(tyreDiv);
+                }
+
+            })
+        };
+
+        $(document).ready(function () {
+            getTyresList();
+        });
+        $("#show_products_select, #sort_by_select").change(function () {
+            $("#pr_page").val(1);
+            getTyresList();
+        });
+        $("#pagination").on('click',"span a",function(){
+            $("span .current").removeClass("current");
+            $(this).parent("span").addClass("current");
+            $("#pr_page").val($(this).data("id"));
+            getTyresList();
+        })
+        // history.pushState('data to be passed', 'Title of the page', 'http://localhost:51738/tyres/?catalogId=1');
+    </script>
+    }

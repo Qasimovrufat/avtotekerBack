@@ -1,0 +1,43 @@
+#season{
+    padding: 44px 0 0 0;
+    .season-box{
+        margin-bottom: 50px;
+        .upper{
+            border-radius: 7px 7px 0 0;	
+            background-color: #F7F7F7;
+
+        }
+       .img{
+        background-color: #F7F7F7;
+        padding: 29px 39px 23px;
+           overflow: hidden;
+            height: 250px;
+        img{
+            width: 97%;
+            height: 100%;
+           @include transition(all 0.4s ease-in-out);
+
+        }
+       }
+       .lower{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 65px;
+           background: $blue;
+           border-bottom-left-radius: 3px;
+           border-bottom-right-radius: 3px;
+
+           h3{
+               line-height: 24px;
+               font-size: 20px;
+                text-transform: capitalize;
+               color: $white;
+               font-weight: 800;
+           }
+       }
+       &:hover img{
+           transform: scale(1.2);
+       }
+    }
+}

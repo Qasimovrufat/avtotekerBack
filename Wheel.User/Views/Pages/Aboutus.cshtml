@@ -1,0 +1,24 @@
+﻿@using res = Wheel.User.Properties.Resources
+<div id="main" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="main_content col-sm-9 col-sm-push-3">
+                <div class="page-scope">
+
+                    <div class="page_header">
+                        <h1 class="page_heading">@res.aboutUs</h1>
+                    </div>
+
+                    <div class="page_content">
+                        @Html.Raw(Model.pageContent.GetType().GetProperty(Model.lang).GetValue(Model.pageContent, null))
+                    </div>
+
+                </div>
+
+            </div>
+
+
+         @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+﻿
+
+<div id="page_content_inner">
+
+    <div class="uk-grid" data-uk-grid-margin>
+        <div class="uk-width-medium-3-5" style="width:100%">
+            <div class="md-card">
+                <div class="md-card-content">
+                    <form action="#" data-parsley-validate>
+
+                        <div class="uk-grid uk-grid-medium form_section_separator form_section " id="d_form_section" style="border-top: 2px solid red; margin-left: -10px; padding-top: 15px;" data-uk-grid-match>
+                            <div class="uk-width-9-10">
+                                <div class="uk-grid">
+                                    <div class="uk-width-1-2">
+                                        <div class="uk-width-large-1-2" style="width: 100%">
+                                            <select id="selec_adv_3" style="width: 100%" class="select" name="selec_adv_3" multiple>
+                                                <option> Select Tyre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2" style="width:40%">
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                            <label for="uk_dp_1">Select date</label>
+                                            <input class="md-input" type="text" id="uk_dp_1"  data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-1-2" style="width:10%">
+                                        <div class="uk-input-group">
+                                            <a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 uk-text-primary md-light">&#xE8B6;</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="md-card">
+        <div class="md-card-content">
+
+            <div id="SoldTyre_crud"></div>
+
+        </div>
+    </div>
+</div>
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-accent" href="#" id="recordAdd">
+        <i class="material-icons">&#xE145;</i>
+    </a>
+</div>
+@section scripts
+{
+
+    <script src="/Scripts/SoldTyre_Crud.js"></script>
+
+    <script>
+
+        $(".select")
+            .selectize({
+                plugins: {
+                    remove_button: {
+                        label: ""
+                    }
+                },
+                options: [],
+
+                maxItems: 1,
+                preloader: true,
+                valueField: "id",
+                labelField: "title",
+                searchField: "title",
+                create: !1,
+                load: function (query, callback) {
+                    console.log(query);
+                    $.ajax({
+                        url: '/SoldTyre/GetTyres',
+                        type: 'GET',
+                        dataType: 'json',
+                        data: {
+                            title: query
+                        },
+                        error: function () {
+                            callback();
+                        },
+                        success: function (res) {
+                            callback(res);
+                        }
+                    });
+                },
+                render: {
+                    option: function (t, e) {
+                        return '<div class="option"><span class="title">' + e(t.title) + "</span></div>";
+                    },
+                    item: function (t, e) {
+                        return '<div class="item"><a href="' +
+                            e(t.url) +
+                            '" target="_blank">' +
+                            e(t.title) +
+                            "</a></div>";
+                    }
+                },
+                onDropdownOpen: function (t) {
+                    t.hide()
+                        .velocity("slideDown",
+                        {
+                            begin: function () {
+                                t.css({
+                                    "margin-top": "0"
+                                });
+                            },
+                            duration: 200,
+                            easing: easing_swiftOut
+                        });
+                },
+                onDropdownClose: function (t) {
+                    t.show()
+                        .velocity("slideUp",
+                        {
+                            complete: function () {
+                                t.css({
+                                    "margin-top": ""
+                                });
+                            },
+                            duration: 200,
+                            easing: easing_swiftOut
+                        });
+                }
+            });
+
+    </script>
+}

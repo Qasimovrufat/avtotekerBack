@@ -1,0 +1,84 @@
+$blue: #1345D5;
+$white :#FFFFFF;
+
+
+
+
+@font-face {
+    font-family: Visby-medium;
+    src: url("../fonts/VisbyCF-Medium.woff");
+}
+@mixin transition($property) {
+   -webkit-transition:$property;
+   -moz-transition: $property;
+   -o-transition: $property;
+   transition: $property;
+}
+.deactive{
+    display: none !important;
+}
+body{
+    font-weight: 800 !important;
+    font-family: Visby-medium !important;
+ 
+}
+footer .logo img{
+    width: 172px;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100% !important;
+}
+button,a{
+@include transition(all 0.4s ease-in-out);
+}
+.overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+}
+a:hover{
+    text-decoration: none;
+    color: none;
+}
+button:focus,input:focus,textarea:focus{
+    outline: none;
+    border: none;
+}
+.dropdown-menu-right{
+    right: 0 !important;
+    left: auto !important;
+}
+#google_map{
+    height: 500px !important;
+    width: 100%;
+}
+
+@import 'header';
+@import 'responsive';
+@import 'searchArea';
+@import 'slider-range';
+@import 'season';
+@import 'brand-carousel';
+@import 'brand-carousel';
+@import 'find-all';
+@import 'products';
+@import 'services';
+@import 'terms';
+@import 'footer';
+@import 'about';
+@import 'tyres';
+@import 'contact';
+@import 'services-page'
+
+
+
+
+
+
+
+
+
+

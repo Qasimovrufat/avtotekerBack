@@ -1,0 +1,41 @@
+.form-group.range-slider{
+    position: relative;
+    .slider{
+        width: 97% !important;
+        margin-bottom: 12px;
+        .slider-handle{
+            height: 16px;
+            width: 16px;
+            background-color: #1345D5;
+            background-image: none;
+        }
+        .slider-selection{
+            background: #171C2A;
+        }
+    }
+    p{
+        text-align: left;
+        color: #000000;
+        font-family: Roboto;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .tooltip.in {
+        opacity: 0.9;
+    }
+    b:first-of-type{
+        left: 0px;
+    }
+    b:last-of-type{
+        right: 0;
+    }
+    b{
+        	color: #000000;
+        	font-family: Roboto;
+        	font-size: 12px;
+        	line-height: 14px;
+        position: absolute;
+        top: 55px;
+    }
+    
+}

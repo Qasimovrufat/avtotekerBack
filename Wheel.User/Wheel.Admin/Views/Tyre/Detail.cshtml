@@ -1,0 +1,150 @@
+﻿@using Wheel.DAL.Enums
+@model Wheel.DAL.Models.TyreViewModel
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<style>
+    hr {
+        margin-bottom: 15px;
+        margin-top: 9px;
+    }
+</style>
+<div id="page_heading" data-uk-sticky="{ top: 48, media: 960 }">
+    <h1>@Model.BrandName @Model.ModelName @((Enums.Seasons)Model.Season) </h1>
+    <span class="uk-text-muted uk-text-upper uk-text-small">@Model.Width/@Model.Height/R @Model.Radius</span>
+
+</div>
+
+<div class="uk-grid uk-grid-medium" data-uk-grid-margin  style="margin-top: 25px">
+    <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+        <div class="md-card">
+            <div class="md-card-toolbar">
+                <h3 class="md-card-toolbar-heading-text">
+                    Photos
+                </h3>
+            </div>
+            <div class="md-card-content">
+                <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                    <img src="@Model.DefaultImage" alt="" class="img_medium" />
+                </div>
+                <ul class="uk-grid uk-grid-width-small-1-3 uk-text-center" data-uk-grid-margin id="imgTyre">
+                    @foreach (var image in @Model.Images.Where(i => i.Status == true))
+                    {
+                        <li class="uk-position-relative">
+                           <img src="/Images/@image.Path" alt="@image.AltText" class="img_small" />
+                        </li>
+                    }
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+        <div class="md-card">
+            <div class="md-card-toolbar">
+                <h3 class="md-card-toolbar-heading-text">
+                    Details
+                </h3>
+            </div>
+            <div class="md-card-content large-padding">
+                <div class="uk-grid uk-grid-divider uk-grid-medium">
+                    <div class="uk-width-large-1-2">
+
+
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Brand Name</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                <span class="uk-text-large uk-text-middle">@Model.BrandName</span>
+                            </div>
+                        </div>
+                        <hr >
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Model Name</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                <span class="uk-text-large uk-text-middle">@Model.ModelName</span>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Size</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                @Model.Width/@Model.Height/R @Model.Radius
+                            </div>
+                        </div>
+                        <hr >
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Price</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                <span class="md-list-heading uk-text-large uk-text-success">$@Model.Price</span>
+                            </div>
+                        </div>
+                        <hr >
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Stok</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                <span class="md-list-heading uk-text-large">@Model.Stok</span>
+                            </div>
+                        </div>
+                        <hr >
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Season</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                <span class="md-list-heading uk-text-large">@((Enums.Seasons)Model.Season)</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-large-1-3">
+                                <span class="uk-text-muted uk-text-small">Usage Status</span>
+                            </div>
+                            <div class="uk-width-large-2-3">
+                                @(Model.UsageStatus? "Used" : "New")
+                            </div>
+                        </div>
+                        <hr class="uk-grid-divider uk-hidden-large">
+                    </div>
+                    <div class="uk-width-large-1-2">
+                        <p>
+                            <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Sale</span>
+                            <span class="uk-badge uk-badge-success">@(Model.Sale ?? 0)</span>
+                        </p>
+                        <hr class="uk-grid-divider">
+                        <p>
+                            <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Show In Default Page?</span>
+                            @Model.DisplayInDefault
+                        </p>
+                        <hr class="uk-grid-divider">
+                        <p>
+                            <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Description</span>
+                            @Model.Description
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-primary" href="@Url.Action("Edit","Tyre",new {id=@Model.Id})">
+        <i class="material-icons">&#xE150;</i>
+    </a>
+</div>

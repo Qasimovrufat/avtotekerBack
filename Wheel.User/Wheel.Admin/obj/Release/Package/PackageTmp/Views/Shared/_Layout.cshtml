@@ -1,0 +1,405 @@
+﻿@using System.Collections.Specialized
+@using Wheel.DAL.Models
+<!doctype html>
+<!--[if lte IE 9]> <html class="lte-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- Mirrored from altair_html.tzdthemes.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Nov 2016 18:30:40 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Remove Tap Highlight on Windows Phone IE -->
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="canonical" href="index.html" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/Images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/Images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/Images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/Images/favicon/ms-icon-144x144.png">
+    <title>AvtoTeker Admin </title>
+    <!-- additional styles for plugins -->
+    
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="/Content/assets/skins/jquery-ui/material/jquery-ui.min.css">
+    <!-- jTable -->
+    <link rel="stylesheet" href="/Content/assets/skins/jtable/jtable.min.css">
+
+    <!-- kendo UI -->
+    <link rel="stylesheet" href="/Content/bower_components/kendo-ui/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="/Content/bower_components/kendo-ui/styles/kendo.material.min.css" id="kendoCSS" />
+
+    <!-- weather icons -->
+    <link rel="stylesheet" href="/Content/bower_components/weather-icons/css/weather-icons.min.css" media="all">
+    <!-- metrics graphics (charts) -->
+    <link rel="stylesheet" href="/Content/bower_components/metrics-graphics/dist/metricsgraphics.css">
+    <!-- chartist -->
+    <link rel="stylesheet" href="/Content/bower_components/chartist/dist/chartist.min.css">
+
+    <!-- uikit -->
+    <link rel="stylesheet" href="/Content/bower_components/uikit/css/uikit.almost-flat.min.css" media="all">
+    <!-- flag icons -->
+    <link rel="stylesheet" href="/Content/assets/icons/flags/flags.min.css" media="all">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
+    <!-- altair admin -->
+    <link rel="stylesheet" href="/Content/assets/css/main.min.css" media="all">
+    <!-- themes -->
+    <link rel="stylesheet" href="/Content/assets/css/themes/themes_combined.min.css" media="all">
+    <!-- matchMedia polyfill for testing media queries in JS -->
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.js"></script>
+        <script type="text/javascript" src="bower_components/matchMedia/matchMedia.addListener.js"></script>
+        <link rel="stylesheet" href="assets/css/ie.css" media="all">
+    <![endif]-->
+</head>
+<body class=" sidebar_main_open sidebar_main_swipe">
+    <!-- main header -->
+    <header id="header_main">
+        <div class="header_main_content">
+            <nav class="uk-navbar">
+
+                <!-- main sidebar switch -->
+                <a href="#" id="sidebar_main_toggle" class="sSwitch sSwitch_left">
+                    <span class="sSwitchIcon"></span>
+                </a>
+
+                <!-- secondary sidebar switch -->
+                <a href="#" id="sidebar_secondary_toggle" class="sSwitch sSwitch_right sidebar_secondary_check">
+                    <span class="sSwitchIcon"></span>
+                </a>
+
+             
+                <div class="uk-navbar-flip">
+                    <ul class="uk-navbar-nav user_actions">
+                        <li><a href="@Url.Action("Index","Currency")" id="Curreny" class="user_action_icon"><i class="material-icons md-36" style="color: white">&#xE53E;</i></a></li>
+                        <li><a href="@Url.Action("Index","SoldTyre")" id="Add sold tyre" class="user_action_icon"><i class="material-icons md-36" style="color: white">&#xE03C;</i></a></li>
+                        <li><a href="#" id="full_screen_toggle" class="user_action_icon uk-visible-large"><i class="material-icons md-24 md-light">&#xE5D0;</i></a></li>
+                        @*<li><a href="#" id="main_search_btn" class="user_action_icon"><i class="material-icons md-24 md-light">&#xE8B6;</i></a></li>*@
+                        <li data-uk-dropdown="{mode:'click',pos:'bottom-right'}">
+                            <a href="@Url.Action("Logout","Login")" class="user_action_image"><img class="md-user-image" src="/Images/logout-512.png" alt=""/></a>
+
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="header_main_search_form">
+            <i class="md-icon header_main_search_close material-icons">&#xE5CD;</i>
+            <form class="uk-form uk-autocomplete" data-uk-autocomplete="{source:'data/search_data.json'}">
+                <input type="text" class="header_main_search_input" />
+                <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons" >&#xE8B6;</i></button>
+                <script type="text/autocomplete">
+                    <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+                        {{~items}}
+                        <li data-value="{{ $item.value }}">
+                            <a href="{{ $item.url }}">
+                                {{ $item.value }}<br>
+                                <span class="uk-text-muted uk-text-small">{{{ $item.text }}}</span>
+                            </a>
+                        </li>
+                        {{/items}}
+                    </ul>
+                </script>
+            </form>
+        </div>
+    </header><!-- main header end -->
+    <!-- main sidebar -->
+    <aside id="sidebar_main">
+
+        <div class="sidebar_main_header">
+            <div class="sidebar_logo" style="height:90px">
+                <a href="" class="sSidebar_hide sidebar_logo_large">
+                    <img class="logo_regular" src="/Images/logo.png" alt="" height="50" width="200" style="margin-top: 8px" />
+                    <img class="logo_light" src="/Images/logo.png" alt="" height="50" width="200" />
+                </a>
+               
+            </div>
+           
+        </div>
+
+        <div class="menu_section">
+            <ul>
+               
+                
+                <li class="current_section" title="Users">
+                    <a href="@Url.Action("Index","Home")">
+                        <span class="menu_icon"><i class="material-icons">&#xE7EF;</i></span>
+                        <span class="menu_title">Users</span>
+                    </a>
+
+                </li>
+                
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","Tyre")">
+                        <span class="menu_icon"><i class="material-icons">&#xE3A2;</i></span>
+                        <span class="menu_title">Tyres</span>
+                    </a>
+
+                </li>
+                
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","TyreBrand")">
+                        <span class="menu_icon"><i class="material-icons">&#xE3A2;</i></span>
+                        <span class="menu_title">Tyre Brand</span>
+                    </a>
+
+                </li>
+
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","TyreModel")">
+                        <span class="menu_icon"><i class="material-icons">&#xE3A2;</i></span>
+                        <span class="menu_title">Tyre Model</span>
+                    </a>
+
+                </li>
+                
+                
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","Car")">
+                        <span class="menu_icon"><i class="material-icons">&#xE531;</i></span>
+                        <span class="menu_title">Cars</span>
+                    </a>
+
+                </li>
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","CarModel")">
+                        <span class="menu_icon"><i class="material-icons">&#xE531;</i></span>
+                        <span class="menu_title">CarModel</span>
+                    </a>
+
+                </li>
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","CarBody")">
+                        <span class="menu_icon"><i class="material-icons">&#xE531;</i></span>
+                        <span class="menu_title">CarBody</span>
+                    </a>
+
+                </li>
+                <li class="current_section" title="Tyres">
+                    <a href="@Url.Action("Index","Campaign")">
+                        <span class="menu_icon"><i class="material-icons">&#xE531;</i></span>
+                        <span class="menu_title">Campaign</span>
+                    </a>
+
+                </li>
+                
+            </ul>
+        </div>
+</aside><!-- main sidebar end -->
+    
+<div id="page_content">
+    <div style="margin-left: 25px">
+       
+        @RenderBody()
+        @{
+            var notification = TempData["Notification"] as Notification;
+        }
+        @if (TempData["Notification"] != null)
+        {
+            
+            <script>
+                window.onload = function () { showNotification("@notification.Message", "@notification.Status", "@notification.Position"); }
+            </script>
+        }
+    </div>
+
+</div>
+    <!-- secondary sidebar -->
+   
+    <!-- secondary sidebar end -->
+    <!-- google web fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: [
+                    'Source+Code+Pro:400,700:latin',
+                    'Roboto:400,300,500,700,400italic:latin'
+                ]
+            }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <!-- common functions -->
+    <script src="/Content/assets/js/common.min.js"></script>
+    <!-- uikit functions -->
+    <script src="/Content/assets/js/uikit_custom.min.js"></script>
+<!-- altair common functions/helpers -->
+
+    <script src="/Content/assets/js/altair_admin_common.min.js"></script>
+    <!-- page specific plugins -->
+<!-- d3 -->
+
+    <script src="/Content/assets/js/kendoui_custom.min.js"></script>
+    <!--  kendoui functions -->
+    <script src="/Content/assets/js/pages/kendoui.min.js"></script>
+
+    <script src="/Content/bower_components/d3/d3.min.js"></script>
+    <!-- metrics graphics (charts) -->
+    <script src="/Content/bower_components/metrics-graphics/dist/metricsgraphics.min.js"></script>
+    <!-- chartist (charts) -->
+    <script src="/Content/bower_components/chartist/dist/chartist.min.js"></script>
+    <!-- maplace (google maps) -->
+    
+    <!-- peity (small charts) -->
+    <script src="/Content/bower_components/peity/jquery.peity.min.js"></script>
+<!-- easy-pie-chart (circular statistics) -->
+   
+    <!-- countUp -->
+    <script src="/Content/bower_components/countUp.js/dist/countUp.min.js"></script>
+    <!-- handlebars.js -->
+    <script src="/Content/bower_components/handlebars/handlebars.min.js"></script>
+    <script src="/Content/assets/js/custom/handlebars_helpers.min.js"></script>
+    <!-- CLNDR -->
+    <script src="/Content/bower_components/clndr/clndr.min.js"></script>
+    <!--  dashbord functions -->
+    <!--  notifications functions -->
+    <script src="/Content/assets/js/pages/components_notifications.min.js"></script>
+
+    <!-- tablesorter -->
+    <script src="/Content/bower_components/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+    <script src="/Content/bower_components/tablesorter/dist/js/jquery.tablesorter.widgets.min.js"></script>
+    <script src="/Content/bower_components/tablesorter/dist/js/widgets/widget-alignChar.min.js"></script>
+    <script src="/Content/bower_components/tablesorter/dist/js/widgets/widget-columnSelector.min.js"></script>
+    <script src="/Content/bower_components/tablesorter/dist/js/widgets/widget-print.min.js"></script>
+    <script src="/Content/bower_components/tablesorter/dist/js/extras/jquery.tablesorter.pager.min.js"></script>
+<!-- ionrangeslider -->
+     <script src="/Content/bower_components/ion.rangeslider/js/ion.rangeSlider.min.js"></script>
+    <!-- jTable -->
+    <!-- jquery ui -->
+    <script src="/Content/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <!-- jTable -->
+    <script src="/Content/bower_components/jtable/lib/jquery.jtable.min.js"></script>
+
+    
+    
+    <script>
+        $(function() {
+            if(isHighDensity()) {
+                $.getScript( "/Content/bower_components/dense/src/dense.html", function() {
+                    // enable hires images
+                    altair_helpers.retina_images();
+                });
+            }
+            if(Modernizr.touch) {
+                // fastClick (touch devices)
+                FastClick.attach(document.body);
+            }
+        });
+        $window.load(function() {
+            // ie fixes
+            altair_helpers.ie_fix();
+        });
+    </script>
+   
+<script>
+    $(function() {
+        if(isHighDensity()) {
+            $.getScript( "/Content/bower_components/dense/src/dense.html", function() {
+                // enable hires images
+                altair_helpers.retina_images();
+            });
+        }
+        if(Modernizr.touch) {
+            // fastClick (touch devices)
+            FastClick.attach(document.body);
+        }
+    });
+    $window.load(function() {
+        // ie fixes
+        altair_helpers.ie_fix();
+    });
+</script>
+    
+<script>
+    
+    var result;
+    var m = $("#kUI_ModelName");
+    var b = $("#kUI_BrandName");
+    var GetModelUrl = "/tyre/GetModels";
+    var GetBrandUrl = "/tyre/GetBrands";
+    if (m.length) {
+        BindDdl(GetModelUrl, m,"Model");
+        BindDdl(GetBrandUrl, b, "Brand");
+
+    }
+
+    function BindDdl(dataLink,inputId,type) {
+        $.ajax({
+            url: dataLink,
+            type: "get",
+            data: JSON.stringify(""),
+            dataType: "json",
+            contentType: "application/json",
+            success: function (data) {
+                BindBrandDropDownList(data, inputId,type);
+            },
+            error: function () {
+                alert("Oh noes");
+            }
+        });
+    }
+
+    function BindBrandDropDownList(data, id,type) {
+        id.kendoDropDownList({
+            optionLabel: "Select "+type+"...",
+            dataTextField: "Name",
+            dataValueField: "Id",
+            index: 2,
+            dataSource: data
+
+        });
+
+    }
+
+
+    function showNotification(message, status, pos) {
+        var thisNotify;
+        if (thisNotify = UIkit.notify({
+            message: message ? message : "",
+            status: status ? status : "",
+            timeout: 5e3,
+            group: null,
+            pos: pos ? pos: "top-center",
+            onClose: function () {
+                $body.find(".md-fab-wrapper").css("margin-bottom", ""), t.data("callback") && executeCallback(t.data("callback")), clearTimeout(thisNotify.timeout)
+            }
+        }), $window.width() < 768 && ("bottom-right" == thisNotify.options.pos || "bottom-left" == thisNotify.options.pos || "bottom-center" == thisNotify.options.pos) || "bottom-right" == thisNotify.options.pos) {
+            var o = $(thisNotify.element).outerHeight(),
+                i = $window.width() < 768 ? -6 : 8;
+            $body.find(".md-fab-wrapper").css("margin-bottom", o + i);
+        }
+    }
+
+</script>
+  
+
+
+    @RenderSection("scripts",false);
+    @RenderSection("Alert",false);
+
+</body>
+</html>
