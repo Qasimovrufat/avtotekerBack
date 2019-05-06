@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Model-Year";
+}
+
+
+
+<div id="page_content_inner">
+
+
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="filtering">
+                <form>
+                    Model Name: <input type="text" name="name" id="name" />
+                    Years:
+                    <select id="year" name="year">
+                        <option selected="selected" value="0">All Years</option>
+                        @foreach (var year in ViewBag.Years)
+                        {
+                            <option value="@year">@year</option>
+                        }
+
+                    </select>
+                    <button type="submit" id="LoadRecordsButton">Load records</button>
+                </form>
+            </div>
+            <div id="students_crud"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-accent" href="#" id="recordAdd">
+        <i class="material-icons">&#xE145;</i>
+    </a>
+</div>
+
+@section scripts
+{
+
+    <script src="/Scripts/CarBody_Crud.js"></script>
+
+}

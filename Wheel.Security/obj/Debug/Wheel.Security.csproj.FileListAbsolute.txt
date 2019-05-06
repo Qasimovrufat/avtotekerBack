@@ -1,0 +1,220 @@
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\ApplicationInsights.config
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\csc.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\vbc.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\VBCSCompiler.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.dll.config
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.pdb
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.SqlServer.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Web.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.ApplicationInsights.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Newtonsoft.Json.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Helpers.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Mvc.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Razor.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Deployment.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Razor.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.pdb
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.dll.config
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.SqlServer.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Web.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.ApplicationInsights.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Newtonsoft.Json.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Razor.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Deployment.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Razor.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Helpers.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Mvc.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csprojAssemblyReference.cache
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csproj.CoreCompileInputs.cache
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csproj.CopyComplete
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.pdb
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\ApplicationInsights.config
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\csc.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\vbc.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\VBCSCompiler.exe
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.dll.config
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.Security.pdb
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.SqlServer.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Web.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.ApplicationInsights.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Newtonsoft.Json.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Owin.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Helpers.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Mvc.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Razor.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Deployment.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Razor.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.pdb
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Wheel.DAL.dll.config
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\EntityFramework.SqlServer.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.Web.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.ApplicationInsights.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\Newtonsoft.Json.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Razor.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Deployment.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Webpages.Razor.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Helpers.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\bin\System.Web.Mvc.xml
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csprojAssemblyReference.cache
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csproj.CoreCompileInputs.cache
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.csproj.CopyComplete
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.dll
+C:\Users\rufet\OneDrive\Desktop\autoteker - Copy\aztelecom-wheel-9daceb8ea5e3\Source\Wheel.Security\obj\Debug\Wheel.Security.pdb
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\ApplicationInsights.config
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\csc.exe
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\vbc.exe
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\VBCSCompiler.exe
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.Security.dll.config
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.Security.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.Security.pdb
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\EntityFramework.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\EntityFramework.SqlServer.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.Web.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.ApplicationInsights.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Newtonsoft.Json.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Owin.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Helpers.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Mvc.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Razor.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.Deployment.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.Razor.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.DAL.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.DAL.pdb
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Wheel.DAL.dll.config
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\EntityFramework.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\EntityFramework.SqlServer.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.Web.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.ApplicationInsights.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Newtonsoft.Json.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Razor.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.Deployment.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.Razor.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Helpers.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Mvc.xml
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csprojResolveAssemblyReference.cache
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.pdb

@@ -1,0 +1,264 @@
+﻿@model  Wheel.User.Models.commonModel
+@using res = Wheel.User.Properties.Resources
+@using set = Wheel.User.Properties.Settings
+
+
+<section id="tyres">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>@res.tyres</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sorting">
+                    <div class="row">
+                        <div class="col-lg-4 offset-lg-4">
+                            <div class="sort">
+                                <p>@res.sortBy</p>
+                                <select class="selectpicker" name="total">
+                                    <option value="6" selected="selected">6</option>
+                                    <option value="9">9</option>
+                                    <option value="15">15</option>
+                                    <option value="1000">@res.viewAll</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="sort">
+                                <p>@res.show</p>
+                                <select class="selectpicker" name="order">
+                                    <option value="">@res.featured</option>
+                                    <option value="price">@res.orderPriceLtH</option>
+                                    <option value="priceDesc">@res.orderPriceHtL</option>
+                                    <option value="id">@res.orderOldToNew</option>
+                                    <option value="idDesc">@res.orderNewToOld</option>
+                                    <option value="brandAsc" selected="selected">@res.brand</option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="products">
+            <div class="row">
+                @foreach (var item in Model.saleTyres.tyreList)
+                {
+                    <div class="col-lg-3">
+                        <a href="/tyres/details/?id=@item.Id">
+                            <div class="product-box">
+                                <div class="upper">
+                                    <div class="img">
+                                        <img src="/adminpr/@(item.Images.Count>0 ? item.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")">
+                                    </div>
+                                </div>
+                                <div class="lower">
+                                    <div class="brand">
+                                        <h6>
+                                           @item.BrandName
+                                        </h6>
+                                    </div>
+                                    <div class="size">
+                                        <p>@item.ModelName  @item.Width/@item.Height<span>R</span>@item.Radius</p>
+                                    </div>
+                                    <div class="price">
+                                        <span> @(((item.Price - (item.Price / 100 * item.Sale)) * Model.currency).Value.ToString("0")) AZN</span>
+                                        @if (item.Price > (item.Price - (item.Price / 100 * item.Sale)))
+                                        {
+                                            <span class="line-through">@((item.Price * Model.currency).ToString("0")) AZN</span>
+
+                                        }
+
+                                    </div>
+
+                                    <a class="details" href="/tyres/details/?id=@item.Id">Details</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+         
+              
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center">
+                            @if (ViewBag.page > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link prev" href="#">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                </li>
+                            }
+                            @for (int k = 0; k < ViewBag.total; k++)
+                            {
+                                <li class="page-item @(ViewBag.page==k+1?"active":"")"><a class="page-link" href="@Url.Action("index","tyres",new {page=k+1 })">@(k+1)</a></li>
+
+                            }
+                            @if (ViewBag.page < ViewBag.total)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link next" href="#">
+                                        <i class="fa fa-angle-right"></i>
+
+                                    </a>
+                                </li>
+                            }
+                         
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section script{
+    @*<script>
+        $('#paginations').bootpag({
+            total: 5,
+            //page: 2,
+            maxVisible: 2,
+            //leaps: true,
+            //firstLastUse: true,
+            //first: '←',
+            //last: '→',
+            //wrapClass: 'pagination',
+            //activeClass: 'active',
+            //disabledClass: 'disabled',
+            //nextClass: 'next',
+            //prevClass: 'prev',
+            //lastClass: 'last',
+            //firstClass: 'first'
+        }).on("page", function (event, num) {
+            $(".content4").html("@res.page " + num); // or some ajax content loading...
+        });
+
+        var getTyresList = function () {
+            $("#product_listing_preloader").show();
+            var row = 1;
+            var tyreDiv="";
+            var products_select = $("#show_products_select").val();
+            var sort_by = $("#sort_by_select").val();
+            var prPage = $("#pr_page").val();
+            $.ajax({
+                url: "/Json/listTyres",
+                type: "GET",
+                data: location.search.split('?')[1] + "&total=" + products_select + "&order=" + sort_by+"&page="+prPage,
+                success: function (result) {
+                    var thisPage = parseInt(result.page);
+                    $(".products_count").html(products_select * (thisPage - 1) + 1 + "&nbsp;–&nbsp;" + (products_select * thisPage > result.total ? result.total : products_select * thisPage) + "&nbsp;@res.productsOf " + result.total);
+                    var pagination = "";
+                    var mathTotal = Math.ceil(result.total/products_select);
+                    //console.log(thisPage);
+                    if (thisPage > 1) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + (thisPage - 1) + '" title="">« @res.pre</a></span>';
+                    var i = 1;
+                    var  max = mathTotal;
+                    if(mathTotal>8){
+                        i=thisPage-4;
+                        max = thisPage+4;
+                        if(i<1){
+                            max += max-i;
+                            i=1;
+                        }
+                        if(max>mathTotal)
+                        {
+                            i -= max-mathTotal;
+                            max= mathTotal;
+                        }
+                       // console.log(i)
+                        //console.log(max)
+                        if (thisPage > 1) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + 1 + '" title="">@res.first</a></span>';
+                        for (;i <= max; i++)
+                        {
+                            pagination = pagination + '<span class="page';
+                            if (i == thisPage) pagination = pagination + ' current">' + i + '</span>';
+                            else pagination = pagination + '"><a href="#aMain" data-id="' + i + '" title="">' + i + '</a></span>';
+                        }
+                        if (thisPage <mathTotal) pagination = pagination + '<span class="prev"><a href="#aMain" data-id="' + mathTotal + '" title="">@res.last</a></span>';
+
+                    }
+                    else {
+                        for (;i <= mathTotal; i++)
+                        {
+                            pagination = pagination + '<span class="page';
+                            if (i == thisPage) pagination = pagination + ' current">' + i + '</span>';
+                            else pagination = pagination + '"><a href="#aMain" data-id="' + i + '" title="">' + i + '</a></span>';
+                        }
+                    }
+
+
+                    // console.log(i + '-' + thisPage);
+                    if (thisPage+1 != i) pagination = pagination + '<span class="next"><a href="#aMain"  data-id="' + (thisPage + 1) + '" title="">@res.next »</a></span>';
+                    $("#pagination").html(pagination)
+                    $.each(result.tyres, function (index, tyre) {
+                        //console.log(tyre);
+                        var sale= "";
+                        var cur =("@((Model.currency).ToString("0.00"))").replace(",",".");
+                        if (row == 4) row = 1;
+                        //console.log(tyre.Sale)
+                       // console.log(tyre.Price)
+                        if (tyre.Price > tyre.Sale) {                            
+                           // sale = '<span class="money priceAZN compare-at-price">' + (parseFloat(tyre.Sale) * parseFloat(cur)).toFixed(0) + '</span>';
+                           // console.log(sale);
+                        }
+                        tyreDiv = tyreDiv + '<div class="wow product col-sm-4 product_collection item3_' + row + ' animated" style="visibility: visible;">' +
+                               '<div class="product_wrapper">' +
+                                   '<div class="product_img">' +
+                                       '<a href="/tyres/details/?id=' + tyre.Id + '">' +
+                                           '<img src="/adminpr/' + (tyre.Images.length ? tyre.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png") + '" alt="' + tyre.ModelName + '">' +
+                                           //'<span class="product_badge new">New</span>'+
+                                       '</a>' +
+                                       '<div class="product_img_hover">' +
+                                           '<form method="post" action="/tyres/Details?id=' + tyre.Id + '">' +
+                                               '<button class="btn btn-cart" type="submit"><i class="fa fa-shopping-cart"></i><span>@res.more</span></button>' +
+                                           '</form>' +
+                                       '</div>' +
+                                   '</div>' +
+                                   '<div class="product_info">' +
+                                       '<div class="product_name">' +
+                                           '<a href="/tyres/Details/?id=' + tyre.Id + '">' + tyre.BrandName + ' <i class="fa fa-arrow-right" style="font-size: 14px;vertical-align: text-top;"></i> ' + tyre.ModelName + '   ' + tyre.Width + '/' + tyre.Height + 'R' + tyre.Radius + '</a>' +
+                                       '</div>' +
+                                       '<div class="product_price col-md-12 ">' +
+                                           ' <span class="money priceUSD" style="display:none"> $' + tyre.Price.toFixed(0) + '</span>' +
+                                            '<span class="money priceAZN col-md-3" style="display:block"> ' + (parseFloat(tyre.Price-tyre.Price*tyre.Sale/100) * parseFloat(cur)).toFixed(0) + '<i class="manat">m</i></span>' +
+                                          //  sale +
+                                            '<a class="btn btn-alt pull-right col-md-5" href="/tyres/Details?id=' + tyre.Id + '">@res.view</a>' +
+                                       '</div>' +
+                                   '</div>' +
+                               '</div>' +
+                           '</div>'
+                        row++;
+                    });
+                    $("#product_listing_preloader").hide();
+                    $(".product_listing_main").html(tyreDiv);
+                }
+
+            })
+        };
+
+        $(document).ready(function () {
+            getTyresList();
+        });
+        $("#show_products_select, #sort_by_select").change(function () {
+            $("#pr_page").val(1);
+            getTyresList();
+        });
+        $("#pagination").on('click',"span a",function(){
+            $("span .current").removeClass("current");
+            $(this).parent("span").addClass("current");
+            $("#pr_page").val($(this).data("id"));
+            getTyresList();
+        })
+        // history.pushState('data to be passed', 'Title of the page', 'http://localhost:51738/tyres/?catalogId=1');
+    </script>*@
+    }

@@ -1,0 +1,253 @@
+﻿@using Wheel.DAL.Enums
+@model Wheel.DAL.Models.TyreViewModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+<div id="page_heading" data-uk-sticky="{ top: 48, media: 960 }">
+    <h1>@Model.BrandName @Model.ModelName @((Enums.Seasons)Model.Season) </h1>
+    <span class="uk-text-muted uk-text-upper uk-text-small">@Model.Width/@Model.Height/R @Model.Radius</span>
+    
+</div>
+<div id="page_content_inner">
+    <form action="#" class="uk-form-stacked"  enctype="multipart/form-data" id="product_edit_form">
+        <div class="uk-grid uk-grid-medium" data-uk-grid-margin style="margin-top: 25px">
+            <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <div class="uk-float-right">
+
+                            <input type="checkbox" data-switchery @(Model.Status?"checked":"")  name="Status" id="Status"/>
+                        </div>
+                        <label class="uk-display-block uk-margin-small-top" for="Status">Active</label>
+                    </div>
+                </div>
+                
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <div class="uk-float-right">
+                            <input type="checkbox" data-switchery @(Model.UsageStatus?"checked":"") name="UsageStatus" id="UsageStatus" />
+                        </div>
+                        <label class="uk-display-block uk-margin-small-top" for="UsageStatus">Used</label>
+                    </div>
+                </div>
+                <div class="md-card">
+                    <div class="md-card-content">
+                        <div class="uk-float-right">
+                            <input type="checkbox" data-switchery @(Model.DisplayInDefault ? "checked" : "") name="DisplayInDefault" id="DisplayInDefault" />
+                        </div>
+                        <label class="uk-display-block uk-margin-small-top" for="DisplayInDefault">Show In Default?</label>
+                    </div>
+                </div>
+
+                <div class="md-card">
+                    <div class="md-card-toolbar">
+                        <a class="uk-form-file md-btn" style="margin-left: 15px;margin-top: 5px;">
+                            <i class="md-icon material-icons">&#xE146;</i>
+                            <input type="file" class="" multiple id="fileUpload" name="files" />
+                        </a>
+
+                        <div class="md-card-toolbar-actions">
+
+                            <a class="uk-form-file md-btn" id="uploadFile"><i class="material-icons">&#xE2C6;</i></a>
+                            
+                        </div>
+                        <h3 class="md-card-toolbar-heading-text">
+                            Photos
+                        </h3>
+                    </div>
+                    <div class="md-card-content">
+                        <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                            <img src="@Model.DefaultImage" alt="" class="img_medium" />
+                        </div>
+                        <ul class="uk-grid uk-grid-width-small-1-3 uk-text-center" data-uk-grid-margin id="imgTyre">
+                            @foreach (var image in @Model.Images.Where(i=>i.Status==true))
+                            {
+                                
+                                <li class="uk-position-relative">
+                                    <button type="button" class="uk-modal-close uk-close uk-close-alt uk-position-absolute"
+                                            onclick="UIkit.modal.confirm('Are you sure Delete  this image?', 
+                                            function() { window.location = '/image/Delete?id=' + @image.Id + '&&tyreId=' + @Model.Id });">
+                                    </button>
+                                    <img src="/Images/@image.Path" alt="@image.AltText" class="img_small" />
+                                </li>
+                            }
+                            
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                <div class="md-card">
+                    <div class="md-card-toolbar">
+                        <h3 class="md-card-toolbar-heading-text">
+                            Details
+                        </h3>
+                    </div>
+                    <div class="md-card-content large-padding">
+                        <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                            <div class="uk-width-large-1-2">
+
+                                <div class="uk-form-row">
+                                    <label for="BrandId" class="uk-form-label">Brand Name</label>
+                                    <input id="tyreId" type="hidden" name="Id" value="@Model.Id" />
+                                    <input id="kUI_BrandName" name="BrandId" required value="@Model.BrandId" class="uk-form-width-large" />
+                                </div>
+
+                                <div class="uk-form-row">
+                                    <label for="kUI_ModelName" class="uk-form-label">Model Name</label>
+                                    <input id="kUI_ModelName" name="ModelId" required value="@Model.ModelId" class="uk-form-width-large" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Width">Width</label>
+                                    <input type="text" class="md-input" required id="Width" name="Width" value="@Model.Width" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Height">Height</label>
+                                    <input type="text" class="md-input" required id="Height" name="Height" value="@Model.Height" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Radius">Radius</label>
+                                    <input type="text" class="md-input" required id="Radius" name="Radius" value="@Model.Radius" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Price">Price</label>
+                                    <input type="number" class="md-input" required id="Price" name="Price" value="@Model.Price" />
+                                </div>
+
+                            </div>
+                            <div class="uk-width-large-1-2">
+                                <div class="uk-form-row">
+                                    <label for="Season" class="uk-form-label">Season</label>
+                                    <select id="Season" name="Season" required data-md-selectize>
+                                        <option value="0" @(Model.Season==0? "selected":"")>Winter</option>
+                                        <option value="1" @(Model.Season==1? "selected":"")>Summer</option>
+                                        <option value="2" @(Model.Season==2? "selected":"")>FourSeason</option>
+                                    </select>
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Stok">Stok</label>
+                                    <input type="number" class="md-input" required id="Stok" name="Stok" value="@Model.Stok" />
+                                </div>
+                                <div class="uk-form-row">
+                                    <label for="Sale">Sale</label>
+                                    <input type="number" class="md-input" id="Sale" name="Sale" value="@Model.Sale" />
+                                </div>
+
+                                <div class="uk-form-row">
+                                    <label for="Description">Description</label>
+                                    <textarea class="md-input" name="Description" id="Description" cols="30" rows="4">@Model.Description</textarea>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<div class="md-fab-wrapper">
+    <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
+        <i class="material-icons">&#xE161;</i>
+    </a>
+</div>
+@section scripts{
+    <script src="/Content/assets/js/pages/ecommerce_product_edit.min.js"></script>
+
+    <script>
+        var i = $("#product_edit_submit"),
+            t = $("#product_edit_form");
+
+        i.on("click",
+            function(i) {
+
+                i.preventDefault();
+                var a = t.serializeObject();
+                a.UsageStatus != undefined ? a.UsageStatus = true : a.UsageStatus = false;;
+                a.Status != undefined ? a.Status = true : a.Status = false;
+                a.DisplayInDefault != undefined ? a.DisplayInDefault = true : a.DisplayInDefault = false;
+                var e = JSON.stringify(a, null, 2);
+
+                $.ajax({
+                    url: "/Tyre/edit",
+                    type: "POST",
+                    data: e,
+                    dataType: 'json',
+                    contentType: "application/json; charset=utf-8",
+                    success: function(result) {
+                        var message = "<a href='#' class='notify-action'>Clear</a> Tyre updated succesfuly";
+                        var status = "success";
+                        var pos = "top-right";
+                        showNotification(message, status, pos);
+                        setTimeout(function () { window.location = '/tyre/detail/'+@Model.Id }, 2000);
+                    },
+                    error: function(parameters) {
+                        var message = "<a href='#' class='notify-action'>Clear</a> Failed! Something was wrong";
+                        var status = "danger";
+                        var pos = "top-right";
+                        showNotification(message, status, pos);
+                    }
+                });
+
+
+            });
+
+
+        jQuery("#uploadFile")
+            .click(function() {
+                jQuery(this).hide();
+                var formdata = new FormData(document.getElementById('product_edit_form')); //FormData object
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/image/Upload');
+                xhr.send(formdata);
+                xhr.onreadystatechange = function() {
+                    jQuery("#uploadFile").show();
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+
+                        var message = "<a href='#' class='notify-action'>Clear</a> Image(s) added succesfuly";
+                        var status = "success";
+                        var pos = "top-right";
+                        showNotification(message, status, pos);
+
+                        var data = xhr.responseText;
+                        var jsonResponse = JSON.parse(data);
+                        console.log(jsonResponse);
+                        for (var s = 0; s < jsonResponse.ImageId.length; s++) {
+                            $('#product_edit_form')
+                                .append(
+                                    $('<input>',
+                                    {
+                                        type: 'hidden',
+                                        name: 'ImageId',
+                                        val: jsonResponse.ImageId[s]
+                                    })
+                                );
+                            $('#imgTyre')
+                                .append(
+                                    '<li class="uk-position-relative">' +
+                                    '<button type="button" class="uk-modal-close uk-close uk-close-alt uk-position-absolute" ' +
+                                    'onclick="UIkit.modal.confirm(\'Are you sure Delete  this image?\',function () {window.location = \'/image/Delete?id=\'+' + jsonResponse.ImageId[s]+'+\'&&tyreId=\'+'+@Model.Id+'});">' +
+                                    '</button><img src="'+jsonResponse.ImagePath[s]+'" class="img_small" /></li>'
+                                    
+                                );
+
+                        }
+                        jQuery("#uploadFile").show();
+                        jQuery('#product_edit_form')[0].reset();
+                    } else if (xhr.readyState == 4 && xhr.status == 400) {
+                        var message = "<a href='#' class='notify-action'>Clear</a> Failed! Something was wrong";
+                        var status = "danger";
+                        var pos = "top-right";
+                        showNotification(message, status, pos);
+                      
+
+                    }
+
+                }
+                return false;
+            });
+    </script>
+}

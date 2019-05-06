@@ -1,0 +1,25 @@
+﻿@using res = Wheel.User.Properties.Resources
+<div id="main" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="main_content col-sm-9 col-sm-push-3">
+                <div class="page-scope">
+
+                    <div class="page_header">
+                        <h1 class="page_heading">@res.campaign</h1>
+                    </div>
+                    <div class="page_content campaign">
+                        @Html.Raw(Model.pageContent.GetType().GetProperty(Model.lang).GetValue(Model.pageContent, null))
+                        <div class="row"><a class="blog-article_read-more btn btn-success pull-right" href="/tyres/?campaign=@Model.pageContent.id">@res.showTyres</a></div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+#services-page{
+       padding: 100px 0;
+       .title {
+           margin-bottom: 81px;
+           text-align: center;
+           padding: 88px 165px 88px 140px;
+           display: inline-block;
+           background: url("../img/group-3.png") no-repeat center center;
+           background-size: cover;
+           h1 {
+               color: #4A4A4A;
+               font-family: "Visby CF";
+               font-size: 65px;
+               font-weight: 800;
+               line-height: 35px;
+               text-align: center;
+           }
+       }
+       .service-box{
+           margin-bottom: 125px;
+            .img{
+                    display: inline-block;
+                    padding: 29px;
+                    margin-bottom: 30px;
+                   	background-color: #F7F7F7;
+                   	box-shadow: 0 0 13px 0 rgba(176, 176, 176, 0.44);
+                       border-radius: 100%;
+                        @include transition(all 0.4s ease-in-out);
+                  &:hover {
+                          background-color: #1345D5;
+                          	box-shadow: 0 0 13px 0 rgba(176, 176, 176, 0.44);
+                  }
+                  img:last-of-type{
+                      display: none;
+                  }
+            }
+            h4{
+                	color: #4A4A4A;
+                	font-family: "Visby CF";
+                	font-size: 17px;
+                	font-weight: 800;
+                	line-height: 20px;
+            }
+         
+       }
+
+       .service-img{
+           position: relative;
+       }
+       .row.justify-content-end{
+           position: relative;
+           .row{
+               position: absolute;
+               z-index: 5;
+               top: 75%;
+               left: 0;
+           }
+       }
+       .service-text{
+           	background-color: #1345D5;
+           	box-shadow: 0 7px 23px 0 rgba(0, 0, 0, 0.3);
+           	padding: 17px 26px;
+           p{
+               color: #FFFFFF;
+               font-family: "Visby CF";
+               font-size: 15px;
+               font-weight: 500;
+               line-height: 22px;
+               text-align: justify;
+            
+           }
+           .moreBtn{
+               	color: #FFFFFF;
+               	font-family: "Visby CF";
+               	font-size: 16px;
+               	font-weight: 800;
+                   line-height: 19px;
+                   text-decoration: underline;
+           }
+       }
+}

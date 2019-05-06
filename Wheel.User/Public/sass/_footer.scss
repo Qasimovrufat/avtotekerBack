@@ -1,0 +1,50 @@
+footer{
+    background-color: #F7F7F7;
+    padding-top: 40px;
+    .logo{
+        margin-bottom: 36px;
+    }
+    .info{
+        display: flex;
+        i{
+            color: $blue;
+            font-size: 15px;
+          margin-right: 7px;
+          margin-top: 5px;
+        }
+        .fa-phone{
+            transform: rotateY(180deg);
+        }
+    }
+    .social {
+        display: inline-block;
+        a{
+
+                 i {
+                     width: 25px;
+                     height: 25px;
+                     background: $blue;
+                     color: $white;
+                     text-align: center;
+                     border-radius: 100%;
+                     line-height: 1.5;
+                     margin: 10px 0
+                 }
+               
+                 &:hover{
+                     text-decoration: none;
+                 }
+        }
+          a:nth-of-type(2) {
+              margin-left: 9px;
+          }
+   
+    }
+    .col-lg-12 p{
+        color: #4A4A4A;
+            font-family: "Visby CF";	
+            font-size: 10px;	
+            font-weight: 500;	
+            line-height: 12px;
+    }
+}

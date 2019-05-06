@@ -1,0 +1,52 @@
+﻿@using res = Wheel.User.Properties.Resources
+@using System.Text.RegularExpressions;
+@using System;
+@using System.Web.WebPages.Html;
+<div id="main" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="main_content col-sm-9 col-sm-push-3">
+
+
+                <div id="blog">
+
+
+                    <h1 class="page_heading">@res.campaign<a href="/pages/campaign" target=""></a></h1>
+
+                    @foreach (var page in Model.pageContents)
+                    {
+
+                        <div class="wow blog-article blog-article__@page.id animated col-md-6" style="visibility: visible;">
+                            <div class="rte">
+                                @{
+                                    var text = "";
+                                    try
+                                    {
+                                        text = Regex.Replace(page.GetType().GetProperty(Model.lang).GetValue(page, null), "<.*?>", string.Empty);
+                                        if (text.Length < 2) { text = Regex.Replace(page.az, "<.*?>", string.Empty); }
+                                        if (text.Length > 100) { text = text.Substring(0, 100); }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        text = "";
+                                    }
+                                }
+                                @text
+                            </div>
+
+                            <a class="blog-article_read-more btn btn-info" href="/pages/campaigndetails/@page.id">@res.more</a>
+                            <a class="blog-article_read-more btn btn-success" href="/tyres/?campaign=@page.id">@res.showTyres</a>
+
+                        </div>
+                                    }
+
+
+                </div>
+
+
+            </div>
+
+            @Html.Partial("_Sidebar")
+        </div>
+    </div>
+</div>

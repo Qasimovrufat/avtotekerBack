@@ -1,0 +1,1190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="wheelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Discriminator" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="LastLoginDateTime" Type="datetime" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="CampaginTyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TyreId" Type="int" Nullable="false" />
+          <Property Name="CampaignId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CarBody">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModelYearId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Wheels" Type="text" />
+        </EntityType>
+        <EntityType Name="CarModel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CarId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DailyCurrency" Type="float" Nullable="false" />
+          <Property Name="Day" Type="date" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MediaType" Type="smallint" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+          <Property Name="TyreId" Type="int" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="AltText" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Path" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ModelYear">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModelId" Type="int" />
+          <Property Name="Year" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="alias" Type="varchar" MaxLength="20" />
+          <Property Name="az" Type="ntext" />
+          <Property Name="ru" Type="ntext" />
+          <Property Name="en" Type="ntext" />
+          <Property Name="status" Type="smallint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_A113B3_avtoteker.dbo.Sheet2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Sheet2">
+          <Property Name="Id" Type="int" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Sale" Type="int" />
+        </EntityType>-->
+        <EntityType Name="slider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="style" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="imgPath" Type="varchar" MaxLength="80" />
+          <Property Name="az" Type="nvarchar(max)" />
+          <Property Name="ru" Type="nvarchar(max)" />
+          <Property Name="en" Type="nvarchar(max)" />
+          <Property Name="linkUrl" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SoldTyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TyreId" Type="int" Nullable="false" />
+          <Property Name="Count" Type="int" />
+          <Property Name="SoldDate" Type="date" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'DB_A113B3_avtoteker.dbo.stok' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="stok">
+          <Property Name="id" Type="int" />
+          <Property Name="stok" Type="int" />
+          <Property Name="sale" Type="int" />
+        </EntityType>-->
+        <EntityType Name="Tyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ModelId" Type="int" Nullable="false" />
+          <Property Name="Width" Type="nvarchar" MaxLength="20" />
+          <Property Name="Height" Type="nvarchar" MaxLength="20" />
+          <Property Name="Radius" Type="nvarchar" MaxLength="20" />
+          <Property Name="UsageStatus" Type="bit" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Stok" Type="int" Nullable="false" />
+          <Property Name="Season" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Sale" Type="float" />
+          <Property Name="priceOld" Type="real" />
+          <Property Name="DisplayInDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TyreBrand">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TyreModel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_CampaginTyre_Pages">
+          <End Role="Pages" Type="Self.Pages" Multiplicity="1" />
+          <End Role="CampaginTyre" Type="Self.CampaginTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pages">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CampaginTyre">
+              <PropertyRef Name="CampaignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CampaginTyre_Tyre">
+          <End Role="Tyre" Type="Self.Tyre" Multiplicity="1" />
+          <End Role="CampaginTyre" Type="Self.CampaginTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CampaginTyre">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarBody_ModelYear">
+          <End Role="ModelYear" Type="Self.ModelYear" Multiplicity="1" />
+          <End Role="CarBody" Type="Self.CarBody" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ModelYear">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarBody">
+              <PropertyRef Name="ModelYearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarModel_Car">
+          <End Role="Car" Type="Self.Car" Multiplicity="1" />
+          <End Role="CarModel" Type="Self.CarModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarModel">
+              <PropertyRef Name="CarId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_File_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_File_Tyre">
+          <End Role="Tyre" Type="Self.Tyre" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Image" Type="Self.Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModelYear_CarModel">
+          <End Role="CarModel" Type="Self.CarModel" Multiplicity="0..1" />
+          <End Role="ModelYear" Type="Self.ModelYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModelYear">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SoldTyre_Tyre">
+          <End Role="Tyre" Type="Self.Tyre" Multiplicity="1" />
+          <End Role="SoldTyre" Type="Self.SoldTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SoldTyre">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tyre_TyreModel">
+          <End Role="TyreModel" Type="Self.TyreModel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Tyre" Type="Self.Tyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TyreModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tyre">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TyreModel_TyreBrand">
+          <End Role="TyreBrand" Type="Self.TyreBrand" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TyreModel" Type="Self.TyreModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TyreBrand">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TyreModel">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="wheelModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CampaginTyre" EntityType="Self.CampaginTyre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarBody" EntityType="Self.CarBody" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CarModel" EntityType="Self.CarModel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Currency" EntityType="Self.Currency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Image" EntityType="Self.Image" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ModelYear" EntityType="Self.ModelYear" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="slider" EntityType="Self.slider" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SoldTyre" EntityType="Self.SoldTyre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tyre" EntityType="Self.Tyre" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TyreBrand" EntityType="Self.TyreBrand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TyreModel" EntityType="Self.TyreModel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CampaginTyre_Pages" Association="Self.FK_CampaginTyre_Pages">
+            <End Role="Pages" EntitySet="Pages" />
+            <End Role="CampaginTyre" EntitySet="CampaginTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CampaginTyre_Tyre" Association="Self.FK_CampaginTyre_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="CampaginTyre" EntitySet="CampaginTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarBody_ModelYear" Association="Self.FK_CarBody_ModelYear">
+            <End Role="ModelYear" EntitySet="ModelYear" />
+            <End Role="CarBody" EntitySet="CarBody" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarModel_Car" Association="Self.FK_CarModel_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="CarModel" EntitySet="CarModel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_File_AspNetUsers" Association="Self.FK_File_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK_File_Tyre" Association="Self.FK_File_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModelYear_CarModel" Association="Self.FK_ModelYear_CarModel">
+            <End Role="CarModel" EntitySet="CarModel" />
+            <End Role="ModelYear" EntitySet="ModelYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SoldTyre_Tyre" Association="Self.FK_SoldTyre_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="SoldTyre" EntitySet="SoldTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tyre_TyreModel" Association="Self.FK_Tyre_TyreModel">
+            <End Role="TyreModel" EntitySet="TyreModel" />
+            <End Role="Tyre" EntitySet="Tyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TyreModel_TyreBrand" Association="Self.FK_TyreModel_TyreBrand">
+            <End Role="TyreBrand" EntitySet="TyreBrand" />
+            <End Role="TyreModel" EntitySet="TyreModel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="wheelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="wheelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="wheelModel.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="wheelModel.AspNetRoles" />
+          <EntitySet Name="AspNetUserClaims" EntityType="wheelModel.AspNetUserClaims" />
+          <EntitySet Name="AspNetUserLogins" EntityType="wheelModel.AspNetUserLogins" />
+          <EntitySet Name="AspNetUsers" EntityType="wheelModel.AspNetUsers" />
+          <EntitySet Name="CampaginTyre" EntityType="wheelModel.CampaginTyre" />
+          <EntitySet Name="Car" EntityType="wheelModel.Car" />
+          <EntitySet Name="CarBody" EntityType="wheelModel.CarBody" />
+          <EntitySet Name="CarModel" EntityType="wheelModel.CarModel" />
+          <EntitySet Name="Currency" EntityType="wheelModel.Currency" />
+          <EntitySet Name="Image" EntityType="wheelModel.Image" />
+          <EntitySet Name="ModelYear" EntityType="wheelModel.ModelYear" />
+          <EntitySet Name="Pages" EntityType="wheelModel.Pages" />
+          <EntitySet Name="slider" EntityType="wheelModel.slider" />
+          <EntitySet Name="SoldTyre" EntityType="wheelModel.SoldTyre" />
+          <EntitySet Name="Tyre" EntityType="wheelModel.Tyre" />
+          <EntitySet Name="TyreBrand" EntityType="wheelModel.TyreBrand" />
+          <EntitySet Name="TyreModel" EntityType="wheelModel.TyreModel" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="wheelModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="wheelModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_File_AspNetUsers" Association="wheelModel.FK_File_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CampaginTyre_Pages" Association="wheelModel.FK_CampaginTyre_Pages">
+            <End Role="Pages" EntitySet="Pages" />
+            <End Role="CampaginTyre" EntitySet="CampaginTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CampaginTyre_Tyre" Association="wheelModel.FK_CampaginTyre_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="CampaginTyre" EntitySet="CampaginTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarModel_Car" Association="wheelModel.FK_CarModel_Car">
+            <End Role="Car" EntitySet="Car" />
+            <End Role="CarModel" EntitySet="CarModel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CarBody_ModelYear" Association="wheelModel.FK_CarBody_ModelYear">
+            <End Role="ModelYear" EntitySet="ModelYear" />
+            <End Role="CarBody" EntitySet="CarBody" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ModelYear_CarModel" Association="wheelModel.FK_ModelYear_CarModel">
+            <End Role="CarModel" EntitySet="CarModel" />
+            <End Role="ModelYear" EntitySet="ModelYear" />
+          </AssociationSet>
+          <AssociationSet Name="FK_File_Tyre" Association="wheelModel.FK_File_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="Image" EntitySet="Image" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SoldTyre_Tyre" Association="wheelModel.FK_SoldTyre_Tyre">
+            <End Role="Tyre" EntitySet="Tyre" />
+            <End Role="SoldTyre" EntitySet="SoldTyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tyre_TyreModel" Association="wheelModel.FK_Tyre_TyreModel">
+            <End Role="TyreModel" EntitySet="TyreModel" />
+            <End Role="Tyre" EntitySet="Tyre" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TyreModel_TyreBrand" Association="wheelModel.FK_TyreModel_TyreBrand">
+            <End Role="TyreBrand" EntitySet="TyreBrand" />
+            <End Role="TyreModel" EntitySet="TyreModel" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="wheelModel.AspNetUserRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discriminator" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="wheelModel.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="wheelModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="wheelModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LastLoginDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="wheelModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="wheelModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="Image" Relationship="wheelModel.FK_File_AspNetUsers" FromRole="AspNetUsers" ToRole="Image" />
+          <NavigationProperty Name="AspNetRoles" Relationship="wheelModel.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+        </EntityType>
+        <EntityType Name="CampaginTyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TyreId" Type="Int32" Nullable="false" />
+          <Property Name="CampaignId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Pages" Relationship="wheelModel.FK_CampaginTyre_Pages" FromRole="CampaginTyre" ToRole="Pages" />
+          <NavigationProperty Name="Tyre" Relationship="wheelModel.FK_CampaginTyre_Tyre" FromRole="CampaginTyre" ToRole="Tyre" />
+        </EntityType>
+        <EntityType Name="Car">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CarModel" Relationship="wheelModel.FK_CarModel_Car" FromRole="Car" ToRole="CarModel" />
+        </EntityType>
+        <EntityType Name="CarBody">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModelYearId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Wheels" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ModelYear" Relationship="wheelModel.FK_CarBody_ModelYear" FromRole="CarBody" ToRole="ModelYear" />
+        </EntityType>
+        <EntityType Name="CarModel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CarId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Car" Relationship="wheelModel.FK_CarModel_Car" FromRole="CarModel" ToRole="Car" />
+          <NavigationProperty Name="ModelYear" Relationship="wheelModel.FK_ModelYear_CarModel" FromRole="CarModel" ToRole="ModelYear" />
+        </EntityType>
+        <EntityType Name="Currency">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DailyCurrency" Type="Double" Nullable="false" />
+          <Property Name="Day" Type="DateTime" Precision="0" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Image">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaType" Type="Int16" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="TyreId" Type="Int32" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="AltText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Path" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="wheelModel.FK_File_AspNetUsers" FromRole="Image" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Tyre" Relationship="wheelModel.FK_File_Tyre" FromRole="Image" ToRole="Tyre" />
+        </EntityType>
+        <EntityType Name="ModelYear">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModelId" Type="Int32" />
+          <Property Name="Year" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CarBody" Relationship="wheelModel.FK_CarBody_ModelYear" FromRole="ModelYear" ToRole="CarBody" />
+          <NavigationProperty Name="CarModel" Relationship="wheelModel.FK_ModelYear_CarModel" FromRole="ModelYear" ToRole="CarModel" />
+        </EntityType>
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="alias" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="az" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int16" />
+          <NavigationProperty Name="CampaginTyre" Relationship="wheelModel.FK_CampaginTyre_Pages" FromRole="Pages" ToRole="CampaginTyre" />
+        </EntityType>
+        <EntityType Name="slider">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="style" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="imgPath" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="az" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ru" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="en" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="linkUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SoldTyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TyreId" Type="Int32" Nullable="false" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="SoldDate" Type="DateTime" Precision="0" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tyre" Relationship="wheelModel.FK_SoldTyre_Tyre" FromRole="SoldTyre" ToRole="Tyre" />
+        </EntityType>
+        <EntityType Name="Tyre">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ModelId" Type="Int32" Nullable="false" />
+          <Property Name="Width" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Height" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Radius" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UsageStatus" Type="Boolean" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Stok" Type="Int32" Nullable="false" />
+          <Property Name="Season" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Sale" Type="Double" />
+          <Property Name="priceOld" Type="Single" />
+          <Property Name="DisplayInDefault" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CampaginTyre" Relationship="wheelModel.FK_CampaginTyre_Tyre" FromRole="Tyre" ToRole="CampaginTyre" />
+          <NavigationProperty Name="Image" Relationship="wheelModel.FK_File_Tyre" FromRole="Tyre" ToRole="Image" />
+          <NavigationProperty Name="SoldTyre" Relationship="wheelModel.FK_SoldTyre_Tyre" FromRole="Tyre" ToRole="SoldTyre" />
+          <NavigationProperty Name="TyreModel" Relationship="wheelModel.FK_Tyre_TyreModel" FromRole="Tyre" ToRole="TyreModel" />
+        </EntityType>
+        <EntityType Name="TyreBrand">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TyreModel" Relationship="wheelModel.FK_TyreModel_TyreBrand" FromRole="TyreBrand" ToRole="TyreModel" />
+        </EntityType>
+        <EntityType Name="TyreModel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tyre" Relationship="wheelModel.FK_Tyre_TyreModel" FromRole="TyreModel" ToRole="Tyre" />
+          <NavigationProperty Name="TyreBrand" Relationship="wheelModel.FK_TyreModel_TyreBrand" FromRole="TyreModel" ToRole="TyreBrand" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="wheelModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.AspNetUserClaims" Role="AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="wheelModel.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.AspNetUserLogins" Role="AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_File_AspNetUsers">
+          <End Type="wheelModel.AspNetUsers" Role="AspNetUsers" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.Image" Role="Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CampaginTyre_Pages">
+          <End Type="wheelModel.Pages" Role="Pages" Multiplicity="1" />
+          <End Type="wheelModel.CampaginTyre" Role="CampaginTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pages">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CampaginTyre">
+              <PropertyRef Name="CampaignId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CampaginTyre_Tyre">
+          <End Type="wheelModel.Tyre" Role="Tyre" Multiplicity="1" />
+          <End Type="wheelModel.CampaginTyre" Role="CampaginTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CampaginTyre">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarModel_Car">
+          <End Type="wheelModel.Car" Role="Car" Multiplicity="1" />
+          <End Type="wheelModel.CarModel" Role="CarModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Car">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarModel">
+              <PropertyRef Name="CarId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CarBody_ModelYear">
+          <End Type="wheelModel.ModelYear" Role="ModelYear" Multiplicity="1" />
+          <End Type="wheelModel.CarBody" Role="CarBody" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ModelYear">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CarBody">
+              <PropertyRef Name="ModelYearId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ModelYear_CarModel">
+          <End Type="wheelModel.CarModel" Role="CarModel" Multiplicity="0..1" />
+          <End Type="wheelModel.ModelYear" Role="ModelYear" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CarModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ModelYear">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_File_Tyre">
+          <End Type="wheelModel.Tyre" Role="Tyre" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.Image" Role="Image" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Image">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SoldTyre_Tyre">
+          <End Type="wheelModel.Tyre" Role="Tyre" Multiplicity="1" />
+          <End Type="wheelModel.SoldTyre" Role="SoldTyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tyre">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SoldTyre">
+              <PropertyRef Name="TyreId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tyre_TyreModel">
+          <End Type="wheelModel.TyreModel" Role="TyreModel" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.Tyre" Role="Tyre" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TyreModel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tyre">
+              <PropertyRef Name="ModelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TyreModel_TyreBrand">
+          <End Type="wheelModel.TyreBrand" Role="TyreBrand" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="wheelModel.TyreModel" Role="TyreModel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TyreBrand">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TyreModel">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="wheelModel.AspNetRoles" Role="AspNetRoles" Multiplicity="*" />
+          <End Type="wheelModel.AspNetUsers" Role="AspNetUsers" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="wheelModelStoreContainer" CdmEntityContainer="wheelEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="wheelModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="wheelModel.AspNetRoles">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="wheelModel.AspNetUserClaims">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="wheelModel.AspNetUserLogins">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="wheelModel.AspNetUsers">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastLoginDateTime" ColumnName="LastLoginDateTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CampaginTyre">
+            <EntityTypeMapping TypeName="wheelModel.CampaginTyre">
+              <MappingFragment StoreEntitySet="CampaginTyre">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CampaignId" ColumnName="CampaignId" />
+                <ScalarProperty Name="TyreId" ColumnName="TyreId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Car">
+            <EntityTypeMapping TypeName="wheelModel.Car">
+              <MappingFragment StoreEntitySet="Car">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarBody">
+            <EntityTypeMapping TypeName="wheelModel.CarBody">
+              <MappingFragment StoreEntitySet="CarBody">
+                <ScalarProperty Name="Wheels" ColumnName="Wheels" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ModelYearId" ColumnName="ModelYearId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CarModel">
+            <EntityTypeMapping TypeName="wheelModel.CarModel">
+              <MappingFragment StoreEntitySet="CarModel">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CarId" ColumnName="CarId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Currency">
+            <EntityTypeMapping TypeName="wheelModel.Currency">
+              <MappingFragment StoreEntitySet="Currency">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="DailyCurrency" ColumnName="DailyCurrency" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Image">
+            <EntityTypeMapping TypeName="wheelModel.Image">
+              <MappingFragment StoreEntitySet="Image">
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AltText" ColumnName="AltText" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TyreId" ColumnName="TyreId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModelYear">
+            <EntityTypeMapping TypeName="wheelModel.ModelYear">
+              <MappingFragment StoreEntitySet="ModelYear">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="wheelModel.Pages">
+              <MappingFragment StoreEntitySet="Pages">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="en" ColumnName="en" />
+                <ScalarProperty Name="ru" ColumnName="ru" />
+                <ScalarProperty Name="az" ColumnName="az" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="slider">
+            <EntityTypeMapping TypeName="wheelModel.slider">
+              <MappingFragment StoreEntitySet="slider">
+                <ScalarProperty Name="linkUrl" ColumnName="linkUrl" />
+                <ScalarProperty Name="en" ColumnName="en" />
+                <ScalarProperty Name="ru" ColumnName="ru" />
+                <ScalarProperty Name="az" ColumnName="az" />
+                <ScalarProperty Name="imgPath" ColumnName="imgPath" />
+                <ScalarProperty Name="style" ColumnName="style" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SoldTyre">
+            <EntityTypeMapping TypeName="wheelModel.SoldTyre">
+              <MappingFragment StoreEntitySet="SoldTyre">
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="SoldDate" ColumnName="SoldDate" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="TyreId" ColumnName="TyreId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tyre">
+            <EntityTypeMapping TypeName="wheelModel.Tyre">
+              <MappingFragment StoreEntitySet="Tyre">
+                <ScalarProperty Name="DisplayInDefault" ColumnName="DisplayInDefault" />
+                <ScalarProperty Name="priceOld" ColumnName="priceOld" />
+                <ScalarProperty Name="Sale" ColumnName="Sale" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="Stok" ColumnName="Stok" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="UsageStatus" ColumnName="UsageStatus" />
+                <ScalarProperty Name="Radius" ColumnName="Radius" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Width" ColumnName="Width" />
+                <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TyreBrand">
+            <EntityTypeMapping TypeName="wheelModel.TyreBrand">
+              <MappingFragment StoreEntitySet="TyreBrand">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TyreModel">
+            <EntityTypeMapping TypeName="wheelModel.TyreModel">
+              <MappingFragment StoreEntitySet="TyreModel">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="wheelModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUsers">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRoles">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

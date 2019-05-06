@@ -1,0 +1,37 @@
+#find-all{
+    position: relative;
+    padding: 163px 0;
+    background: url("../img/car-back.jpg") no-repeat center bottom ;
+    background-size: cover;
+    .overlay{
+        opacity: 0.6;
+        	background-color: #000000;
+    }
+    h2{
+        font-size: 70px;
+        color: $white;
+        line-height: 78px;
+        font-weight: 800;
+
+    }
+    h4{
+        font-weight: 800;
+        font-size: 35px;
+        color: $white;
+        line-height: 78px;
+        margin-bottom: 50px;
+    }
+    a{
+        margin-top: 50px;
+        border-radius: 3px;	
+        color: $white;
+        padding: 13px 40px 18px;
+        background-color: #1345D5;	
+        box-shadow: 0 0 8px 0 rgba(19,69,213,0.45);
+        &:hover{
+            background: $white;
+            color: $blue;
+                 
+        }
+    }
+}

@@ -1,0 +1,214 @@
+#header {
+    .top {
+       
+        .social {
+            display: inline-block;
+            a{
+
+                     i {
+                         width: 25px;
+                         height: 25px;
+                         background: $blue;
+                         color: $white;
+                         text-align: center;
+                         border-radius: 100%;
+                         line-height: 1.5;
+                         margin: 10px 0
+                     }
+                   
+                     &:hover{
+                         text-decoration: none;
+                     }
+            }
+              a:nth-of-type(2) {
+                  margin-left: 9px;
+              }
+       
+        }
+        .contact {
+            display: inline-block;
+            margin-left: 21px;
+            i{
+                    transform: rotateY(180deg);
+                    font-size: 16px;
+                    color: $blue;
+                    margin-right: 5px;
+            }
+            p {
+                display: inline-block;
+            }
+        }
+
+        .search-lang{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            .search-box{
+                position: relative;
+                margin-right: 15px;
+                input{
+                    	border-radius: 11.34px;
+                        background-color: #F2F2F2;
+                        padding: 2px 20px;
+                        font-weight: 500;
+                        border: none;
+                }
+                i{
+                    position: absolute;
+                    right: 10px;
+                    top: 6px;
+                    color: $blue;
+                }
+               input::placeholder{
+                   
+                   font-family: Visby-medium;
+               }
+            }
+
+            .language-selector{
+                margin-top: -2px;
+                img{
+                transform: scale(1.5);
+                       margin-top: -1px;
+                    margin-right: 4px;
+                }
+                button{
+                        color: #4A4A4A;
+                        background: white;
+                        border: none;
+                      font-weight: 800;
+                      padding: 0;
+                      font-size: 21px;
+                      &:focus{
+                          outline: none;
+                          border: none;
+                          box-shadow: none;
+                      }
+                      &::after{
+                          margin-left: 5px;
+                          color: $blue;
+                          vertical-align: 0.2em;
+                      }
+                }
+                .dropdown-menu{
+                        transform: translate3d(9px, 31px, 0px) !important;
+                        min-width: 6rem;
+                        .dropdown-item.active{
+                            background: $blue !important;
+                        }
+                }
+            }
+        }
+    }
+
+    .bottom{
+    
+        .navbar{
+            background: $blue !important;
+            .nav-item{
+                margin-right: 30px;
+                .nav-link{
+                    border-bottom-left-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                    
+                    font-size: 18px !important;
+                    font-weight: 800 !important;
+                    color: $white !important;
+                    @include transition(all 0.4s ease-in-out);
+                    &:hover{
+                        background: $white;
+                        color: $blue !important;
+                    }
+                }
+            }
+
+            .log-reg{
+                .btn-sign button:first-of-type{
+                    border: 1px solid transparent !important;
+                }
+
+                .btn-sign button:first-of-type:hover{
+                    background: $white;
+                    color: $blue;
+                    border: 1px solid $blue !important;
+                }
+                .btn-sign .btn-cancel:hover{
+                      background: $blue !important;
+                      color: $white !important;
+                }
+                .btn-group:first-child{
+                    margin-right: 25px;
+                }
+                .dropdown-toggle {
+                    position: relative;
+                    cursor: pointer;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 5px;
+                    background: transparent;
+                    color: $white;
+                    font-weight: 800;
+                    padding: 3px 35px;
+                    @include transition(all 0.4s ease-in-out);
+                    &:hover{
+                        color: $blue !important;
+                        background: $white !important;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                }
+             
+                .dropdown-menu{
+                    min-width: 18rem;
+                    padding: 0;
+                    margin-top: 18px;
+                     &::before {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        right: 24px;
+                        top: -9px;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid white;
+                     }
+                    form{
+                       
+                        padding-top: 0 !important;
+                        .btn    {
+                            background: $blue ;
+                            border: none;
+                        }
+                        input{
+                            	border-radius: 7px;
+                            	background-color: #FFFFFF;
+                            	box-shadow: 0 0 6px 2px rgba(187, 187, 187, 0.5);
+                            	
+                        }
+                    }
+                    p{
+                        font-weight: 800;
+                        font-size: 16px;
+                        color: $blue;
+                        margin: 11px 16px;
+                    }
+
+                   
+                }
+                .dropdown-register{
+                    min-width: 35rem;
+               
+                }
+                     .btn-cancel {
+                         margin-left: 12px;
+                         color: $blue !important;
+                         border: 0.81px solid #1345D5 !important;
+                         border-radius: 2.43px;
+                         background: $white !important;
+                     }
+            }
+        }
+
+    }
+}

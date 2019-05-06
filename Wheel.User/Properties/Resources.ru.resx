@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aboutUs" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="brand" xml:space="preserve">
+    <value>марка</value>
+  </data>
+  <data name="campaign" xml:space="preserve">
+    <value>Кампании</value>
+  </data>
+  <data name="car" xml:space="preserve">
+    <value>Aвтомобилей</value>
+  </data>
+  <data name="catalog" xml:space="preserve">
+    <value>Каталог</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Контакт</value>
+  </data>
+  <data name="createAccount" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="customTyres" xml:space="preserve">
+    <value>шины на заказ</value>
+  </data>
+  <data name="dHeight" xml:space="preserve">
+    <value>высота(%)</value>
+  </data>
+  <data name="dRadius" xml:space="preserve">
+    <value>диаметр (дюймов)</value>
+  </data>
+  <data name="dRelated" xml:space="preserve">
+    <value>Связанные продукты</value>
+  </data>
+  <data name="dSeason" xml:space="preserve">
+    <value>Эта зимняя шина?</value>
+  </data>
+  <data name="dStock" xml:space="preserve">
+    <value>Количество колес</value>
+  </data>
+  <data name="dUsage" xml:space="preserve">
+    <value>состояние</value>
+  </data>
+  <data name="dWidth" xml:space="preserve">
+    <value>ширина (mm)</value>
+  </data>
+  <data name="easyReturn" xml:space="preserve">
+    <value>Легкий возврат</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="fbUrl" xml:space="preserve">
+    <value>https://www.facebook.com/Avtoteker.az/</value>
+  </data>
+  <data name="featured" xml:space="preserve">
+    <value>Рекомендуемые</value>
+  </data>
+  <data name="featuredProducts" xml:space="preserve">
+    <value>Рекомендуемые товары</value>
+  </data>
+  <data name="findWheelTyre" xml:space="preserve">
+    <value>Найти колесо &amp; шину</value>
+  </data>
+  <data name="first" xml:space="preserve">
+    <value>Первый</value>
+  </data>
+  <data name="forAll" xml:space="preserve">
+    <value>ДЛЯ ВСЕХ ТИПОВ АВТОМОБИЛЕЙ</value>
+  </data>
+  <data name="fourSeason" xml:space="preserve">
+    <value>Всесезонные</value>
+  </data>
+  <data name="guaranteed" xml:space="preserve">
+    <value>100% гарантировано</value>
+  </data>
+  <data name="height" xml:space="preserve">
+    <value>высота</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="homePage" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="last" xml:space="preserve">
+    <value>Последний</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="menuCatalog" xml:space="preserve">
+    <value>Каталог</value>
+  </data>
+  <data name="menuNew" xml:space="preserve">
+    <value>новый</value>
+  </data>
+  <data name="message" xml:space="preserve">
+    <value>сообщение</value>
+  </data>
+  <data name="messageError" xml:space="preserve">
+    <value>Был ошибка на отправленного письма</value>
+  </data>
+  <data name="messageSuccess" xml:space="preserve">
+    <value>Ваше сообщение было успешно отправлено</value>
+  </data>
+  <data name="model" xml:space="preserve">
+    <value>Модель</value>
+  </data>
+  <data name="more" xml:space="preserve">
+    <value>Подробнее</value>
+  </data>
+  <data name="newModels" xml:space="preserve">
+    <value>Новые модели</value>
+  </data>
+  <data name="newTyre" xml:space="preserve">
+    <value>новые шины</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Следующий</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="oldTyre" xml:space="preserve">
+    <value>старые шины</value>
+  </data>
+  <data name="orderNewToOld" xml:space="preserve">
+    <value>Новых к старым</value>
+  </data>
+  <data name="orderOldToNew" xml:space="preserve">
+    <value>От старых к новым</value>
+  </data>
+  <data name="orderPriceHtL" xml:space="preserve">
+    <value>Цена: от выс.  до низк.</value>
+  </data>
+  <data name="orderPriceLtH" xml:space="preserve">
+    <value>Цена: от низк. до выс.</value>
+  </data>
+  <data name="ourServices" xml:space="preserve">
+    <value>Наши услуги</value>
+  </data>
+  <data name="page" xml:space="preserve">
+    <value>страница</value>
+  </data>
+  <data name="phoneNumber" xml:space="preserve">
+    <value>Номер телефона</value>
+  </data>
+  <data name="pleaseSelect" xml:space="preserve">
+    <value>Пожалуйста выберите</value>
+  </data>
+  <data name="pre" xml:space="preserve">
+    <value>Предыдущий</value>
+  </data>
+  <data name="price" xml:space="preserve">
+    <value>Цена</value>
+  </data>
+  <data name="productsOf" xml:space="preserve">
+    <value>продукты</value>
+  </data>
+  <data name="radius" xml:space="preserve">
+    <value>Радиус</value>
+  </data>
+  <data name="returnExchange" xml:space="preserve">
+    <value>возврат и обмен</value>
+  </data>
+  <data name="roundClock" xml:space="preserve">
+    <value>Круглосуточная бесплатная горячая линия (круглосуточно)</value>
+  </data>
+  <data name="sale" xml:space="preserve">
+    <value>Продажа</value>
+  </data>
+  <data name="satisfaction" xml:space="preserve">
+    <value>удовлетворение</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="seeAll" xml:space="preserve">
+    <value>Посмотреть все продукты</value>
+  </data>
+  <data name="send" xml:space="preserve">
+    <value>послать</value>
+  </data>
+  <data name="servicesText1" xml:space="preserve">
+    <value>Если Вы хотите приобрести шины для вашего автомобиля, желаемого размера и качества, то это намного проще с нами. В соответствии с вашими заказами, Наша компания поставляет шины с самым высоким качеством из Европы и Азии  в минимальные срок времени. Свяжитесь с нами, если вы сторонник  высокого качества. Мы постоянно активны для клиентов, чтобы приобрести шины достаточно в любое время связаться с нами в течение 7 дней в неделю. Рабочие часы нашего магазина: 9: 00-19: 00.</value>
+  </data>
+  <data name="servicesText2" xml:space="preserve">
+    <value>Дорогие клиенты,
+Расстояние не является препятствием для нас, чтобы удовлетворить Вас. Достаточно позвонить нам или написать с помощью онлайн-сервисов из любого региона Азербайджанской Республики. Мы стремимся предоставить максимального комфорта для Вас, а также есть услуга доставки. Это не конец ... Мы выполняем балансировку и замену шин ваших автомобилей, которые будут предоставлены нашим профессиональным персоналом в соответствии с максимальными стандартами качества.  Мы гарантируем точность балансировки с самой высокой технологией.</value>
+  </data>
+  <data name="servicesText3" xml:space="preserve">
+    <value>Уважаемые клиенты, наша цель создать  для вас универсальный сайт. При поиски шин Вы как можно скорее  и без каких-либо дополнительных расходов затрат, сможете войти в доступ , которое  в любое время,  Вы найдёте необходимое вам продукт. С помощью веб сайта, вы легко определите,  является ли на данном момент (шины) в нашем базе. А также  через веб сайт вы сможете связаться  с нами, чтобы получить информацию о различных кампаниях и, самое главное, без  каких-либо проблем  можно заказать продукт  через  онлайн  Интернет.</value>
+  </data>
+  <data name="servicesTitle1" xml:space="preserve">
+    <value>Продажа шинов</value>
+  </data>
+  <data name="servicesTitle2" xml:space="preserve">
+    <value>Доставка и баланс</value>
+  </data>
+  <data name="servicesTitle3" xml:space="preserve">
+    <value>о сайте</value>
+  </data>
+  <data name="sevenDay" xml:space="preserve">
+    <value>7-й день</value>
+  </data>
+  <data name="shopNow" xml:space="preserve">
+    <value>Покупка</value>
+  </data>
+  <data name="show" xml:space="preserve">
+    <value>Показать</value>
+  </data>
+  <data name="showTyres" xml:space="preserve">
+    <value>Показать шины кампании</value>
+  </data>
+  <data name="siteName" xml:space="preserve">
+    <value>Avto Təkər</value>
+  </data>
+  <data name="siteSlogan" xml:space="preserve">
+    <value>Интернет-магазин шин</value>
+  </data>
+  <data name="sortBy" xml:space="preserve">
+    <value>Сортировать по</value>
+  </data>
+  <data name="stockRemain" xml:space="preserve">
+    <value>в наличии</value>
+  </data>
+  <data name="summer" xml:space="preserve">
+    <value>Летние</value>
+  </data>
+  <data name="twitterUrl" xml:space="preserve">
+    <value>https://www.instagram.com/avtoteker17/</value>
+  </data>
+  <data name="tyres" xml:space="preserve">
+    <value>Шины</value>
+  </data>
+  <data name="tyresHome" xml:space="preserve">
+    <value>Шины</value>
+  </data>
+  <data name="unused" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="usage" xml:space="preserve">
+    <value>состояние</value>
+  </data>
+  <data name="used" xml:space="preserve">
+    <value>Используется</value>
+  </data>
+  <data name="view" xml:space="preserve">
+    <value>Показать</value>
+  </data>
+  <data name="viewAll" xml:space="preserve">
+    <value>Посмотреть все коллекции</value>
+  </data>
+  <data name="width" xml:space="preserve">
+    <value>Ширина</value>
+  </data>
+  <data name="winter" xml:space="preserve">
+    <value>Зимние</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="yourName" xml:space="preserve">
+    <value>Ваше имя</value>
+  </data>
+  <data name="ytUrl" xml:space="preserve">
+    <value>http://youtube.com</value>
+  </data>
+</root>

@@ -1,0 +1,115 @@
+
+@media (min-width: 1200px){
+  
+   
+ .container {
+     max-width: 1160px;
+ }
+}
+@media(max-width:1200px){
+     .nav-item {
+         margin-right: 13px !important;
+     }
+     .contact-form{
+         .btn-group{
+             margin-top: 26px;
+         }
+     }
+}
+@media(min-width:992px){
+    .nav-link{
+          padding: 26px 10px 18px;
+          margin-bottom: 13px;
+    }
+    .navbar{
+        padding: 0 1rem;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #services .col-lg-4{
+        margin-bottom: 40px !important;
+    }
+    #tyres .sort{
+            margin: 15px 44px 5px 15px !important;
+    }
+    #tyres .sorting .sort p:first-of-type {
+        margin-right: 7px;
+    }
+        .contact-form {
+            margin-top: 40px;
+        }
+    .dropdown-login{
+        left: 0 !important;
+        right: auto !important;
+        min-width: 266px !important;
+        margin-top: 9px !important;
+        &::before{
+            left: 24px;
+            top: -8px;
+        }
+    }
+    .dropdown-register{
+          min-width: 266px !important;
+          margin-top: 9px !important;
+             &::before {
+                 right: 24px;
+                 top: -8px;
+             }
+    }
+    .top{
+        margin-bottom: 25px;
+    }
+    .top .social-contact {
+        text-align: center;
+    }
+    .top .search-lang{
+        justify-content: center !important;
+    }
+}
+@media (max-width: 576px) {
+   #search .title h1 {
+       font-size: 50px !important;
+       line-height: 66px !important;
+   }
+   .owl-prev{
+       left: -14px !important;
+   }
+   .single-brand-logo{
+    margin-right: 20px !important; 
+   }
+   #about .title img{
+       width: 70%;
+   }
+   #tyres .title{
+       padding: 52px 70px 52px 70px !important;
+   }
+    #services-page .title{
+     padding: 52px 20px 52px 34px !important;
+    }
+    #contact .title {
+          padding: 52px 40px 52px 40px !important;
+    }
+}
+@media (max-width: 351px) {
+    .navbar .navbar-collapse{
+        margin-left: 1rem !important;
+    }
+    .top .search-lang{
+        flex-wrap: wrap;
+    }
+    .language-selector{
+        margin-top: 15px !important;
+    }
+}
+
+
+
+// @media (min-width: 1440px) {
+//     .container {
+//         max-width: 1440px;
+//     }
+// }
+

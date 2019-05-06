@@ -1,0 +1,83 @@
+﻿@using res = Wheel.User.Properties.Resources
+<section id="contact">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>@res.contact</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-box">
+                    <div class="content">
+                        <p>Tel: (012)4657253</p>
+                        <p>Mob: (077)5927444</p>
+                        <p>Email: avtoteker@mail.ru</p>
+                        <p>
+                            Address: Nərimanov rayonu Yusif Vazir Camanzaminli. (Mona liza restoranın yanı)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <div class="alert alert-success" style="display:none" id="messageReport" role="alert">
+                    </div>
+                    <form method="post" action="#" id="contactForm" class="contact-form" accept-charset="UTF-8">
+                        <div class="form-group">
+                            <input required placeholder="@res.yourName" name="name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input placeholder="@res.phoneNumber" name="phone" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input required placeholder="@res.email" name="email" type="text">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="@res.message" name="body" name="" id="" cols="30" rows="5"></textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button  id="contactFormSubmit" type="submit">@res.send</button>
+                            <button id="clear">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="map">
+    <div class="container">
+        <div class="col-lg-12">
+            <div id="google_map"></div>
+        </div>
+    </div>
+
+</section>
+                
+@section bottom{
+                        <script>
+                            $("#contactFormSubmit").click(function () {
+                                $.ajax({
+                                    url: "/pages/contact",
+                                    type: "POST",
+                                    data: $("#contactForm").serialize(),
+                                    success: function (response) {
+                                        $("#messageReport").removeClass();
+                                        $("#messageReport").addClass("alert alert-" + response.status);
+                                        $("#messageReport").text(response.message);
+                                        $("#messageReport").show();
+                                    }
+                                })
+                            });
+                            $(document).ready(function () {
+                                initialize();
+                            })
+                        </script>
+}
+           
+  
+
+

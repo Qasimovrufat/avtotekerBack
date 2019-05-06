@@ -1,0 +1,40 @@
+#services{
+  position: relative;
+    background: url("../img/services-back.jpg") no-repeat center bottom ;
+    background-size: cover;
+    padding-top: 67px;
+    .overlay{
+        opacity: 0.48;
+        	background-color: #000000;
+    }
+    .col-lg-12{
+        .title{
+            margin-bottom: 100px;
+            h1{
+                line-height: 61px;
+                font-size: 50px;
+                color: $white;
+                font-weight: 800;
+            }
+        }
+    }
+    .col-lg-4{
+        margin-bottom: 107px;
+        .title{
+            h6{
+                color: $white;
+                font-weight: 500;
+            }
+        }
+        .content{
+            p{
+                text-align: justify;
+                font-weight: 500;
+                color: $white;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+  
+}
