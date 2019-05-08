@@ -28,7 +28,28 @@
 }
 
 @media (max-width: 992px) {
+    #services-page{
+        .row.justify-content-end {
+            position: relative;
+            .row {
+                position: static !important; 
+             
+            }
+        }
+    }
+    .service-footer{
+        margin-top: 0 !important;
+    }
+     .service-footer.active{
+         margin-top: 0 !important;
+     }
 
+    .sorting{
+        justify-content: center !important;
+        .sort-button{
+            margin: 0 !important;
+        }
+    }
     #services .col-lg-4{
         margin-bottom: 40px !important;
     }
@@ -80,12 +101,18 @@
    .single-brand-logo{
     margin-right: 20px !important; 
    }
-   #about .title img{
-       width: 70%;
-   }
+
    #tyres .title{
        padding: 52px 70px 52px 70px !important;
    }
+ HEAD
+     #about .title {
+         padding: 52px 20px 52px 34px !important;
+     }
+
+   #product .title{
+    padding: 52px 70px 52px 70px !important;
+}
     #services-page .title{
      padding: 52px 20px 52px 34px !important;
     }

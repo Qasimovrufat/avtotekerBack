@@ -14,40 +14,48 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="sorting">
-                    <div class="row">
-                        <div class="col-lg-4 offset-lg-4">
+                <form action="@Url.Action("index","tyres")">
+                    <div class="row sorting ">
+
+
+                        <div class="col-lg-4">
+
                             <div class="sort">
-                                <p>@res.sortBy</p>
-                                <select class="selectpicker" name="total">
-                                    <option value="6" selected="selected">6</option>
-                                    <option value="9">9</option>
-                                    <option value="15">15</option>
-                                    <option value="1000">@res.viewAll</option>
+                                <p>@res.show</p>
+                                <select name="limit" class="selectpicker">
+                                    <option @(ViewBag.limit == 8 ?"selected":"") value="8">8</option>
+                                    <option @(ViewBag.limit == 16 ?"selected":"") value="16">16</option>
+                                    <option @(ViewBag.limit == 24 ?"selected":"") value="24">24</option>
                                 </select>
 
                             </div>
+
                         </div>
                         <div class="col-lg-4">
                             <div class="sort">
-                                <p>@res.show</p>
-                                <select class="selectpicker" name="order">
+                                <p>@res.sortBy</p>
+                                <select name="order" class="selectpicker">
                                     <option value="">@res.featured</option>
-                                    <option value="price">@res.orderPriceLtH</option>
-                                    <option value="priceDesc">@res.orderPriceHtL</option>
-                                    <option value="id">@res.orderOldToNew</option>
-                                    <option value="idDesc">@res.orderNewToOld</option>
-                                    <option value="brandAsc" selected="selected">@res.brand</option>
+                                    <option @(ViewBag.order == res.orderPriceLtH ? "selected":"") value="price">@res.orderPriceLtH</option>
+                                    <option @(ViewBag.order == @res.orderPriceHtL ? "selected":"")  value="priceDesc">@res.orderPriceHtL</option>
+                                    <option @(ViewBag.order == @res.orderOldToNew ? "selected":"") value="id">@res.orderOldToNew</option>
+                                    <option @(ViewBag.order == @res.orderNewToOld ? "selected":"") value="idDesc">@res.orderNewToOld</option>
+                                    <option  @(ViewBag.order == @res.brand ? "selected":"") value="brandAsc" selected="selected">@res.brand</option>
                                 </select>
 
                             </div>
                         </div>
+                        <div class="sort-button">
+                            <button class="btn-sort" type="submit">Sort</button>
+
+                        </div>
+
                     </div>
-                </div>
+                </form>
 
             </div>
         </div>
-        <div class="products">
+        <div id="products">
             <div class="row">
                 @foreach (var item in Model.saleTyres.tyreList)
                 {
@@ -94,20 +102,24 @@
                             @if (ViewBag.page > 1)
                             {
                                 <li class="page-item">
-                                    <a class="page-link prev" href="#">
+                                    <a class="page-link prev" href="@Url.Action("index","tyres",new {page=ViewBag.page-1,BrandId = Model.tyreSearchModel.BrandId,
+                                     ModelId = Model.tyreSearchModel.ModelId , Width = Model.tyreSearchModel.Width, Height = Model.tyreSearchModel.Height, Radius = Model.tyreSearchModel.Radius,  order = ViewBag.order,limit=ViewBag.limit    })">
                                         <i class="fa fa-angle-left"></i>
                                     </a>
                                 </li>
                             }
                             @for (int k = 0; k < ViewBag.total; k++)
                             {
-                                <li class="page-item @(ViewBag.page==k+1?"active":"")"><a class="page-link" href="@Url.Action("index","tyres",new {page=k+1 })">@(k+1)</a></li>
+                                <li class="page-item @(ViewBag.page==k+1?"active":"")"><a class="page-link" href="@Url.Action("index","tyres",new {page=k+1,BrandId = Model.tyreSearchModel.BrandId,
+                                     ModelId = Model.tyreSearchModel.ModelId , Width = Model.tyreSearchModel.Width, Height = Model.tyreSearchModel.Height, Radius = Model.tyreSearchModel.Radius,
+                                      order = ViewBag.order,limit=ViewBag.limit                                                    })">@(k+1)</a></li>
 
                             }
                             @if (ViewBag.page < ViewBag.total)
                             {
                                 <li class="page-item">
-                                    <a class="page-link next" href="#">
+                                    <a class="page-link next" href="@Url.Action("index","tyres",new {page=ViewBag.page+1,BrandId = Model.tyreSearchModel.BrandId,
+                                     ModelId = Model.tyreSearchModel.ModelId , Width = Model.tyreSearchModel.Width, Height = Model.tyreSearchModel.Height, Radius = Model.tyreSearchModel.Radius,  order = ViewBag.order,limit=ViewBag.limit    })">
                                         <i class="fa fa-angle-right"></i>
 
                                     </a>

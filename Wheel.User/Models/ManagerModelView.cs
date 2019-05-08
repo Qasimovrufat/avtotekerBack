@@ -16,6 +16,7 @@ namespace Wheel.User.Models
         private List<breadcrumbModel> _breadCrumb = new List<breadcrumbModel>();
         private List<catalogViewModel> _catalog = new List<catalogViewModel>();
         private TyreViewModel _tyreDetails = new TyreViewModel();
+        public TyreSearchModel tyreSearchModel = new TyreSearchModel();
         private List<DAL.Context.Car> _carbrand = new List<DAL.Context.Car>();
         private double _currency;
         public double currency
@@ -90,7 +91,7 @@ namespace Wheel.User.Models
 
     public class tyreModel
     {
-        public List<Wheel.DAL.Models.TyreViewModel> tyreList { get; set; }
+        public IEnumerable<Wheel.DAL.Models.TyreViewModel> tyreList { get; set; }
     }
 
     public class catalogViewModel

@@ -81,4 +81,122 @@
             }
         }
     }
+    .related-products{
+        .title-related{
+            margin-top: 113px;
+            h1{
+                color: #4A4A4A;
+                    font-family: "Visby CF";	
+                    font-size: 20px;	
+                    font-weight: 800;	
+                    line-height: 24px;
+            }
+        }
+    }
+    .related-products-carousel{
+        margin-top: 60px;
+        .product-box{
+            position: relative;
+            margin-bottom: 84px;
+            &:hover .details{
+             color: $white;
+             background: $blue;
+             border-color: $blue;
+             box-shadow: 0 0 8px 0 rgba(19,69,213,0.45);
+            }
+             .brand{
+                 margin-top: 30px;
+                 h6{
+                     color: #4A4A4A;
+                     font-size: 18px;
+                     font-weight: 800;
+                     line-height: 21px;
+                 }
+             }
+             .size{
+                 p{
+                     color: #4A4A4A;
+                     font-size: 15px;
+                     font-weight: 500;
+                     line-height: 18px;
+                 }
+             }
+             .price{
+                 margin-bottom: 20px;
+                 span{
+                     color: #4A4A4A;
+                     font-size: 20px;
+                     font-weight: 800;
+                     line-height: 24px;
+                     margin-right: 15px;
+                 }
+                 span.line-through{
+                     text-decoration: line-through;
+                     color:  #777777;
+                 }
+             }
+             .details{
+                 border: 1px solid #1345D5;
+                     border-radius: 3px;
+                     color: #1345D5;
+                     padding: 7px 23px;
+               
+             }
+         }
+         .upper{
+          
+             .img{
+                 img{
+                     width: 100%;
+                     height: 100%;
+                     
+                 }
+             }
+         }
+         .owl-nav{
+            display: block !important;
+        }
+        &:hover .owl-nav .owl-prev{
+            opacity: 1;
+            visibility: visible;
+        }
+        &:hover .owl-nav .owl-next{
+            opacity: 1;
+            visibility: visible;
+        }
+        .owl-nav .owl-prev,.owl-next{
+            
+      
+        color: $blue !important;
+        border-radius: 3px;
+        font-size: 25px !important;
+        height: 25px;
+        
+        line-height: 20px !important;
+        position: absolute;
+        text-align: center;
+        top: 34%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease 0s;
+        width: 25px;
+        opacity: 0;
+        visibility: hidden;
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            background-color: $blue !important;
+            color: $white !important;
+           
+        }
+        }
+        .owl-next{
+            left: auto;
+        right: 0px;
+        }
+        .owl-prev{
+            right: auto;
+            left: -30px ;
+        }
+    }
 }

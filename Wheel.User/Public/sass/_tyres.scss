@@ -23,10 +23,13 @@
     .sorting{
         border-radius: 7px;	
         background-color: #1345D5;
-        .sort{
+        display: flex;
+        justify-content: flex-end;
+        .sort,.sort-button{
             display: flex;
             margin: 15px 44px 5px 0;
             p{
+
                 color: #FFFFFF;	
                 font-family: "Visby CF";	
                 font-size: 20px;	
@@ -36,7 +39,23 @@
                 margin-top: 8px;
             }
             select{
+               
             }
+        }
+        .btn-sort{
+            position: relative;
+    cursor: pointer;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background: transparent;
+    color: #FFFFFF;
+    font-weight: 800;
+    padding: 3px 35px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 11px;
         }
     }
     .product-box{
