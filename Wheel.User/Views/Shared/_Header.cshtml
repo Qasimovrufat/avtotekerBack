@@ -34,13 +34,13 @@
                                 <img src="Public/img/globus.svg" alt="">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                    EN
+                                  @Model.lang.ToUpper()
                                 </button>
                                 <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item active" href="/Home/SetCulture/?culture=en-US&href=@Request.Url">EN</a>
+                                    <a class="dropdown-item @(Model.lang=="en"? "active":"")" href="/Home/SetCulture/?culture=en-US&href=@Request.Url">EN</a>
 
-                                    <a class="dropdown-item" href="/Home/SetCulture/?culture=az&href=@Request.Url">AZ</a>
-                                    <a class="dropdown-item" href="/Home/SetCulture/?culture=ru&href=@Request.Url">RU</a>
+                                    <a class="dropdown-item @(Model.lang=="az"? "active":"")" href="/Home/SetCulture/?culture=az&href=@Request.Url">AZ</a>
+                                    <a class="dropdown-item @(Model.lang=="ru"? "active":"")" href="/Home/SetCulture/?culture=ru&href=@Request.Url">RU</a>
 
                                 </div>
                             </div>

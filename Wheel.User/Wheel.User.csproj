@@ -328,6 +328,7 @@
     <Content Include="Views\Tyres\Details.cshtml" />
     <Content Include="Views\Pages\Campaign.cshtml" />
     <Content Include="Views\Pages\CampaignDetails.cshtml" />
+    <Content Include="Views\Pages\Services.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

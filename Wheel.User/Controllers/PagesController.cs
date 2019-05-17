@@ -104,5 +104,10 @@ namespace Wheel.User.Controllers
             }
 
         }
+
+        public ActionResult Services()
+        {
+            return View();
+        }
     }
 }

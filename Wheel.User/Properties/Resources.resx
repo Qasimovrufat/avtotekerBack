@@ -141,26 +141,29 @@
   <data name="customTyres" xml:space="preserve">
     <value>Custom Tyres</value>
   </data>
+  <data name="details" xml:space="preserve">
+    <value>Details</value>
+  </data>
   <data name="dHeight" xml:space="preserve">
-    <value>Hündürlüyü (%)</value>
+    <value>Height</value>
   </data>
   <data name="dRadius" xml:space="preserve">
-    <value>Diametri (Düym)</value>
+    <value>Radius</value>
   </data>
   <data name="dRelated" xml:space="preserve">
     <value>Other fine products</value>
   </data>
   <data name="dSeason" xml:space="preserve">
-    <value>Bu qış təkəridir?</value>
+    <value>Season</value>
   </data>
   <data name="dStock" xml:space="preserve">
-    <value>Ümumi təkərlərin sayı</value>
+    <value>Stock</value>
   </data>
   <data name="dUsage" xml:space="preserve">
-    <value>Vəziyyəti</value>
+    <value>Usage</value>
   </data>
   <data name="dWidth" xml:space="preserve">
-    <value>Eni (mm)</value>
+    <value>Width</value>
   </data>
   <data name="easyReturn" xml:space="preserve">
     <value>Easy return</value>

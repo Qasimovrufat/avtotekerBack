@@ -215,6 +215,8 @@ C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Webpages.Razor.xml
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Helpers.xml
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\System.Web.Mvc.xml
-C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csprojResolveAssemblyReference.cache
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.dll
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.pdb
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csprojAssemblyReference.cache
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csproj.CoreCompileInputs.cache
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csproj.CopyComplete

@@ -208,7 +208,7 @@ button:focus, input:focus, textarea:focus {
     margin-top: 26px; } }
 @media (min-width: 992px) {
   .nav-link {
-    padding: 26px 0px 18px !important;
+    padding: 26px 5px 18px !important;
     margin-bottom: 13px; }
 
   .navbar {
@@ -586,15 +586,15 @@ button:focus, input:focus, textarea:focus {
       font-size: 15px;
       font-weight: 500;
       line-height: 18px; }
-    #products .product-box .price {
+    .price {
       margin-bottom: 20px; }
-      #products .product-box .price span {
+      .price span {
         color: #4A4A4A;
         font-size: 20px;
         font-weight: 800;
         line-height: 24px;
         margin-right: 5px; }
-      #products .product-box .price span.line-through {
+     .price span.line-through {
         text-decoration: line-through;
         color: #777777; }
     #products .product-box .details {

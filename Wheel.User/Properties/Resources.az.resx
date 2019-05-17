@@ -141,6 +141,9 @@
   <data name="customTyres" xml:space="preserve">
     <value>XÜSUSİ Şinlər</value>
   </data>
+  <data name="details" xml:space="preserve">
+    <value>Ətrafli</value>
+  </data>
   <data name="dHeight" xml:space="preserve">
     <value>Hündürlüyü (%)</value>
   </data>

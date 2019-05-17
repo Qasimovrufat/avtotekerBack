@@ -16,10 +16,12 @@
                         <div class="tab-search">
                             <form action="/tyres/" method="GET" id="searchbytyres">
                                 <div class="form-group">
-                                    <select data-live-search="true" name="BrandId" id="BrandId" class="selectpicker" data-width="100%"></select>
+                                    <select data-live-search="true" name="BrandId" id="BrandId" class="selectpicker" data-width="100%">
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" name="ModelId" id="ModelId" class="selectpicker" data-width="100%"></select>
+                                    <select data-live-search="true" name="ModelId" id="ModelId" class="selectpicker" data-width="100%">
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <select data-live-search="true" name="Width" id="WidthId" class="selectpicker" data-width="100%"></select>
@@ -268,7 +270,7 @@
 
 
                                 </div>
-                                <a class="details" href="/tyres/details/?id=@tyre.Id">Details</a>
+                                <a class="details" href="/tyres/details/?id=@tyre.Id">@res.details</a>
                             </div>
                         </div>
                     </a>

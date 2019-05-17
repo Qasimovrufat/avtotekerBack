@@ -10,11 +10,14 @@ $(document).ready(function(){
            moreText.removeClass("active").addClass("deactive")
            dots.removeClass("deactive").addClass("active")
            btnText.text("Read more")
+           $(".service-footer").removeClass("active")
        }
        else{
            moreText.removeClass("deactive").addClass("active")
            dots.removeClass("active").addClass("deactive")
            btnText.text("Read less")
+           $(".service-footer").addClass("active")
+
        }
    })
 

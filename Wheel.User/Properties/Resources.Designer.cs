@@ -19,7 +19,7 @@ namespace Wheel.User.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -133,7 +133,16 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hündürlüyü (%).
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string details {
+            get {
+                return ResourceManager.GetString("details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
         /// </summary>
         public static string dHeight {
             get {
@@ -142,7 +151,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Diametri (Düym).
+        ///   Looks up a localized string similar to Radius.
         /// </summary>
         public static string dRadius {
             get {
@@ -160,7 +169,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bu qış təkəridir?.
+        ///   Looks up a localized string similar to Season.
         /// </summary>
         public static string dSeason {
             get {
@@ -169,7 +178,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ümumi təkərlərin sayı.
+        ///   Looks up a localized string similar to Stock.
         /// </summary>
         public static string dStock {
             get {
@@ -178,7 +187,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vəziyyəti.
+        ///   Looks up a localized string similar to Usage.
         /// </summary>
         public static string dUsage {
             get {
@@ -187,7 +196,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Eni (mm).
+        ///   Looks up a localized string similar to Width.
         /// </summary>
         public static string dWidth {
             get {
