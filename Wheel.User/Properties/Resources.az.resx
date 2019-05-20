@@ -390,4 +390,38 @@
   <data name="ytUrl" xml:space="preserve">
     <value>http://youtube.com</value>
   </data>
+  <data name="services" xml:space="preserve">
+    <value>Xidmətlər</value>
+  </data>
+  <data name="servicePage1" xml:space="preserve">
+    <value>Yaxşı servisin sirri - təmin edilən xidmətlərin keyfiyyəti və avadanlıqların dəqiqliyidir. Təəssüf ki, şinmontaj emalatxanaların
+                            sahibləri avadanlıqların vəziyyətini lazımı qaydada yoxlamırlar. Bundan əlavə, "yolkənarı
+                            servizlər" istifadəyə yararsız avadanlıqlardan istifadə edirlər.</value>
+  </data>
+  <data name="servicePage2" xml:space="preserve">
+    <value>Məsələn, Hoffmann balans
+                            dəzgahları hətta 5 qramı keçməyən normativlərə malikdirlər. Və əgər xata icazə verilən normaları
+                            aşarsa, məsuliyyətli şirkətlər bu avadanlıqdan dərhal azad olurlar, və onlar əksər hallarda
+                            garaj və yolkənarı şinmontajlar tərəfindən çox aşağı qiymətə alınırlar. Ancaq yanlış işləyən
+                            dəzgah yanlış nəticələr göstərir və yenidən balanslaşdırma lazım ola bilər.</value>
+  </data>
+  <data name="servicePage3" xml:space="preserve">
+    <value>Avtomobil şinləri
+                            sabit yüklərə məruz qalır və düzgün quraşdırılmamış şinlər daha tez aşınır və yol qəzalarına
+                            səbəb olurlar. Bu səbəbdən, şinmontaj məntəqəsini seçdikdə</value>
+  </data>
+  <data name="servicePage4" xml:space="preserve">
+    <value>mütəxəssislərinin səlahiyyətləri və peşəkarlıqlarına əmin olmaq lazımdır. Radius şirkəti, ən müasir avadanlıqlarda, təcrübəli
+                                peşəkarlar tərəfindən görülən şinmontaj xidmətini təklif edir. Radius müasir serviz mərkəzinin
+                                mütəxəssisləri, şinmontaj işlərini yerinə yetirərkən, yüksək keyfiyyətli istehlak materiallarından
+                                istifadə edirlər. Keyfiyyətli şinmontaj sayəsində şassinin istismar müddəti artır, rahatlıq
+                                göstəriciləri və ümumiyyətlə avtomobilin bütün istismar xüsusiyyətləri yaxşılaşır. Avtomobilə
+                                xidmət, video nəzarət kameralarının qeydiyyatı altında həyata keçirilir. İşçilərin peşəkarlığı,
+                                müasir materiallarda, ən yaxşı təmir alətlərdən və avadanlıqlardan istifadə edərək, müştərilərilərimizə
+                                premium səviyyədə şinmontaj xidməti ilə təmin edirik! Radius şin mərkəzində həyata keçirilən
+                                bütün şinmontaj` işlərinə zəmanət verilir.</value>
+  </data>
+  <data name="customWheelsRims" xml:space="preserve">
+    <value>Xüsusi təkərlər &amp; Disklər</value>
+  </data>
 </root>

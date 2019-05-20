@@ -220,3 +220,5 @@ C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csprojAssemblyReference.cache
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csproj.CoreCompileInputs.cache
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\obj\Debug\Wheel.Security.csproj.CopyComplete
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Antlr3.Runtime.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.Security\bin\Antlr3.Runtime.pdb

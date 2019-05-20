@@ -107,7 +107,16 @@ namespace Wheel.User.Controllers
 
         public ActionResult Services()
         {
-            return View();
+            cModel.breadCrumb = new List<Models.breadcrumbModel>{
+                new Models.breadcrumbModel { home=true,name=res.home,url="/",style="homepage-link" },
+                new Models.breadcrumbModel {home=false,name=res.aboutUs,url=null,style="" }
+            };
+            cModel.currency = Db.Currency.OrderByDescending(o => o.id).FirstOrDefault().DailyCurrency;
+            cModel.lang = CultureHelper.GetNeutralCulture(CultureHelper.GetCurrentCulture());
+            cModel.catalog = Db.TyreBrand.Where(w => w.TyreModel.Count > 1).Select(s => new catalogViewModel { Id = s.Id, Name = s.Name, Models = s.TyreModel.ToList() }).ToList();
+            cModel.saleTyres.tyreList = Db.Tyre.Where(w => w.Sale > 0).Select(s => new DAL.Models.TyreViewModel { Id = s.Id, BrandName = s.TyreModel.TyreBrand.Name, ModelName = s.TyreModel.Name, Price = s.Price, Sale = s.Price - s.Sale, Images = s.Image.Where(w => w.AltText == "default").ToList() }).Take(4).ToList();
+            cModel.pageContent = Db.Pages.Single(w => w.alias == "services");
+            return View(cModel);
         }
     }
 }

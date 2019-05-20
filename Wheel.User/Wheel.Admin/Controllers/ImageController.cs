@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -24,6 +23,8 @@ namespace Wheel.Admin.Controllers
         [HttpGet]
         public ActionResult Delete(int id,int? tyreId)
         {
+         
+            
             try
             {
                 var data = Db.Image.SingleOrDefault(i => i.Id == id);

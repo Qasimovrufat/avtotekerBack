@@ -17,10 +17,13 @@
                             <form action="/tyres/" method="GET" id="searchbytyres">
                                 <div class="form-group">
                                     <select data-live-search="true" name="BrandId" id="BrandId" class="selectpicker" data-width="100%">
+                                        <option value="" selected disabled hidden>Brand</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <select data-live-search="true" name="ModelId" id="ModelId" class="selectpicker" data-width="100%">
+                                        <option value="" selected disabled hidden>Model</option>
+
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -52,61 +55,35 @@
                             </form>
                         </div>
                     </div>
-                    <div class="tab-content" id="searchCar">
-                        <div class="tab-search">
-                            <form>
+                    <div  class="tab-content" id="searchCar">
+                        <div class="tab-search" id="car">
+                            <form id="searchbycar" action="/tyres/" method="GET">
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker">
-                                        <option value="0">Car</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
+                                    <select data-live-search="true" class="selectpicker" name="BrandIdCar" id="BrandIdCar">
+                                        <option selected disabled value="0">@*@res.pleaseSelect*@ @res.car</option>
+
+                                        @foreach (var car in Model.carbrand)
+                                        {
+                                            <option value="@car.Id">@car.Name</option>
+                                        }
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker">
-                                        <option value="0">Model</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
+                                    <select data-live-search="true" class="selectpicker" name="ModelIdCar" disabled id="ModelIdCar">
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker">
-                                        <option value="0">Width</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
+                                    <select data-live-search="true" class="selectpicker" name="YearCar" disabled id="YearCar">
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker">
-                                        <option value="0">Height</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
+                                    <select data-live-search="true" class="selectpicker" name="BanCar" disabled id="BanCar">
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker">
-                                        <option value="0">Radius</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="selectpicker">
-                                        <option value="0">Usage status</option>
-                                        <option>Ketchup</option>
-                                        <option>Barbecue</option>
-                                    </select>
-                                </div>
-                                <div class="form-group range-slider">
-                                    <p>Price</p>
-                                    <b>10</b>
-                                    <input data-slider-tooltip="show" id="ex1" type="text" class="span2" value="" data-slider-min="10" data-slider-max="1000"
-                                           data-slider-step="5" data-slider-value="[0,1000]" />
-                                    <b>1000</b>
-                                </div>
+                              
+                               
                                 <hr>
-                                <button type="submit" class="btnSearch">Search </button>
-                                <a href="" class="Reset">Reset all filters</a>
+                              
                             </form>
                         </div>
                     </div>
@@ -114,7 +91,7 @@
             </div>
             <div class="col-lg-7 align-self-center offset-lg-1">
                 <div class="title">
-                    <h1>CUSTOM WHEELS & RIMS</h1>
+                    <h1>@res.customWheelsRims</h1>
                 </div>
             </div>
 
@@ -292,44 +269,38 @@
             <div class="col-lg-12">
                 <div class="title">
                     <h1>
-                        Our Services
+                       @res.ourServices
                     </h1>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="title">
-                    <h6> ABOUT SITE</h6>
+                    <h6>@res.servicesTitle3</h6>
 
                 </div>
                 <div class="content">
                     <p>
-                        Thinking about of you we started the online activities of our company. Dear customers,our goal is
-                        to create possibility for you to achieve the desired product in any time without any additional
-                        cost. Through the online site you can get information very quickly about the product that if
-                        it is based in the firm or not, get information about various compaigns existing in the firm
-                        and to contact with us.
+                      @res.servicesText3
                     </p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="title">
                     <h6>
-                        BALANCE AND DELIVERY
+                      @res.servicesTitle2
                     </h6>
 
                 </div>
                 <div class="content">
                     <p>
-                        Dear customers, Distance is not an obstacle for us to make you satisfied any more. It is enough to call us or communicate
-                        via online services from any region of Azerbaijan Republic. We aim the provosion of comfort for
-                        you by delivering any product you are in want of to your adress.
+                     @res.servicesText2
                     </p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="title">
                     <h6>
-                        SALES TIRES
+                      @res.servicesTitle1
 
 
 
@@ -338,11 +309,7 @@
                 </div>
                 <div class="content">
                     <p>
-                        Owning the tires with wide range of sizes and quality is a lot easier with us. Our company supplies
-                        the tires with the highest quality from Europe and Asia in minimum time intervals in line with
-                        your orders. Contact us, if you are also in favor of quality. We are constantly active for the
-                        customers to be able to be in contact with us anytime they need. Please, contact us in 7 days
-                        of a week.The active hours of our store: 9:00-19:00.
+                      @res.servicesText1
                     </p>
                 </div>
             </div>
@@ -362,7 +329,7 @@
 
                     </div>
                     <div class="content">
-                        <p> Round-the-clock free hotline (24/7)</p>
+                        <p> @res.roundClock</p>
                     </div>
                 </div>
             </div>
@@ -373,12 +340,12 @@
                     </div>
                     <div class="title">
                         <p>
-                            RETURN & EXCHANGE
+                         @res.returnExchange
                         </p>
 
                     </div>
                     <div class="content">
-                        <p> 7 DAY EASY RETURN</p>
+                        <p>@res.sevenDay @res.easyReturn</p>
                     </div>
                 </div>
             </div>
@@ -389,12 +356,12 @@
                     </div>
                     <div class="title">
                         <p>
-                            SATISFACTION
+                           @res.satisfaction
                         </p>
 
                     </div>
                     <div class="content">
-                        <p> 100% GUARANTEED</p>
+                        <p> @res.guaranteed</p>
                     </div>
                 </div>
             </div>
@@ -407,7 +374,34 @@
         <div id="google_map"></div>
     </div>
 </section>
+<div id="newCarModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class=" modal-title">@*@res.pleaseSelect*@ @res.tyres</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
 
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header frontPanel">Front</div>
+                    <div class="card-body">
+                        <ul id="frontPanel"></ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Rear</div>
+                    <div class="card-body rearPanel">
+                        <ul id="rearPanel"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_Footer")
 
 @section script{
     <script>
@@ -575,13 +569,13 @@
                                         $.each(thisTyre.front, function (tindex, front) {
                                             // frontTyre.push({ width: front.tire_width[0], height: front.tire_aspect_ratio[0], radius: front.rim_diameter[0] });
                                             if (front.tire_width[0] != "") {
-                                                frontTyre.push('<li><a class="btn btn-default" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
+                                                frontTyre.push('<li><a class="btn btn-primary" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
                                             }//console.log(frontTyre)
                                         })
                                         $.each(thisTyre.rear, function (tindex, rear) {
                                             //rearTyre.push({ width: rear.tire_width[0], height: rear.tire_aspect_ratio[0], radius: rear.rim_diameter[0] });
                                             if (rear.tire_width[0] != "") {
-                                                rearTyre.push('<li><a  class="btn btn-default"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
+                                                rearTyre.push('<li><a  class="btn btn-primary"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
                                             }// console.log(rearTyre)
                                         })
                                     })
@@ -599,7 +593,7 @@
 
 }
 <script>
-    
+
             //$.fn.serializeObject = function () {
             //    var o = {};
             //    var a = this.serializeArray();
@@ -621,7 +615,7 @@
             //    tooltip_position: 'bottom',
 
             //}).on("slideStop", function (slideEvt) { refreshList(); });
-    
+
 
             $("#searchbytyres select").change(function () {
                     refreshList($(this));
@@ -641,6 +635,7 @@
                     data: formData,
                     dataType: "json",
                     success: function (response) {
+                    
                         var oldValue = $(e).html();
                         $(".selectpicker.clear").html("");
                         if (!e) {
@@ -763,13 +758,13 @@
                                         $.each(thisTyre.front, function (tindex, front) {
                                             // frontTyre.push({ width: front.tire_width[0], height: front.tire_aspect_ratio[0], radius: front.rim_diameter[0] });
                                             if (front.tire_width[0] != "") {
-                                                frontTyre.push('<li><a class="btn btn-default" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
+                                                frontTyre.push('<li><a class="btn btn-primary" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
                                             }//console.log(frontTyre)
                                         })
                                         $.each(thisTyre.rear, function (tindex, rear) {
                                             //rearTyre.push({ width: rear.tire_width[0], height: rear.tire_aspect_ratio[0], radius: rear.rim_diameter[0] });
                                             if (rear.tire_width[0] != "") {
-                                                rearTyre.push('<li><a  class="btn btn-default"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
+                                                rearTyre.push('<li><a  class="btn btn-primary"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
                                             }// console.log(rearTyre)
                                         })
                                     })

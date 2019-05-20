@@ -133,6 +133,15 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CUSTOM WHEELS &amp; RIMS.
+        /// </summary>
+        public static string customWheelsRims {
+            get {
+                return ResourceManager.GetString("customWheelsRims", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
         public static string details {
@@ -624,6 +633,53 @@ namespace Wheel.User.Properties {
         public static string send {
             get {
                 return ResourceManager.GetString("send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///The secret of good service is the quality of the services provided and accuracy of the equipment. Unfortunately, the shinshaft workshops owners do not properly check the condition of the equipment. In addition, &quot;roadside  servises &quot;using unusable equipment..
+        /// </summary>
+        public static string servicePage1 {
+            get {
+                return ResourceManager.GetString("servicePage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For example, Hoffmann&apos;s balance. They have even the norms that do not exceed 5 grams. And if the error is allowed in the rule. If it exceeds, responsible companies are immediately released from this equipment, and in most cases garage and roadside shrinkage at a very low price. But it&apos;s wrong  the bench shows incorrect results and may need to be re-balanced..
+        /// </summary>
+        public static string servicePage2 {
+            get {
+                return ResourceManager.GetString("servicePage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Car tires  it is exposed to constant loads and undamaged tires are faded more quickly and are subject to traffic accidents cause. Therefore, when choosing a bus station.
+        /// </summary>
+        public static string servicePage3 {
+            get {
+                return ResourceManager.GetString("servicePage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to professionals and their professionalism. Radius company, experienced in the most up-to-date equipment offers a shinmasting service by professionals. Radius is a modern service center experts, high quality consumables while performing shinning jobs
+        ///use. Due to high-quality shinarm, the chassis&apos;s expiration period increases,comfort  indicators and generally all the exploits of the car are improving. To the car service is carried out under the registration of video surveillance cameras. Employee professionali [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string servicePage4 {
+            get {
+                return ResourceManager.GetString("servicePage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Services.
+        /// </summary>
+        public static string services {
+            get {
+                return ResourceManager.GetString("services", resourceCulture);
             }
         }
         

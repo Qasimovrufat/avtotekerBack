@@ -3,6 +3,14 @@
   src: url("../fonts/VisbyCF-Medium.woff"); }
 .deactive {
   display: none !important; }
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+}
+
+#frontPanel li, #rearPanel li {
+    display: inline;
+}
 
 body {
   font-weight: 800 !important;
@@ -121,6 +129,7 @@ button:focus, input:focus, textarea:focus {
     #header .bottom .navbar .nav-item .nav-link {
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
+      white-space:nowrap;
       font-size: 18px !important;
       font-weight: 800 !important;
       color: #FFFFFF !important;
@@ -145,6 +154,7 @@ button:focus, input:focus, textarea:focus {
   #header .bottom .navbar .log-reg .dropdown-toggle {
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
     border: 1px solid #FFFFFF;
     border-radius: 5px;
     background: transparent;

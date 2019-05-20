@@ -208,6 +208,7 @@ C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\bin\Syste
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\bin\System.Web.WebPages.Razor.xml
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\obj\Debug\Wheel.DAL.dll
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\obj\Debug\Wheel.DAL.pdb
-C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\obj\Debug\Wheel.DAL.csprojAssemblyReference.cache
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\obj\Debug\Wheel.DAL.csproj.CoreCompileInputs.cache
 C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\obj\Debug\Wheel.DAL.csproj.CopyComplete
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\bin\Antlr3.Runtime.dll
+C:\Users\shohrat.maharramov\Desktop\Rufat\avotekerBack-Rufat\Wheel.DAL\bin\Antlr3.Runtime.pdb

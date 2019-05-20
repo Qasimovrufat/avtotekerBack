@@ -1,8 +1,74 @@
-﻿
+﻿@using res = Wheel.User.Properties.Resources
 @{
-   
+
     ViewBag.Title = "Services";
 }
 
-<h2>Services</h2>
+<section id="services-page">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div class="title">
+                    <h1>@res.services</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-2">
+                <div class="service-box">
+                    <div class="img">
+                        <img src="~/Public/img/tyre-mounting-blue.png" alt="">
+                        <img src="~/Public/img/tyre-mounting-white.png" alt="">
+                    </div>
+                    <h4>Tire mounting</h4>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="service-box">
+                    <div class="img">
+                        <img src="~/Public/img/tyre-repair-blue.png" alt="">
+                        <img src="~/Public/img/tyre-repair-white.png" alt="">
+                    </div>
+                    <h4>Tire repair</h4>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="service-box">
+                    <div class="img">
+                        <img src="~/Public/img/disc-repair-blue.png" alt="">
+                        <img src="~/Public/img/disc-repair-white.png" alt="">
+                    </div>
+                    <h4>Disc repair</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-lg-8">
+                <div class="service-img owl-carousel">
+                    <div class="img"><img src="~/Public/img/service-1.png" alt=""></div>
+                    <div class="img"><img src="~/Public/img/service-2.png" alt=""></div>
+                    <div class="img"><img src="~/Public/img/service-3.png" alt=""></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="service-text">
+                        <p>
+                            @res.servicePage1<br>
+                            <br>
+                            @res.servicePage2
+                          <br>
+                            <br>
+                           @res.servicePage3<span class="dots active">…</span> <span class="more deactive">
+                               @res.servicePage4
+                            </span>
+                        </p>
+                        <a href="" class="moreBtn">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@Html.Partial("_ServicesFooter")
 

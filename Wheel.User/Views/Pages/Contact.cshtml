@@ -39,7 +39,7 @@
                             <textarea placeholder="@res.message" name="body" name="" id="" cols="30" rows="5"></textarea>
                         </div>
                         <div class="btn-group">
-                            <button  id="contactFormSubmit" type="submit">@res.send</button>
+                            <button id="contactFormSubmit" type="submit">@res.send</button>
                             <button id="clear">Clear</button>
                         </div>
                     </form>
@@ -56,28 +56,27 @@
     </div>
 
 </section>
-                
+@Html.Partial("_Footer")
 @section bottom{
-                        <script>
-                            $("#contactFormSubmit").click(function () {
-                                $.ajax({
-                                    url: "/pages/contact",
-                                    type: "POST",
-                                    data: $("#contactForm").serialize(),
-                                    success: function (response) {
-                                        $("#messageReport").removeClass();
-                                        $("#messageReport").addClass("alert alert-" + response.status);
-                                        $("#messageReport").text(response.message);
-                                        $("#messageReport").show();
-                                    }
-                                })
-                            });
-                            $(document).ready(function () {
-                                initialize();
-                            })
-                        </script>
+    <script>
+        $("#contactFormSubmit").click(function () {
+            $.ajax({
+                url: "/pages/contact",
+                type: "POST",
+                data: $("#contactForm").serialize(),
+                success: function (response) {
+                    $("#messageReport").removeClass();
+                    $("#messageReport").addClass("alert alert-" + response.status);
+                    $("#messageReport").text(response.message);
+                    $("#messageReport").show();
+                }
+            })
+        });
+        $(document).ready(function () {
+            initialize();
+        })
+    </script>
 }
-           
-  
+
 
 
