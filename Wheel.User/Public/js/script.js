@@ -1,4 +1,61 @@
-$(document).ready(function(){
+$(document).ready(function () {
+
+    var active = parseInt($(".page-item.active").text())
+    var totalPages = ($(".pagination > li").length) - 2
+
+    if (active < 3) {
+        active = 2
+    }
+    if (active > totalPages - 2) {
+        active = totalPages - 2
+    }
+    for (var i = active - 2; i < active + 3; i++) {
+        $($(".pagination").children()[i]).css("display", "block")
+    }
+
+    $(".nav-item .close-collapse").click(function () {
+
+        $(".navbar-collapse").removeClass("show");
+    })
+
+    $(".nav-item a").click(function (e) {
+        if (this.hash !== "") {
+            e.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 120
+            }, 800, function () {
+                window.location.hash = hash - 120;
+            });
+        }
+    });
+
+    $('.related-products-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        item: 4,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            },
+            1000: {
+                items: 4
+            }
+        }
+    })
 
    $(".moreBtn").click(function name(params) {
        params.preventDefault()
@@ -94,6 +151,33 @@ $(document).ready(function(){
         $(this).addClass("active")
     })
 
+    $('.slider-active').owlCarousel({
+        loop: true,
+        dots: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplaySpeed: 1800,
+        item: 3,
+        responsive: {
+            0: {
+                items: 1
+            },
+            480: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            992: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
     $(".btn-cancel").click(function(params) {
         params.preventDefault()
         $(".dropdown-menu").removeClass("show")
@@ -105,10 +189,11 @@ $(document).ready(function(){
     $("#ex1").slider({});
 
     // Without JQuery
-   $(".Reset").click(function(params) {
-      
-       $(this).parents("form").reset()
-   })
+    $(".Reset").click(function (params) {
+        params.preventDefault()
+
+        $(this).parents("form").find("select").val('default').selectpicker("refresh")
+    })
 
    $(".tab-list a").click(function(e) {
        console.log("sdsad")

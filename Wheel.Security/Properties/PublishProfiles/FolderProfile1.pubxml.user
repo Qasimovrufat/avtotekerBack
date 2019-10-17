@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\AvtotekerNew</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetRoles.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUserClaims.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUserLogins.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUsers.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CampaginTyre.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/Car.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CarBody.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CarModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Currency.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/C__MigrationHistory.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/Image.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/ModelYear.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Pages.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/slider.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/SoldTyre.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Tyre.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/TyreBrand.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/TyreModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.Context.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.Designer.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.edmx.diagram">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.dll">
+      <publishTime>09/10/2019 15:07:21</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.dll.config">
+      <publishTime>05/20/2019 17:35:18</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.pdb">
+      <publishTime>09/10/2019 15:07:21</publishTime>
+    </File>
+    <File Include="bin/Wheel.Security.dll">
+      <publishTime>09/10/2019 15:07:22</publishTime>
+    </File>
+    <File Include="bin/Wheel.Security.pdb">
+      <publishTime>09/10/2019 15:07:22</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/20/2019 17:35:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/22/2019 12:34:29</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

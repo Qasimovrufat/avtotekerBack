@@ -154,7 +154,7 @@
     <value>Oxşar məhsullar</value>
   </data>
   <data name="dSeason" xml:space="preserve">
-    <value>Bu qış təkəridir?</value>
+    <value>Fəsil</value>
   </data>
   <data name="dStock" xml:space="preserve">
     <value>Ümumi təkərlərin sayı</value>
@@ -298,7 +298,7 @@
     <value>razı</value>
   </data>
   <data name="search" xml:space="preserve">
-    <value>Axtar</value>
+    <value>Təkər seçimi</value>
   </data>
   <data name="seeAll" xml:space="preserve">
     <value>Bütün məhsulları baxın</value>
@@ -307,22 +307,22 @@
     <value>Göndər</value>
   </data>
   <data name="servicesText1" xml:space="preserve">
-    <value>Avtomobiliniz üçün istədiyiniz keyfiyyətdə və ölçüdə şin əldə etmək bizimlə daha asandır. Şirkətimiz maksimum yüksək keyfiyyətə malik şinləri sizin sifarişləriniz əsasında çox qısa müddətdə Avropa ve Asiya ölkələrindən birbaşa təmin edir. Əgər sizdə yuksək keyfiyyət tərəfdarısınızsa onda bizə müraciət edin. Müştərilərimizin istənilən vaxt bizimlə əlaqə saxlaya bilməsi üçün biz istirahətsiz daimi fəaliyyətdəyik və həftənin istənilən günü bizə müraciət edə bilərsiniz. Mağazamızın fəaliyyət saatı 9:00-19:00</value>
+    <value>Siz təkər seçimi ilə hər hansı bir kömək əldə edə bilərsiniz. Biz sizə professional şinomontaj, balans və disk təmiri xidmətlərin təklif edirik. Bizim mərkəz hər gün saat 9:00-19:00 fəaliyyət göstərir.Avtotəkər sizə bol çeşid fərqli təkər brendlərin təklif edir. Horizon, Vitour, yük maşınları üçün Kapsen təkərlərin eksklüziv distribütorudur və eyni zamanda Dunlop, Continental, Yokohama təkərlərin təklif edir.</value>
   </data>
   <data name="servicesText2" xml:space="preserve">
-    <value>Siz çağırın..biz gələrik. Əziz müştərilərimiz,artıq məsafələr sizi məmnun etməyimizə mane deyil. Azərbaycan Respublikasının istənilən bölgəsindən zəng və ya online vasitələrlə müraciət etməyiniz kifayətdir. Biz istədiyiniz məhsulu rahatlığınızın təmini məqsədi ilə ünvanlarınıza catdırma fəaliyyəti ilə də məsğuluq.bu hələ son deyil, eyni zamanda avtomobilinizin şinlərinin balans olunub dəyişdirilməsi prosesi də profesional personallarımız tərəfindən maksimum keyfiyyət etalonuna əməl edilməklə həyata keçiriləcək..son dərəcə yüksək texnika ilə balanslaşdırmanın dəqiqliyinə zəmanət veririk.</value>
+    <value>Avtotəkər sizə bol çeşid fərqli təkər brendlərin təklif edir. Horizon, Vitour, yük maşınları üçün Kapsen təkərlərin eksklüziv distribütorudur və eyni zamanda Dunlop, Continental, Yokohama, Kumho və digər təkərlərin təklif edir. Böyük sayda olan şin ölçülərimiz, hər qiymət seqmentinə uyğun çeşidlərimiz və mütəxəssislərimizin məsləhəti Avtotəkəri sizin üçün tək seçim edir.</value>
   </data>
   <data name="servicesText3" xml:space="preserve">
-    <value>Sizləri düşünərək şirkətimizin online fəaliyyətinə start verdik.Hörmətli müştərilərimiz, məqsədimiz sizin üçün tez bir zamanda,heç bir əlavə məsrəf xərcləmədən istədiyiniz zaman istədiyiniz məhsulu əldə etmə imkanını yaratmaqdır. Sayt vasitəsilə siz axtardığınız məhsulun bazada olub olmamasını müəyyənləşdirə, bizimlə əlaqə qura, müxtəlif kampaniyalar haqqında tez bir zamanda məlumat əldə və ən əsası heç bir yol qət etmədən online şəkildə istədiyiniz məhsulu sifariş edə bilərsiniz. Bizim saytdan istifadə etməkdə sərhədsizsiniz. Çünki bizim üçün sərhəd sizsiniz</value>
+    <value>Avtotəkər sizə şəhərdaxili pulsuz çatdırılma təklif edir. Avtotəkər sizə BirKart ilə 3 ay ərzində, ilkin ödənişsiz, faizsiz və komissiyasız hissə hissə ödəniş imkanı təklif edir.</value>
   </data>
   <data name="servicesTitle1" xml:space="preserve">
     <value>ŞİNLƏRİN SATIŞI</value>
   </data>
   <data name="servicesTitle2" xml:space="preserve">
-    <value>Balans və Çatdırılma</value>
+    <value>Niyə Avtotəkəri seçməlisiniz ?</value>
   </data>
   <data name="servicesTitle3" xml:space="preserve">
-    <value>Sayt haqqında</value>
+    <value>Pulsuz göndərmə və maliyyələşdirmə</value>
   </data>
   <data name="sevenDay" xml:space="preserve">
     <value>7 Gün</value>
@@ -391,7 +391,7 @@
     <value>http://youtube.com</value>
   </data>
   <data name="services" xml:space="preserve">
-    <value>Xidmətlər</value>
+    <value>Servis</value>
   </data>
   <data name="servicePage1" xml:space="preserve">
     <value>Yaxşı servisin sirri - təmin edilən xidmətlərin keyfiyyəti və avadanlıqların dəqiqliyidir. Təəssüf ki, şinmontaj emalatxanaların
@@ -423,5 +423,47 @@
   </data>
   <data name="customWheelsRims" xml:space="preserve">
     <value>Xüsusi təkərlər &amp; Disklər</value>
+  </data>
+  <data name="sort" xml:space="preserve">
+    <value>Sırala</value>
+  </data>
+  <data name="clearAll" xml:space="preserve">
+    <value>Hamısını təmizlə</value>
+  </data>
+  <data name="engine" xml:space="preserve">
+    <value>Mühərrik</value>
+  </data>
+  <data name="year" xml:space="preserve">
+    <value>İL</value>
+  </data>
+  <data name="searchCar" xml:space="preserve">
+    <value>Maşın ilə seçim</value>
+  </data>
+  <data name="searchTyre" xml:space="preserve">
+    <value>Ölçü ilə seçim</value>
+  </data>
+  <data name="soon" xml:space="preserve">
+    <value>Tezliklə</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Ağa Neymatulla küç. 79, Nərimanov ray.</value>
+  </data>
+  <data name="followUs" xml:space="preserve">
+    <value>Bizi izləyin:</value>
+  </data>
+  <data name="allRights" xml:space="preserve">
+    <value>Bütün hüquqlar qorunur</value>
+  </data>
+  <data name="serviceHeading" xml:space="preserve">
+    <value>Niyə bizim təkər mərkəzimiz?</value>
+  </data>
+  <data name="tireBalance" xml:space="preserve">
+    <value>Şin balansı</value>
+  </data>
+  <data name="tireFitting" xml:space="preserve">
+    <value>Şin montajı</value>
+  </data>
+  <data name="tireRepair" xml:space="preserve">
+    <value>Şin və disk təmiri</value>
   </data>
 </root>

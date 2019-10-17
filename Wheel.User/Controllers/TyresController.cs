@@ -11,7 +11,7 @@ namespace Wheel.User.Controllers
     public class TyresController : BaseController
     {
         // GET: Tyres
-        public ActionResult Index(TyreSearchModel model,int page=1,int limit=8, string order = "id")
+        public ActionResult Index(TyreSearchModel model,int sale =0, int page=1,int limit=8, string order = "id")
         {
             try
             {
@@ -38,28 +38,56 @@ namespace Wheel.User.Controllers
             cModel.lang = CultureHelper.GetNeutralCulture(CultureHelper.GetCurrentCulture());
             cModel.catalog = Db.TyreBrand.Where(w => w.TyreModel.Count > 1).Select(s => new catalogViewModel { Id = s.Id, Name = s.Name, Models = s.TyreModel.ToList() }).ToList();
             ViewBag.page = page;
-           
-            cModel.saleTyres.tyreList = Db.Tyre.Where(w => w.Sale > 0).Where(t=>(model.BrandId!=0?t.TyreModel.BrandId == model.BrandId:true) 
-            && (model.ModelId!=0 ? t.ModelId==model.ModelId : true) && (model.Width!=null? t.Width == model.Width:true)
-            && (model.Height !=null ? t.Height == model.Height : true) && (model.Radius !=null? t.Radius == model.Radius :true)
-               && (model.priceMin > 0 ? t.Price > model.priceMin : true)
-                        && (model.priceMax < 9999 ? t.Price < model.priceMax : true)
-            )
-            .Select(s => new DAL.Models.TyreViewModel
+
+            if (sale == 1)
             {
-                Id = s.Id,
-                BrandId = s.TyreModel.TyreBrand.Id,
-                BrandName = s.TyreModel.TyreBrand.Name,
-                ModelName = s.TyreModel.Name,
-                ModelId = s.TyreModel.Id,
-                Width = s.Width,
-                Height = s.Height,
-                Radius = s.Radius,
-                Price = s.Price,
-                Sale = s.Price - s.Sale,
-                Images = s.Image.Where(w => w.AltText == "default").ToList()
-            }).
-            OrderBy(s => s.BrandName).ToList();
+                cModel.saleTyres.tyreList = Db.Tyre.Where(w => w.Sale > 0).Where(t => (model.BrandId != 0 ? t.TyreModel.BrandId == model.BrandId : true)
+           && (model.ModelId != 0 ? t.ModelId == model.ModelId : true) && (model.Width != null ? t.Width == model.Width : true)
+           && (model.Height != null ? t.Height == model.Height : true) && (model.Radius != null ? t.Radius == model.Radius : true)
+              && (model.priceMin > 0 ? t.Price > model.priceMin : true)
+                       && (model.priceMax < 9999 ? t.Price < model.priceMax : true)
+           )
+           .Select(s => new DAL.Models.TyreViewModel
+           {
+               Id = s.Id,
+               BrandId = s.TyreModel.TyreBrand.Id,
+               BrandName = s.TyreModel.TyreBrand.Name,
+               ModelName = s.TyreModel.Name,
+               ModelId = s.TyreModel.Id,
+               Width = s.Width,
+               Height = s.Height,
+               Radius = s.Radius,
+               Price = s.Price,
+               Sale = s.Price - s.Sale,
+               Images = s.Image.Where(w => w.AltText == "default").ToList()
+           }).
+           OrderBy(s => s.BrandName).ToList();
+            }
+            else
+            {
+                cModel.saleTyres.tyreList = Db.Tyre.Where(t => (model.BrandId != 0 ? t.TyreModel.BrandId == model.BrandId : true)
+                   && (model.ModelId != 0 ? t.ModelId == model.ModelId : true) && (model.Width != null ? t.Width == model.Width : true)
+                   && (model.Height != null ? t.Height == model.Height : true) && (model.Radius != null ? t.Radius == model.Radius : true)
+                      && (model.priceMin > 0 ? t.Price > model.priceMin : true)
+                               && (model.priceMax < 9999 ? t.Price < model.priceMax : true)
+                   )
+                   .Select(s => new DAL.Models.TyreViewModel
+                   {
+                       Id = s.Id,
+                       BrandId = s.TyreModel.TyreBrand.Id,
+                       BrandName = s.TyreModel.TyreBrand.Name,
+                       ModelName = s.TyreModel.Name,
+                       ModelId = s.TyreModel.Id,
+                       Width = s.Width,
+                       Height = s.Height,
+                       Radius = s.Radius,
+                       Price = s.Price,
+                       Sale = s.Price - s.Sale,
+                       Images = s.Image.Where(w => w.AltText == "default").ToList()
+                   }).
+                   OrderBy(s => s.BrandName).ToList();
+            }
+           
             switch (order)
             {
                 case "idDesc":

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\avtoteker</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>09/10/2013 16:29:20</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="bin/az/Wheel.User.resources.dll">
+      <publishTime>05/22/2019 01:48:29</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetRoles.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUserClaims.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUserLogins.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/AspNetUsers.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CampaginTyre.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/Car.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CarBody.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/CarModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Currency.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/C__MigrationHistory.cs">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Context/Image.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/ModelYear.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Pages.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/slider.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/SoldTyre.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/Tyre.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/TyreBrand.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/TyreModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.Context.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.Designer.cs">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/Context/WheelModel.edmx.diagram">
+      <publishTime>05/06/2019 14:51:48</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/PagedList.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/PagedList.Mvc.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>05/06/2019 14:51:44</publishTime>
+    </File>
+    <File Include="bin/ru/Wheel.User.resources.dll">
+      <publishTime>05/22/2019 01:48:29</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/28/2018 12:59:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>05/06/2019 14:51:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/28/2018 13:00:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/28/2018 13:04:24</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>05/06/2019 14:51:46</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.dll">
+      <publishTime>05/22/2019 01:47:52</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.dll.config">
+      <publishTime>05/20/2019 17:35:18</publishTime>
+    </File>
+    <File Include="bin/Wheel.DAL.pdb">
+      <publishTime>05/22/2019 01:47:52</publishTime>
+    </File>
+    <File Include="bin/Wheel.Security.dll">
+      <publishTime>05/22/2019 01:48:28</publishTime>
+    </File>
+    <File Include="bin/Wheel.Security.dll.config">
+      <publishTime>05/20/2019 17:35:20</publishTime>
+    </File>
+    <File Include="bin/Wheel.Security.pdb">
+      <publishTime>05/22/2019 01:48:28</publishTime>
+    </File>
+    <File Include="bin/Wheel.User.dll">
+      <publishTime>05/22/2019 01:48:29</publishTime>
+    </File>
+    <File Include="bin/Wheel.User.pdb">
+      <publishTime>05/22/2019 01:48:29</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/20/2019 17:35:20</publishTime>
+    </File>
+    <File Include="Public/css/bootstrap-slider.min.css">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/css/owl.carousel.min.css">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/css/owl.theme.default.min.css">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/css/style.css">
+      <publishTime>05/21/2019 15:04:30</publishTime>
+    </File>
+    <File Include="Public/css/style.css.map">
+      <publishTime>05/08/2019 16:40:32</publishTime>
+    </File>
+    <File Include="Public/fonts/VisbyCF-Bold.ttf">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/fonts/VisbyCF-Heavy.woff">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/fonts/VisbyCF-Medium.woff">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/1459429206_maxx050.jpg20171128-221157.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/aboutback.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Bridgestone-logo-5500x1500.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/car-back.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/conti premiumcontact5.jpg20181023-001009.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/continental-png-continental-logo-8333.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/custom.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/disc-repair-blue.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/disc-repair-white.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/dunlop_logo_png_426199.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/four-Season.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/globus.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Group-3.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Logo-blue.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/logo-white.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/mapicon.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/michelin-png-michelin-png-2000.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Pirelli-logo-2560x1440.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Searchback.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/service-1.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/service-2.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/service-3.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/services-back.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/summer.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/summer.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/tyre-mounting-blue.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/tyre-mounting-white.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/tyre-repair-blue.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/tyre-repair-white.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Winter.jpg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/winter.svg">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/img/Yokohama-logo-5100x800.png">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/js/bootstrap-slider.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/js/owl.carousel.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Public/js/script.js">
+      <publishTime>05/21/2019 14:52:20</publishTime>
+    </File>
+    <File Include="Public/sass/style.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_about.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_brand-carousel.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_contact.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_find-all.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_footer.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_header.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_product.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_products.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_responsive.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_searchArea.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_season.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_services-page.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_services.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_slider-range.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_terms.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Public/sass/_tyres.scss">
+      <publishTime>05/08/2019 16:29:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/currencies.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/elevatezoom.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery-migrate-1.2.1.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.ajax-cart7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.bxslider.min7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.collection-sort7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.elevatezoom7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fancybox.min7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.formstyler.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.nivoslider.min7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.parallax.min7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/sf-Touchscreen.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Scripts/shop7d44.js">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>05/20/2019 16:35:50</publishTime>
+    </File>
+    <File Include="Views/Pages/Aboutus.cshtml">
+      <publishTime>05/20/2019 15:02:18</publishTime>
+    </File>
+    <File Include="Views/Pages/Campaign.cshtml">
+      <publishTime>05/20/2019 15:39:50</publishTime>
+    </File>
+    <File Include="Views/Pages/CampaignDetails.cshtml">
+      <publishTime>05/20/2019 15:42:40</publishTime>
+    </File>
+    <File Include="Views/Pages/Contact.cshtml">
+      <publishTime>05/20/2019 15:02:28</publishTime>
+    </File>
+    <File Include="Views/Pages/Services.cshtml">
+      <publishTime>05/20/2019 15:27:30</publishTime>
+    </File>
+    <File Include="Views/Shared/_Bottom.cshtml">
+      <publishTime>05/06/2019 14:51:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>05/20/2019 16:11:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Head.cshtml">
+      <publishTime>05/21/2019 14:54:18</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>05/20/2019 16:11:18</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/20/2019 15:04:02</publishTime>
+    </File>
+    <File Include="Views/Shared/_NewsLatter.cshtml">
+      <publishTime>05/06/2019 14:51:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_ServicesFooter.cshtml">
+      <publishTime>05/20/2019 16:11:32</publishTime>
+    </File>
+    <File Include="Views/Tyres/Details.cshtml">
+      <publishTime>05/20/2019 15:02:08</publishTime>
+    </File>
+    <File Include="Views/Tyres/Index.cshtml">
+      <publishTime>05/21/2019 15:01:42</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/06/2019 14:51:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/22/2019 01:48:30</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -121,7 +121,7 @@
     <value>О нас</value>
   </data>
   <data name="brand" xml:space="preserve">
-    <value>марка</value>
+    <value>Марка</value>
   </data>
   <data name="campaign" xml:space="preserve">
     <value>Кампании</value>
@@ -142,7 +142,7 @@
     <value>шины на заказ</value>
   </data>
   <data name="details" xml:space="preserve">
-    <value>подробности</value>
+    <value>Детали</value>
   </data>
   <data name="dHeight" xml:space="preserve">
     <value>высота(%)</value>
@@ -154,7 +154,7 @@
     <value>Связанные продукты</value>
   </data>
   <data name="dSeason" xml:space="preserve">
-    <value>Эта зимняя шина?</value>
+    <value>Сезон</value>
   </data>
   <data name="dStock" xml:space="preserve">
     <value>Количество колес</value>
@@ -196,7 +196,7 @@
     <value>100% гарантировано</value>
   </data>
   <data name="height" xml:space="preserve">
-    <value>высота</value>
+    <value>Высота</value>
   </data>
   <data name="home" xml:space="preserve">
     <value>Главная</value>
@@ -298,7 +298,7 @@
     <value>удовлетворение</value>
   </data>
   <data name="search" xml:space="preserve">
-    <value>Поиск</value>
+    <value>Выбор шины</value>
   </data>
   <data name="seeAll" xml:space="preserve">
     <value>Посмотреть все продукты</value>
@@ -307,14 +307,13 @@
     <value>послать</value>
   </data>
   <data name="servicesText1" xml:space="preserve">
-    <value>Если Вы хотите приобрести шины для вашего автомобиля, желаемого размера и качества, то это намного проще с нами. В соответствии с вашими заказами, Наша компания поставляет шины с самым высоким качеством из Европы и Азии  в минимальные срок времени. Свяжитесь с нами, если вы сторонник  высокого качества. Мы постоянно активны для клиентов, чтобы приобрести шины достаточно в любое время связаться с нами в течение 7 дней в неделю. Рабочие часы нашего магазина: 9: 00-19: 00.</value>
+    <value>Вы можете получить любую помощь с выбором шин. Мы предлагаем вам профессиональный шиномонтаж балансировку и ремонт дисков. Наш центр работает каждый день с 9:00-19:00.Avtotəkər предлагает вам богатое разнообразие разных брендов шин, включая эксклюзивно предлагаемые Horizon, Vitour и грузовые Kapsen и всемирно известные Dunlop, Continental, Yokohama.</value>
   </data>
   <data name="servicesText2" xml:space="preserve">
-    <value>Дорогие клиенты,
-Расстояние не является препятствием для нас, чтобы удовлетворить Вас. Достаточно позвонить нам или написать с помощью онлайн-сервисов из любого региона Азербайджанской Республики. Мы стремимся предоставить максимального комфорта для Вас, а также есть услуга доставки. Это не конец ... Мы выполняем балансировку и замену шин ваших автомобилей, которые будут предоставлены нашим профессиональным персоналом в соответствии с максимальными стандартами качества.  Мы гарантируем точность балансировки с самой высокой технологией.</value>
+    <value>Avtotəkər предлагает вам богатое разнообразие разных брендов шин, включая эксклюзивно предлагаемые Horizon, Vitour и грузовые Kapsen и всемирно известные Dunlop, Continental, Yokohama, Kumho и другие. Огромное количество размеров шин, любой ценовой сегмент и консультация наших специалистов делают Avtotəkər единственным выбором для вас.</value>
   </data>
   <data name="servicesText3" xml:space="preserve">
-    <value>Уважаемые клиенты, наша цель создать  для вас универсальный сайт. При поиски шин Вы как можно скорее  и без каких-либо дополнительных расходов затрат, сможете войти в доступ , которое  в любое время,  Вы найдёте необходимое вам продукт. С помощью веб сайта, вы легко определите,  является ли на данном момент (шины) в нашем базе. А также  через веб сайт вы сможете связаться  с нами, чтобы получить информацию о различных кампаниях и, самое главное, без  каких-либо проблем  можно заказать продукт  через  онлайн  Интернет.</value>
+    <value>Avtotəkər предлагает вам бесплатную доставку по городу. Avtotəkər предлагает вам оплату по частям с помощью BirKart без процентов, без начального взноса и без комиссии.</value>
   </data>
   <data name="servicesTitle1" xml:space="preserve">
     <value>Продажа шинов</value>
@@ -323,7 +322,7 @@
     <value>Доставка и баланс</value>
   </data>
   <data name="servicesTitle3" xml:space="preserve">
-    <value>о сайте</value>
+    <value>Бесплатная доставка и финансирование</value>
   </data>
   <data name="sevenDay" xml:space="preserve">
     <value>7-й день</value>
@@ -347,7 +346,7 @@
     <value>Сортировать по</value>
   </data>
   <data name="stockRemain" xml:space="preserve">
-    <value>в наличии</value>
+    <value>В наличии</value>
   </data>
   <data name="summer" xml:space="preserve">
     <value>Летние</value>
@@ -410,5 +409,47 @@
   </data>
   <data name="customWheelsRims" xml:space="preserve">
     <value>ТАМОЖЕННЫЕ КОЛЕСА И ОБОДА</value>
+  </data>
+  <data name="sort" xml:space="preserve">
+    <value>Сортировать</value>
+  </data>
+  <data name="clearAll" xml:space="preserve">
+    <value>Oчистить все</value>
+  </data>
+  <data name="engine" xml:space="preserve">
+    <value>двигатель</value>
+  </data>
+  <data name="year" xml:space="preserve">
+    <value>Год</value>
+  </data>
+  <data name="searchCar" xml:space="preserve">
+    <value>Выбор по машине</value>
+  </data>
+  <data name="searchTyre" xml:space="preserve">
+    <value>Выбор по размеру</value>
+  </data>
+  <data name="soon" xml:space="preserve">
+    <value>Cкоро</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>ул. Ага Нейматуллы 79, Наримановский рай.</value>
+  </data>
+  <data name="followUs" xml:space="preserve">
+    <value>Следите за нами:</value>
+  </data>
+  <data name="allRights" xml:space="preserve">
+    <value>Все права защищены</value>
+  </data>
+  <data name="serviceHeading" xml:space="preserve">
+    <value>Почему наш шинный центр?</value>
+  </data>
+  <data name="tireBalance" xml:space="preserve">
+    <value>Балансировка шин</value>
+  </data>
+  <data name="tireFitting" xml:space="preserve">
+    <value>Шиномонтаж</value>
+  </data>
+  <data name="tireRepair" xml:space="preserve">
+    <value>Ремонт шин и дисков</value>
   </data>
 </root>

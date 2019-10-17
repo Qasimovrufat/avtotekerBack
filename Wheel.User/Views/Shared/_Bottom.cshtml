@@ -125,7 +125,6 @@
 
 </script>
 
-
 <script src="//cdn.shopify.com/s/files/1/0889/3312/t/2/assets/jquery.nivoslider.min.js" type="text/javascript"></script>
 <script src="//cdn.shopify.com/s/files/1/0889/3312/t/2/assets/jquery.bxslider.min.js" type="text/javascript"></script>
 <script src="//cdn.shopify.com/s/files/1/0889/3312/t/2/assets/jquery.parallax.min.js" type="text/javascript"></script>
@@ -183,9 +182,7 @@
 </script>
 <!-- COLLECTION PAGE SCRIPTS -->
 <!-- CUSTOMERS PAGES SCRIPTS -->
-
 <script src="//cdn.shopify.com/s/files/1/0889/3312/t/2/assets/jquery.fancybox.min.js" type="text/javascript"></script>
-
 <script async src="//cdn.shopify.com/s/files/1/0889/3312/t/2/assets/jquery.ajax-cart.js" type="text/javascript"></script>
 <script src="~/Scripts/shop7d44.js" type="text/javascript"></script>
 <script>
@@ -193,30 +190,29 @@
 </script>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/58624e16f81f1673b644dbc2/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/58624e16f81f1673b644dbc2/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
 </script>
 <!--End of Tawk.to Script-->
-
 <script>
-   
-    $(document).ready(function () {      
+
+    $(document).ready(function () {
         //if (!localStorage.thisCurrency) {
-            localStorage.thisCurrency = "AZN";
-       // }
-        $(".price" + localStorage.thisCurrency).show();       
+        localStorage.thisCurrency = "AZN";
+        // }
+        $(".price" + localStorage.thisCurrency).show();
         $("#currencySelect").val(localStorage.thisCurrency).prop("selected", true);
         $("#currencySelect").trigger('refresh');
 
         $(".megamenu_custom_sub").mCustomScrollbar();
-       // $("body").mCustomScrollbar();
+        // $("body").mCustomScrollbar();
 
     })
 </script>

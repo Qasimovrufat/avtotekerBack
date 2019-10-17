@@ -186,34 +186,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\favicon\manifest.json" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="Content\favicon\android-icon-144x144.png" />
+    <Content Include="Content\favicon\android-icon-192x192.png" />
+    <Content Include="Content\favicon\android-icon-36x36.png" />
+    <Content Include="Content\favicon\android-icon-48x48.png" />
+    <Content Include="Content\favicon\android-icon-72x72.png" />
+    <Content Include="Content\favicon\android-icon-96x96.png" />
+    <Content Include="Content\favicon\apple-icon-114x114.png" />
+    <Content Include="Content\favicon\apple-icon-120x120.png" />
+    <Content Include="Content\favicon\apple-icon-144x144.png" />
+    <Content Include="Content\favicon\apple-icon-152x152.png" />
+    <Content Include="Content\favicon\apple-icon-180x180.png" />
+    <Content Include="Content\favicon\apple-icon-57x57.png" />
+    <Content Include="Content\favicon\apple-icon-60x60.png" />
+    <Content Include="Content\favicon\apple-icon-72x72.png" />
+    <Content Include="Content\favicon\apple-icon-76x76.png" />
+    <Content Include="Content\favicon\apple-icon-precomposed.png" />
+    <Content Include="Content\favicon\apple-icon.png" />
+    <Content Include="Content\favicon\browserconfig.xml" />
+    <Content Include="Content\favicon\favicon-16x16.png" />
+    <Content Include="Content\favicon\favicon-32x32.png" />
+    <Content Include="Content\favicon\favicon-96x96.png" />
+    <Content Include="Content\favicon\favicon.ico" />
+    <Content Include="Content\favicon\ms-icon-144x144.png" />
+    <Content Include="Content\favicon\ms-icon-150x150.png" />
+    <Content Include="Content\favicon\ms-icon-310x310.png" />
+    <Content Include="Content\favicon\ms-icon-70x70.png" />
     <Content Include="Public\css\bootstrap-slider.min.css" />
     <Content Include="Public\css\owl.carousel.min.css" />
     <Content Include="Public\css\owl.theme.default.min.css" />
     <Content Include="Public\css\style.css" />
     <Content Include="Public\img\1459429206_maxx050.jpg20171128-221157.jpg" />
+    <Content Include="Public\img\5cc894625e338.png" />
+    <Content Include="Public\img\5cc89651bdcd2.png" />
     <Content Include="Public\img\aboutback.svg" />
+    <Content Include="Public\img\aspect-ratio.svg" />
+    <Content Include="Public\img\avtoteker-slider.png" />
+    <Content Include="Public\img\brands.svg" />
     <Content Include="Public\img\Bridgestone-logo-5500x1500.png" />
     <Content Include="Public\img\car-back.jpg" />
     <Content Include="Public\img\conti premiumcontact5.jpg20181023-001009.jpg" />
     <Content Include="Public\img\continental-png-continental-logo-8333.png" />
     <Content Include="Public\img\custom.svg" />
+    <Content Include="Public\img\diameter.svg" />
     <Content Include="Public\img\disc-repair-blue.png" />
     <Content Include="Public\img\disc-repair-white.png" />
     <Content Include="Public\img\dunlop_logo_png_426199.png" />
     <Content Include="Public\img\four-Season.jpg" />
     <Content Include="Public\img\globus.svg" />
     <Content Include="Public\img\Group-3.png" />
-    <Content Include="Public\img\Logo-blue.svg" />
-    <Content Include="Public\img\logo-white.png" />
+    <Content Include="Public\img\logo-dark.svg" />
+    <Content Include="Public\img\logo-light.svg" />
+    <Content Include="Public\img\Logo.png" />
     <Content Include="Public\img\mapicon.svg" />
     <Content Include="Public\img\michelin-png-michelin-png-2000.png" />
     <Content Include="Public\img\Pirelli-logo-2560x1440.png" />
     <Content Include="Public\img\Searchback.jpg" />
+    <Content Include="Public\img\section-width.svg" />
     <Content Include="Public\img\service-1.png" />
     <Content Include="Public\img\service-2.png" />
     <Content Include="Public\img\service-3.png" />
@@ -277,7 +314,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />

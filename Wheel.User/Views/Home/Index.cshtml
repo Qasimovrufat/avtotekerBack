@@ -2,7 +2,139 @@
 @{
     int i = 0;
 }
+<section id="slider">
+    <div class="owl-carousel owl-theme slider-active">
+        <div class="single-slider">
+            <img src="/Public/img/avtoteker-slider.png" alt="Alternate Text" />
+        </div>
+        <div class="single-slider">
+            <img src="/Public/img/5cc89651bdcd2.png" alt="Alternate Text" />
+        </div>
+    </div>
+</section>
+
 <section id="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="search-area text-center">
+                    <div class="title">
+                        <h3>
+                            @res.search
+                        </h3>
+                    </div>
+                    <div class="tab-list">
+                        <a class="active" href="#searchTyres">@res.searchTyre</a>
+                        <a href="#searchCar">@res.searchCar (@res.soon) </a>
+                    </div>
+                    <div class="tab-content active" id="searchTyres">
+                        <div class="tab-search">
+                            <form action="/tyres/" method="GET" id="searchbytyres">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/section-width.svg" />
+                                                <p>@res.width</p>
+                                            </div>
+                                            <select data-live-search="true" name="Width" id="WidthId" class="selectpicker" data-width="100%"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/aspect-ratio.svg" />
+                                                <p>@res.height</p>
+                                            </div>
+                                            <select data-live-search="true" name="Height" id="HeightId" data-width="100%" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/diameter.svg" />
+                                                <p>@res.radius</p>
+                                            </div>
+                                            <select data-live-search="true" name="Radius" id="RadiusId" data-width="100%" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/brands.svg" />
+                                                <p>@res.brand</p>
+                                            </div>
+                                            <select data-live-search="true" name="BrandId" id="BrandId" data-width="100%" class="selectpicker">
+                                                <option value="" selected disabled hidden>@res.model</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <button type="submit" id="tyreSearchButton" class="btnSearch">@res.search </button>
+                                <a href="" class="Reset">@res.clearAll</a>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-content" id="searchCar">
+                        <div class="tab-search" id="car">
+                            <form id="searchbycar" action="/tyres/" method="GET">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.brand</p>
+                                            </div>
+                                            <select name="BrandIdCar" id="BrandIdCar" data-live-search="true" class="selectpicker">
+                                                <option selected disabled value="0"> @res.car</option>
+                                                @foreach (var car in Model.carbrand)
+                                                {
+                                                    <option value="@car.Id">@car.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+
+                                                <p>@res.model</p>
+                                            </div>
+                                            <select name="ModelIdCar" disabled id="ModelIdCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.year</p>
+                                            </div>
+                                            <select name="YearCar" disabled id="YearCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.engine</p>
+                                            </div>
+                                            <select name="BanCar" disabled id="BanCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<section id="search">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -16,17 +148,6 @@
                         <div class="tab-search">
                             <form action="/tyres/" method="GET" id="searchbytyres">
                                 <div class="form-group">
-                                    <select data-live-search="true" name="BrandId" id="BrandId" class="selectpicker" data-width="100%">
-                                        <option value="" selected disabled hidden>Brand</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select data-live-search="true" name="ModelId" id="ModelId" class="selectpicker" data-width="100%">
-                                        <option value="" selected disabled hidden>Model</option>
-
-                                    </select>
-                                </div>
-                                <div class="form-group">
                                     <select data-live-search="true" name="Width" id="WidthId" class="selectpicker" data-width="100%"></select>
                                 </div>
                                 <div class="form-group">
@@ -36,12 +157,17 @@
                                     <select data-live-search="true" name="Radius" id="RadiusId" class="selectpicker" data-width="100%"></select>
                                 </div>
                                 <div class="form-group">
-                                    <select name="Usage" id="UsageId" class="selectpicker">
-                                        <option selected value="">@*@res.pleaseSelect*@ @res.usage</option>
-                                        <option value="true">@res.used</option>
-                                        <option value="false">@res.unused</option>
+                                    <select data-live-search="true" name="BrandId" id="BrandId" class="selectpicker" data-width="100%">
+                                        <option value="" selected disabled hidden>@res.brand</option>
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <select data-live-search="true" name="ModelId" id="ModelId" class="selectpicker" data-width="100%">
+                                        <option value="" selected disabled hidden>@res.model</option>
+
+                                    </select>
+                                </div>
+
                                 <div class="form-group range-slider">
                                     <p>@res.price</p>
                                     <b>10</b>
@@ -55,12 +181,12 @@
                             </form>
                         </div>
                     </div>
-                    <div  class="tab-content" id="searchCar">
+                    <div class="tab-content" id="searchCar">
                         <div class="tab-search" id="car">
                             <form id="searchbycar" action="/tyres/" method="GET">
                                 <div class="form-group">
                                     <select data-live-search="true" class="selectpicker" name="BrandIdCar" id="BrandIdCar">
-                                        <option selected disabled value="0">@*@res.pleaseSelect*@ @res.car</option>
+                                        <option selected disabled value="0">res.pleaseSelect @res.car</option>
 
                                         @foreach (var car in Model.carbrand)
                                         {
@@ -69,21 +195,18 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker" name="ModelIdCar" disabled id="ModelIdCar">
-                                    </select>
+                                    <select data-live-search="true" class="selectpicker" name="ModelIdCar" disabled id="ModelIdCar"></select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker" name="YearCar" disabled id="YearCar">
-                                    </select>
+                                    <select data-live-search="true" class="selectpicker" name="YearCar" disabled id="YearCar"></select>
                                 </div>
                                 <div class="form-group">
-                                    <select data-live-search="true" class="selectpicker" name="BanCar" disabled id="BanCar">
-                                    </select>
+                                    <select data-live-search="true" class="selectpicker" name="BanCar" disabled id="BanCar"></select>
                                 </div>
-                              
-                               
+
+
                                 <hr>
-                              
+
                             </form>
                         </div>
                     </div>
@@ -97,8 +220,8 @@
 
         </div>
     </div>
-</section>
-<section id="season">
+</section>*@
+@*<section id="season">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -152,7 +275,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@
 <section id="brand-carousel">
     <div class="container">
         <div class="brand-logo-active owl-carousel">
@@ -190,7 +313,7 @@
         </div>
     </div>
 </section>
-<section id="find-all">
+@*<section id="find-all">
     <div class="overlay"></div>
     <div class="container">
         <div class="row text-center align-items-center ">
@@ -201,8 +324,8 @@
             </div>
         </div>
     </div>
-</section>
-<section id="products">
+</section>*@
+@*<section id="products">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -261,7 +384,7 @@
 
         </div>
     </div>
-</section>
+</section>*@
 <section id="services">
     <div class="overlay"></div>
     <div class="container">
@@ -269,54 +392,39 @@
             <div class="col-lg-12">
                 <div class="title">
                     <h1>
-                       @res.ourServices
+                        @res.serviceHeading
                     </h1>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="title">
                     <h6>@res.servicesTitle3</h6>
 
                 </div>
                 <div class="content">
                     <p>
-                      @res.servicesText3
+                        @res.servicesText3
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="title">
                     <h6>
-                      @res.servicesTitle2
+                        @res.servicesTitle2
                     </h6>
 
                 </div>
                 <div class="content">
                     <p>
-                     @res.servicesText2
+                        @res.servicesText1
                     </p>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="title">
-                    <h6>
-                      @res.servicesTitle1
-
-
-
-                    </h6>
-
-                </div>
-                <div class="content">
-                    <p>
-                      @res.servicesText1
-                    </p>
-                </div>
-            </div>
+         
         </div>
     </div>
 </section>
-<section id="terms">
+@*<section id="terms">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 text-center">
@@ -340,7 +448,7 @@
                     </div>
                     <div class="title">
                         <p>
-                         @res.returnExchange
+                            @res.returnExchange
                         </p>
 
                     </div>
@@ -356,7 +464,7 @@
                     </div>
                     <div class="title">
                         <p>
-                           @res.satisfaction
+                            @res.satisfaction
                         </p>
 
                     </div>
@@ -368,7 +476,7 @@
 
         </div>
     </div>
-</section>
+</section>*@
 <section id="map">
     <div class="col-lg-12">
         <div id="google_map"></div>
@@ -429,7 +537,6 @@
 
 
             $("#searchbytyres select").change(function () {
-                console.log("dsadas")
                 refreshList($(this));
             });
 
@@ -439,13 +546,14 @@
             function refreshList(e) {
 
                 var formData = $("#searchbytyres").serializeObject();
-                //console.log(e)
-
-                console.dir(formData);
+           
                 $.ajax({
                     url: "/json/searchbytyres",
                     type: "GET",
                     data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType:false,
                     success: function (response) {
                         var oldValue = $(e).html();
                         $(".selectpicker.clear").html("");
@@ -633,9 +741,12 @@
                     url: "/json/searchbytyres",
                     type: "GET",
                     data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
                     dataType: "json",
                     success: function (response) {
-                    
+
                         var oldValue = $(e).html();
                         $(".selectpicker.clear").html("");
                         if (!e) {
@@ -739,7 +850,9 @@
 
                     }
                 })
-            });
+    });
+
+
 
             $("#BanCar").change(function () {
                 var id = $(this).val();

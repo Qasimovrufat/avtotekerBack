@@ -16,10 +16,6 @@ namespace Wheel.User.Controllers
         [HttpGet]
         public JsonResult searchByTyres(TyreSearchModel search)
         {
-            var prices = search.priceArray.Split(',');
-            search.priceMax = Convert.ToInt16(prices[1]);
-            search.priceMin = Convert.ToInt16(prices[0]);
-
 
             var tyres = Db.Tyre.Where(w =>
             search.BrandId != 0 ? w.TyreModel.BrandId == search.BrandId : w.Id > 0

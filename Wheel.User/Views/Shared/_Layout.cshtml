@@ -11,31 +11,27 @@
 <!-- Added by HTTrack -->
 
 <head>
-    @Html.Partial("_Head");
+    @Html.Partial("_Head")
     @RenderSection("head", required: false)
 </head>
-<body >
- 
-
+<body>
 
     <div id="fb-root"></div>
     <script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1571290463186394";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-   
-            <!-- HEADER -->
-            @Html.Partial("_Header")
-            <!-- SHOWCASE CUSTOM BLOCKS -->
-            <!-- BREADCRUMBS -->
-         
-            <!-- MAIN CONTENT -->
-            @RenderBody()
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1571290463186394";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
+    <!-- HEADER -->
+    @Html.Partial("_Header")
+    <!-- SHOWCASE CUSTOM BLOCKS -->
+    <!-- BREADCRUMBS -->
+    <!-- MAIN CONTENT -->
+    @RenderBody()
 
     @Html.Partial("_Bottom")
     @RenderSection("bottom", required: false)

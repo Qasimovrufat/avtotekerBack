@@ -177,10 +177,14 @@
     <EntityDeploy Include="Context\WheelModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WheelModel.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EntityDeploy>
     <Content Include="Context\WheelModel.edmx.diagram">
       <DependentUpon>WheelModel.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,11 +197,13 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WheelModel.edmx</DependentUpon>
       <LastGenOutput>WheelModel.Context.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Context\WheelModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>WheelModel.edmx</DependentUpon>
       <LastGenOutput>WheelModel.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -206,73 +212,94 @@
   <ItemGroup>
     <Compile Include="Context\AspNetRoles.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\AspNetUserClaims.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\AspNetUserLogins.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\AspNetUsers.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\CampaginTyre.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\Car.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\CarBody.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\CarModel.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\Currency.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\C__MigrationHistory.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\Image.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\ModelYear.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\Pages.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\slider.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\SoldTyre.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\Tyre.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\TyreBrand.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\TyreModel.cs">
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\WheelDbContext.cs" />
     <Compile Include="Context\WheelModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WheelModel.Context.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\WheelModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WheelModel.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Context\WheelModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WheelModel.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Migrations\Configuration.cs" />

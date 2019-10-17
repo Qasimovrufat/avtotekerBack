@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +15,10 @@ namespace Wheel.User
     {
         protected void Application_Start()
         {
+            foreach (System.Collections.DictionaryEntry entry in HttpContext.Current.Cache)
+            {
+                HttpContext.Current.Cache.Remove((string)entry.Key);
+            }
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalFilters.Filters.Add(new ValidationFilter());

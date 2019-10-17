@@ -3,94 +3,172 @@
 @using set = Wheel.User.Properties.Settings
 
 <section id="tyres">
-    <div class="container">
-        <div class="row text-center">
+    <div class="row blue-back" id="search">
+        <div class="container">
             <div class="col-lg-12">
-                <div class="title">
-                    <h1>@res.tyres</h1>
+                <div class="search-area text-center">
+                    <div class="title">
+                        <h3>
+                            @res.search
+                        </h3>
+                    </div>
+                    <div class="tab-list">
+                        <a class="active" href="#searchTyres">@res.searchTyre</a>
+                        <a href="#searchCar">@res.searchCar (@res.soon) </a>
+                    </div>
+                    <div class="tab-content active" id="searchTyres">
+                        <div class="tab-search">
+                            <form action="/tyres/" method="GET" id="searchbytyres">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/section-width.svg" />
+                                                <p>@res.width</p>
+                                            </div>
+                                            <select data-live-search="true" name="Width" id="WidthId" class="selectpicker" data-width="100%"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/aspect-ratio.svg" />
+                                                <p>@res.height</p>
+                                            </div>
+                                            <select data-live-search="true" name="Height" id="HeightId" data-width="100%" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/diameter.svg" />
+                                                <p>@res.radius</p>
+                                            </div>
+                                            <select data-live-search="true" name="Radius" id="RadiusId" data-width="100%" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <img src="~/Public/img/brands.svg" />
+                                                <p>@res.brand</p>
+                                            </div>
+                                            <select data-live-search="true" name="BrandId" id="BrandId" data-width="100%" class="selectpicker">
+                                                <option value="" selected disabled hidden>@res.model</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <button type="submit" id="tyreSearchButton" class="btnSearch">@res.search </button>
+                                <a href="" class="Reset">@res.clearAll</a>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="tab-content" id="searchCar">
+                        <div class="tab-search" id="car">
+                            <form id="searchbycar" action="/tyres/" method="GET">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.brand</p>
+                                            </div>
+                                            <select name="BrandIdCar" id="BrandIdCar" data-live-search="true" class="selectpicker">
+                                                <option selected disabled value="0"> @res.car</option>
+                                                @foreach (var car in Model.carbrand)
+                                                {
+                                                    <option value="@car.Id">@car.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+
+                                                <p>@res.model</p>
+                                            </div>
+                                            <select name="ModelIdCar" disabled id="ModelIdCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.year</p>
+                                            </div>
+                                            <select name="YearCar" disabled id="YearCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="name">
+                                                <p>@res.engine</p>
+                                            </div>
+                                            <select name="BanCar" disabled id="BanCar" data-live-search="true" class="selectpicker"></select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <form action="@Url.Action("index","tyres")">
-                    <div class="row sorting ">
-
-
-                        <div class="col-lg-4">
-
-                            <div class="sort">
-                                <p>@res.show</p>
-                                <select name="limit" class="selectpicker">
-                                    <option @(ViewBag.limit == 8 ? "selected" : "") value="8">8</option>
-                                    <option @(ViewBag.limit == 16 ? "selected" : "") value="16">16</option>
-                                    <option @(ViewBag.limit == 24 ? "selected" : "") value="24">24</option>
-                                </select>
-
-                            </div>
-
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="sort">
-                                <p>@res.sortBy</p>
-                                <select name="order" class="selectpicker">
-                                    <option value="">@res.featured</option>
-                                    <option @(ViewBag.order == res.orderPriceLtH ? "selected" : "") value="price">@res.orderPriceLtH</option>
-                                    <option @(ViewBag.order == @res.orderPriceHtL ? "selected" : "") value="priceDesc">@res.orderPriceHtL</option>
-                                    <option @(ViewBag.order == @res.orderOldToNew ? "selected" : "") value="id">@res.orderOldToNew</option>
-                                    <option @(ViewBag.order == @res.orderNewToOld ? "selected" : "") value="idDesc">@res.orderNewToOld</option>
-                                    <option @(ViewBag.order == @res.brand ? "selected" : "") value="brandAsc" selected="selected">@res.brand</option>
-                                </select>
-
-                            </div>
-                        </div>
-                        <div class="sort-button">
-                            <button class="btn-sort" type="submit">Sort</button>
-
-                        </div>
-
-                    </div>
-                </form>
-
-            </div>
-        </div>
+    </div>
+ 
+    <div class="container">
+       
         <div id="products">
             <div class="row">
-                @foreach (var item in Model.saleTyres.tyreList)
-                {
-                    <div class="col-lg-3">
-                        <a href="/tyres/details/?id=@item.Id">
-                            <div class="product-box">
-                                <div class="upper">
-                                    <div class="img">
-                                        <img src="/adminpr/@(item.Images.Count>0 ? item.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")">
-                                    </div>
-                                </div>
-                                <div class="lower">
-                                    <div class="brand">
-                                        <h6>
-                                            @item.BrandName
-                                        </h6>
-                                    </div>
-                                    <div class="size">
-                                        <p>@item.ModelName  @item.Width/@item.Height<span>R</span>@item.Radius</p>
-                                    </div>
-                                    <div class="price">
-                                        <span> @(((item.Price - (item.Price / 100 * item.Sale)) * Model.currency).Value.ToString("0")) AZN</span>
-                                        @if (item.Price > (item.Price - (item.Price / 100 * item.Sale)))
-                                        {
-                                            <span class="line-through">@((item.Price * Model.currency).ToString("0")) AZN</span>
 
-                                        }
 
+                <div class="col-lg-12">
+                    <div class="row">
+                        @foreach (var item in Model.saleTyres.tyreList)
+                        {
+                            <div class="col-lg-3">
+                                <a href="/tyres/details/?id=@item.Id">
+                                    <div class="product-box">
+                                        <div class="upper">
+                                            <div class="img">
+                                                <img src="/adminpr/@(item.Images.Count>0 ? item.Images[0].Path : "360_forged_-_mesh_8_custom_painted_close-up_1_large68a8.png")">
+                                            </div>
+                                        </div>
+                                        <div class="lower">
+                                            <div class="brand">
+                                                <h6>
+                                                    @item.BrandName
+                                                </h6>
+                                            </div>
+                                            <div class="size">
+                                                <p>@item.ModelName  @item.Width/@item.Height<span>R</span>@item.Radius</p>
+                                            </div>
+                                            <div class="price">
+                                                <span> @(((item.Sale) * Model.currency).Value.ToString("0")) AZN</span>
+                                                @if (item.Price > item.Sale)
+                                                {
+                                                    <span class="line-through">@((item.Price * Model.currency).ToString("0")) AZN</span>
+
+                                                }
+
+
+                                            </div>
+
+                                            <a class="details" href="/tyres/details/?id=@item.Id">@res.details</a>
+                                        </div>
                                     </div>
-
-                                    <a class="details" href="/tyres/details/?id=@item.Id">@res.details</a>
-                                </div>
+                                </a>
                             </div>
-                        </a>
+                        }
                     </div>
-                }
+
+                </div>
+
 
 
             </div>
@@ -109,7 +187,7 @@
                             }
                             @for (int k = 0; k < ViewBag.total; k++)
                             {
-                                <li class="page-item @(ViewBag.page==k+1?"active":"")">
+                                <li class="page-item num @(ViewBag.page==k+1?"active":"")">
                                     <a class="page-link" href="@Url.Action("index","tyres",new {page=k+1,BrandId = Model.tyreSearchModel.BrandId,
                                      ModelId = Model.tyreSearchModel.ModelId , Width = Model.tyreSearchModel.Width, Height = Model.tyreSearchModel.Height, Radius = Model.tyreSearchModel.Radius,
                                       order = ViewBag.order,limit=ViewBag.limit                                                    })">@(k + 1)</a>
@@ -134,4 +212,382 @@
         </div>
     </div>
 </section>
+
+<script>
+            $.fn.serializeObject = function () {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function () {
+                    if (o[this.name]) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+            // Instantiate a slider
+            var mySlider = $("#price").slider({
+                // tooltip: 'always',
+                tooltip_position: 'bottom',
+
+            }).on("slideStop", function (slideEvt) { refreshList(); });
+
+
+            $("#searchbytyres select").change(function () {
+                console.log("dsadas")
+                refreshList($(this));
+            });
+
+            $("#tyreSearchButton").click(function () {
+                $("#searchbytyres").submit();
+            })
+            function refreshList(e) {
+
+                var formData = $("#searchbytyres").serializeObject();
+                //console.log(e)
+
+                console.dir(formData);
+                $.ajax({
+                    url: "/json/searchbytyres",
+                    type: "GET",
+                    data: formData,
+                    success: function (response) {
+                        var oldValue = $(e).html();
+                        $(".selectpicker.clear").html("");
+                        if (!e) {
+                            for (var i = 0; i < response.brand.length; i++) {
+                                $("#BrandId").append('<option value="' + response.brand[i].Id + '">' + response.brand[i].Name + '</option>');
+                            }
+                        }
+                        for (var i = 0; i < response.model.length; i++) {
+                            $("#ModelId").append('<option value="' + response.model[i].Id + '">' + response.model[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.width.length; i++) {
+                            $("#WidthId").append('<option value="' + response.width[i].Id + '">' + response.width[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.height.length; i++) {
+                            $("#HeightId").append('<option value="' + response.height[i].Id + '">' + response.height[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.radius.length; i++) {
+                            $("#RadiusId").append('<option value="' + response.radius[i].Id + '">' + response.radius[i].Name + '</option>');
+                        }
+
+                        //for (var i = 0; i < response.usage.length; i++) {
+                        //    $("#UsageId").append('<option value="' + response.usage[i].Id + '">' + response.usage[i].Name + '</option>');
+                        //}
+
+                        $(e).html(oldValue);
+
+                        $('#BrandId').val(formData.BrandId);
+                        $('#ModelId').val(formData.ModelId);
+                        $('#WidthId').val(formData.Width);
+                        $('#HeightId').val(formData.Height);
+                        $('#RadiusId').val(formData.Radius);
+                        $('#UsageId').val(formData.Usage);
+                        //todo set selecetd item
+                        $(".selectpicker").selectpicker("refresh");
+                    }
+                })
+            }
+        $(document).ready(function () {
+                refreshList();
+                initialize();
+            })
+
+            $("#BrandIdCar").change(function () {
+                $("#ModelIdCar").html('<option selected disabled value="0"> @res.model</option>');
+                $("#YearCar").html('<option selected disabled value="0"> @res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0"> @res.car</option>');
+                var id = $(this).val();
+                // if (id != 0) {
+                $.ajax({
+                    url: "/Json/listModels",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.model, function (index, model) {
+                            $("#ModelIdCar").append('<option value="' + model.Id + '">' + model.Name + '</option>');
+                        });
+                        $("#ModelIdCar").removeAttr("disabled");
+                        $("#ModelIdCar").selectpicker("refresh");
+
+                    }
+                })
+                //  }
+                //  else
+                //  {
+                //      $("#ModelIdCar").addAttr("disabled");
+                //  }
+            });
+
+            $("#ModelIdCar").change(function () {
+                $("#YearCar").html('<option selected disabled value="0">@res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0"> @res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listYears",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.year, function (index, year) {
+                            $("#YearCar").append('<option value="' + year.Id + '">' + year.Year + '</option>');
+                        });
+                        $("#YearCar").removeAttr("disabled");
+                        $("#YearCar").selectpicker("refresh");
+
+                    }
+                })
+            });
+
+            $("#YearCar").change(function () {
+                $("#BanCar").html('<option selected disabled value="0">@res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listBans",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.ban, function (index, ban) {
+                            $("#BanCar").append('<option value="' + ban.Id + '">' + ban.Name + '</option>');
+                        });
+                        $("#BanCar").removeAttr("disabled");
+                        $("#BanCar").selectpicker("refresh");
+
+                    }
+                })
+            });
+
+            $("#BanCar").change(function () {
+                var id = $(this).val();
+                var frontTyre = [];
+                var rearTyre = [];
+                $.ajax({
+                    url: "/Json/listWheels",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.wheel, function (index, wheel) {
+                            var wheels = JSON.parse(wheel.wheels);
+                            $.each(wheels, function (i, tyres) {
+                                $.each(tyres, function (index, tyre) {
+                                    $.each(tyre, function (ind, thisTyre) {
+                                        $.each(thisTyre.front, function (tindex, front) {
+                                            // frontTyre.push({ width: front.tire_width[0], height: front.tire_aspect_ratio[0], radius: front.rim_diameter[0] });
+                                            if (front.tire_width[0] != "") {
+                                                frontTyre.push('<li><a class="btn btn-primary" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
+                                            }//console.log(frontTyre)
+                                        })
+                                        $.each(thisTyre.rear, function (tindex, rear) {
+                                            //rearTyre.push({ width: rear.tire_width[0], height: rear.tire_aspect_ratio[0], radius: rear.rim_diameter[0] });
+                                            if (rear.tire_width[0] != "") {
+                                                rearTyre.push('<li><a  class="btn btn-primary"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
+                                            }// console.log(rearTyre)
+                                        })
+                                    })
+                                })
+
+                            })
+                        });
+                        $("#frontPanel").html(frontTyre.join(" "));
+                        $("#rearPanel").html(rearTyre.join(" "));
+                        $("#newCarModal").modal({ backdrop: false });
+                    }
+                })
+            });
+</script>
+<script>
+
+            //$.fn.serializeObject = function () {
+            //    var o = {};
+            //    var a = this.serializeArray();
+            //    $.each(a, function () {
+            //        if (o[this.name]) {
+            //            if (!o[this.name].push) {
+            //                o[this.name] = [o[this.name]];
+            //            }
+            //            o[this.name].push(this.value || '');
+            //        } else {
+            //            o[this.name] = this.value || '';
+            //        }
+            //    });
+            //    return o;
+            //};
+            //// Instantiate a slider
+            //var mySlider = $("#price").slider({
+            //    // tooltip: 'always',
+            //    tooltip_position: 'bottom',
+
+            //}).on("slideStop", function (slideEvt) { refreshList(); });
+
+
+            $("#searchbytyres select").change(function () {
+                    refreshList($(this));
+            });
+
+            $("#tyreSearchButton").click(function () {
+                $("#searchbytyres").submit();
+            })
+            function refreshList(e) {
+
+                var formData = $("#searchbytyres").serializeObject();
+                //console.log(e)
+
+                $.ajax({
+                    url: "/json/searchbytyres",
+                    type: "GET",
+                    data: formData,
+                    dataType: "json",
+                    success: function (response) {
+
+                        var oldValue = $(e).html();
+                        $(".selectpicker.clear").html("");
+                        if (!e) {
+                            for (var i = 0; i < response.brand.length; i++) {
+                                $("#BrandId").append('<option value="' + response.brand[i].Id + '">' + response.brand[i].Name + '</option>');
+                            }
+                        }
+                        for (var i = 0; i < response.model.length; i++) {
+                            $("#ModelId").append('<option value="' + response.model[i].Id + '">' + response.model[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.width.length; i++) {
+                            $("#WidthId").append('<option value="' + response.width[i].Id + '">' + response.width[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.height.length; i++) {
+                            $("#HeightId").append('<option value="' + response.height[i].Id + '">' + response.height[i].Name + '</option>');
+                        }
+                        for (var i = 0; i < response.radius.length; i++) {
+                            $("#RadiusId").append('<option value="' + response.radius[i].Id + '">' + response.radius[i].Name + '</option>');
+                        }
+
+                        //for (var i = 0; i < response.usage.length; i++) {
+                        //    $("#UsageId").append('<option value="' + response.usage[i].Id + '">' + response.usage[i].Name + '</option>');
+                        //}
+
+                        $(e).html(oldValue);
+
+                        $('#BrandId').val(formData.BrandId);
+                        $('#ModelId').val(formData.ModelId);
+                        $('#WidthId').val(formData.Width);
+                        $('#HeightId').val(formData.Height);
+                        $('#RadiusId').val(formData.Radius);
+                        $('#UsageId').val(formData.Usage);
+                        //todo set selecetd item
+                        $(".selectpicker").selectpicker("refresh");
+                    }
+                })
+            }
+        $(document).ready(function () {
+                refreshList();
+                initialize();
+            })
+
+            $("#BrandIdCar").change(function () {
+                $("#ModelIdCar").html('<option selected disabled value="0"> @res.model</option>');
+                $("#YearCar").html('<option selected disabled value="0"> @res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0"> @res.car</option>');
+                var id = $(this).val();
+                // if (id != 0) {
+                $.ajax({
+                    url: "/Json/listModels",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.model, function (index, model) {
+                            $("#ModelIdCar").append('<option value="' + model.Id + '">' + model.Name + '</option>');
+                        });
+                        $("#ModelIdCar").removeAttr("disabled");
+                        $("#ModelIdCar").selectpicker("refresh");
+
+                    }
+                })
+                //  }
+                //  else
+                //  {
+                //      $("#ModelIdCar").addAttr("disabled");
+                //  }
+            });
+
+            $("#ModelIdCar").change(function () {
+                $("#YearCar").html('<option selected disabled value="0">@res.winter</option>');
+                $("#BanCar").html('<option selected disabled value="0"> @res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listYears",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.year, function (index, year) {
+                            $("#YearCar").append('<option value="' + year.Id + '">' + year.Year + '</option>');
+                        });
+                        $("#YearCar").removeAttr("disabled");
+                        $("#YearCar").selectpicker("refresh");
+
+                    }
+                })
+            });
+
+            $("#YearCar").change(function () {
+                $("#BanCar").html('<option selected disabled value="0">@res.car</option>');
+                var id = $(this).val();
+                $.ajax({
+                    url: "/Json/listBans",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.ban, function (index, ban) {
+                            $("#BanCar").append('<option value="' + ban.Id + '">' + ban.Name + '</option>');
+                        });
+                        $("#BanCar").removeAttr("disabled");
+                        $("#BanCar").selectpicker("refresh");
+
+                    }
+                })
+    });
+
+
+
+            $("#BanCar").change(function () {
+                var id = $(this).val();
+                var frontTyre = [];
+                var rearTyre = [];
+                $.ajax({
+                    url: "/Json/listWheels",
+                    data: "id=" + id,
+                    type: "GET",
+                    success: function (result) {
+                        $.each(result.wheel, function (index, wheel) {
+                            var wheels = JSON.parse(wheel.wheels);
+                            $.each(wheels, function (i, tyres) {
+                                $.each(tyres, function (index, tyre) {
+                                    $.each(tyre, function (ind, thisTyre) {
+                                        $.each(thisTyre.front, function (tindex, front) {
+                                            // frontTyre.push({ width: front.tire_width[0], height: front.tire_aspect_ratio[0], radius: front.rim_diameter[0] });
+                                            if (front.tire_width[0] != "") {
+                                                frontTyre.push('<li><a class="btn btn-primary" href="/tyres?width=' + front.tire_width[0] + '&height=' + front.tire_aspect_ratio[0] + '&radius=' + front.rim_diameter[0] + '">' + front.tire_width[0] + '/' + front.tire_aspect_ratio[0] + 'R' + front.rim_diameter[0] + '</a></li>')
+                                            }//console.log(frontTyre)
+                                        })
+                                        $.each(thisTyre.rear, function (tindex, rear) {
+                                            //rearTyre.push({ width: rear.tire_width[0], height: rear.tire_aspect_ratio[0], radius: rear.rim_diameter[0] });
+                                            if (rear.tire_width[0] != "") {
+                                                rearTyre.push('<li><a  class="btn btn-primary"  href="/tyres?width=' + rear.tire_width[0] + '&height=' + rear.tire_aspect_ratio[0] + '&radius=' + rear.rim_diameter[0] + '">' + rear.tire_width[0] + '/' + rear.tire_aspect_ratio[0] + 'R' + rear.rim_diameter[0] + '</a></li>')
+                                            }// console.log(rearTyre)
+                                        })
+                                    })
+                                })
+
+                            })
+                        });
+                        $("#frontPanel").html(frontTyre.join(" "));
+                        $("#rearPanel").html(rearTyre.join(" "));
+                        $("#newCarModal").modal({ backdrop: false });
+                    }
+                })
+            });
+</script>
 @Html.Partial("_Footer")
+
+

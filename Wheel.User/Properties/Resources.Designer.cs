@@ -70,6 +70,15 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All rights reserved.
+        /// </summary>
+        public static string allRights {
+            get {
+                return ResourceManager.GetString("allRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Brand.
         /// </summary>
         public static string brand {
@@ -102,6 +111,15 @@ namespace Wheel.User.Properties {
         public static string catalog {
             get {
                 return ResourceManager.GetString("catalog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear All.
+        /// </summary>
+        public static string clearAll {
+            get {
+                return ResourceManager.GetString("clearAll", resourceCulture);
             }
         }
         
@@ -232,6 +250,15 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Engine.
+        /// </summary>
+        public static string engine {
+            get {
+                return ResourceManager.GetString("engine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://www.facebook.com/Avtoteker.az/.
         /// </summary>
         public static string fbUrl {
@@ -273,6 +300,15 @@ namespace Wheel.User.Properties {
         public static string first {
             get {
                 return ResourceManager.GetString("first", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Follow and like us:.
+        /// </summary>
+        public static string followUs {
+            get {
+                return ResourceManager.GetString("followUs", resourceCulture);
             }
         }
         
@@ -336,6 +372,15 @@ namespace Wheel.User.Properties {
         public static string last {
             get {
                 return ResourceManager.GetString("last", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Agha Neymatulla str. 79, Narimanov ray..
+        /// </summary>
+        public static string location {
+            get {
+                return ResourceManager.GetString("location", resourceCulture);
             }
         }
         
@@ -610,11 +655,29 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search.
+        ///   Looks up a localized string similar to Tyre search.
         /// </summary>
         public static string search {
             get {
                 return ResourceManager.GetString("search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by car.
+        /// </summary>
+        public static string searchCar {
+            get {
+                return ResourceManager.GetString("searchCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search by size.
+        /// </summary>
+        public static string searchTyre {
+            get {
+                return ResourceManager.GetString("searchTyre", resourceCulture);
             }
         }
         
@@ -633,6 +696,15 @@ namespace Wheel.User.Properties {
         public static string send {
             get {
                 return ResourceManager.GetString("send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Why to choose our tire centre?.
+        /// </summary>
+        public static string serviceHeading {
+            get {
+                return ResourceManager.GetString("serviceHeading", resourceCulture);
             }
         }
         
@@ -684,8 +756,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Owning the tires with wide range of sizes and quality is a lot easier with us. Our company supplies the tires with the highest quality from Europe and Asia in minimum time intervals in line with your orders. 
-        ///Contact us, if you are also in favor of quality. We are constantly active for the customers to be able to be in contact with us anytime they need. Please, contact us in 7 days of a week.The active hours of our store: 9:00-19:00..
+        ///   Looks up a localized string similar to You can get the needed help with your tire choice. We offer you professional tire fitting and balancing. Our center is open daily at 9:00-19:00.Avtotəkər presents you the rich variety of different tire brands, including exclusively distributed Horizon, Vitour and freight Kapsen and worldwide popular Dunlop, Continental, Yokohama..
         /// </summary>
         public static string servicesText1 {
             get {
@@ -694,8 +765,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Dear customers,
-        ///Distance is not an obstacle for us to make you satisfied any more. It is enough to call us or communicate via online services from any region of Azerbaijan Republic. We aim the provosion of comfort for you by delivering any product you are in want of to your adress. This is not the end...We are fullfilling the balancing and replacement of the tires of your cars ¬¬¬which will be provided by our professional personnel according to the maximum quality standards. We guarantee the accuracy of bal [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Avtotəkər presents you the rich variety of different tire brands, including exclusively distributed Horizon, Vitour and freight Kapsen and worldwide popular Dunlop, Continental, Yokohama, Kumho and others. Huge amount of available tire sizes, any budget-targeted prices, our  specialists’ consultation makes Avtotəkər to be the only choice for you..
         /// </summary>
         public static string servicesText2 {
             get {
@@ -704,7 +774,8 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thinking about of you we started the online activities of our company. Dear customers,our goal is to create possibility for you to achieve the desired product in any time without any additional cost. Through the online site you can get information very quickly about the product that if it is based in the firm or not, get information about various compaigns existing in the firm and to contact with us. Also you can order the desired product without going any distance. You can use our site without any borders, [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Avtotəkər presents you free shipping 
+        ///opportunity within the city. Avtotəkər offers you tire financing within 3 month with BirKart with no installment, interest free or and no commission fee..
         /// </summary>
         public static string servicesText3 {
             get {
@@ -722,7 +793,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Balance and delivery.
+        ///   Looks up a localized string similar to Why to choose Avtotəkər.
         /// </summary>
         public static string servicesTitle2 {
             get {
@@ -731,7 +802,7 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About Site.
+        ///   Looks up a localized string similar to Free shipping and financing.
         /// </summary>
         public static string servicesTitle3 {
             get {
@@ -794,6 +865,24 @@ namespace Wheel.User.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Soon.
+        /// </summary>
+        public static string soon {
+            get {
+                return ResourceManager.GetString("soon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort.
+        /// </summary>
+        public static string sort {
+            get {
+                return ResourceManager.GetString("sort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sort by.
         /// </summary>
         public static string sortBy {
@@ -817,6 +906,33 @@ namespace Wheel.User.Properties {
         public static string summer {
             get {
                 return ResourceManager.GetString("summer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tire banancing.
+        /// </summary>
+        public static string tireBalance {
+            get {
+                return ResourceManager.GetString("tireBalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tire fitting.
+        /// </summary>
+        public static string tireFitting {
+            get {
+                return ResourceManager.GetString("tireFitting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tire and disc repair.
+        /// </summary>
+        public static string tireRepair {
+            get {
+                return ResourceManager.GetString("tireRepair", resourceCulture);
             }
         }
         
@@ -907,6 +1023,15 @@ namespace Wheel.User.Properties {
         public static string winter {
             get {
                 return ResourceManager.GetString("winter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string year {
+            get {
+                return ResourceManager.GetString("year", resourceCulture);
             }
         }
         

@@ -222,7 +222,7 @@
    
     <!-- secondary sidebar end -->
     <!-- google web fonts -->
-    <script>
+    @*<script>
         WebFontConfig = {
             google: {
                 families: [
@@ -240,7 +240,7 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(wf, s);
         })();
-    </script>
+    </script>*@
     <!-- common functions -->
     <script src="/Content/assets/js/common.min.js"></script>
     <!-- uikit functions -->
@@ -255,11 +255,11 @@
     <!--  kendoui functions -->
     <script src="/Content/assets/js/pages/kendoui.min.js"></script>
 
-    <script src="/Content/bower_components/d3/d3.min.js"></script>
+    @*<script src="/Content/bower_components/d3/d3.min.js"></script>*@
     <!-- metrics graphics (charts) -->
-    <script src="/Content/bower_components/metrics-graphics/dist/metricsgraphics.min.js"></script>
+    @*<script src="/Content/bower_components/metrics-graphics/dist/metricsgraphics.min.js"></script>*@
     <!-- chartist (charts) -->
-    <script src="/Content/bower_components/chartist/dist/chartist.min.js"></script>
+   @* <script src="/Content/bower_components/chartist/dist/chartist.min.js"></script>*@
     <!-- maplace (google maps) -->
     
     <!-- peity (small charts) -->
@@ -296,43 +296,7 @@
 
     
     
-    <script>
-        $(function() {
-            if(isHighDensity()) {
-                $.getScript( "/Content/bower_components/dense/src/dense.html", function() {
-                    // enable hires images
-                    altair_helpers.retina_images();
-                });
-            }
-            if(Modernizr.touch) {
-                // fastClick (touch devices)
-                FastClick.attach(document.body);
-            }
-        });
-        $window.load(function() {
-            // ie fixes
-            altair_helpers.ie_fix();
-        });
-    </script>
    
-<script>
-    $(function() {
-        if(isHighDensity()) {
-            $.getScript( "/Content/bower_components/dense/src/dense.html", function() {
-                // enable hires images
-                altair_helpers.retina_images();
-            });
-        }
-        if(Modernizr.touch) {
-            // fastClick (touch devices)
-            FastClick.attach(document.body);
-        }
-    });
-    $window.load(function() {
-        // ie fixes
-        altair_helpers.ie_fix();
-    });
-</script>
     
 <script>
     
@@ -342,16 +306,16 @@
     var GetModelUrl = "/tyre/GetModels";
     var GetBrandUrl = "/tyre/GetBrands";
     if (m.length) {
-        BindDdl(GetModelUrl, m,"Model");
-        BindDdl(GetBrandUrl, b, "Brand");
+        BindDdl(GetBrandUrl, b, "Brand", "");
+        BindDdl(GetModelUrl, m, "Model", "");
 
     }
 
-    function BindDdl(dataLink,inputId,type) {
+    function BindDdl(dataLink, inputId, type, brandId) {
+       
         $.ajax({
-            url: dataLink,
+            url: dataLink+"/"+brandId,
             type: "get",
-            data: JSON.stringify(""),
             dataType: "json",
             contentType: "application/json",
             success: function (data) {
@@ -363,7 +327,8 @@
         });
     }
 
-    function BindBrandDropDownList(data, id,type) {
+    function BindBrandDropDownList(data, id, type) {
+        
         id.kendoDropDownList({
             optionLabel: "Select "+type+"...",
             dataTextField: "Name",
@@ -394,6 +359,19 @@
         }
     }
 
+    $("#kUI_BrandName").change(function () {
+        var end = this.value;
+
+        BindDdl(GetModelUrl, $("#kUI_ModelName"), "Model", end);
+        
+    });
+
+    $("#kUI_ModelName").change(function () {
+        var end = this.value;
+        console.log(b);
+        BindDdl(GetBrandUrl, $("#kUI_BrandName"), "Brand", end);
+       
+    });
 </script>
   
 

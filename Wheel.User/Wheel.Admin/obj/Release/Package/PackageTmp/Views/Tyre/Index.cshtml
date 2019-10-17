@@ -27,7 +27,8 @@
                         <th data-priority="4">Height</th>
                         <th data-priority="5">Radius</th>
                         <th data-priority="6">Price</th>
-                        <th data-priority="7">Stok</th>
+                        <th data-priority="7">Show In Default</th>
+                        <th data-priority="8">InStok</th>
                         <th class="filter-false remove sorter-false uk-text-center" data-priority="8">Operation</th>
                     </tr>
                     </thead>
@@ -39,6 +40,7 @@
                         <th>Height</th>
                         <th>Radius</th>
                         <th>Price</th>
+                        <th>Display In Default</th>
                         <th>Stok</th>
                         <th class="uk-text-center">Operation</th>
                     </tr>
@@ -53,6 +55,10 @@
                             <td>@tyre.Height</td>
                             <td>@tyre.Radius</td>
                             <td>@tyre.Price</td>
+                            <td>
+                                <input type="checkbox" checked="@tyre.DisplayInDefault" disabled="disabled"/>
+                                @tyre.DisplayInDefault
+                            </td>
                             <td>@tyre.Stok</td>
                             <td class="uk-text-center">
                                 <a href="@Url.Action("Detail","Tyre",new {id=@tyre.Id})" class="ts_selectize"><i class="md-icon material-icons">&#xE8F4;</i></a>

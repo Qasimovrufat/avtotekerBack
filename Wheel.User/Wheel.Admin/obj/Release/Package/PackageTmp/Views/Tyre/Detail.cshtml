@@ -33,7 +33,7 @@
                     @foreach (var image in @Model.Images.Where(i => i.Status == true))
                     {
                         <li class="uk-position-relative">
-                           <img src="@image.Path" alt="@image.AltText" class="img_small" />
+                           <img src="/Images/@image.Path" alt="@image.AltText" class="img_small" />
                         </li>
                     }
 
@@ -115,7 +115,7 @@
                                 <span class="uk-text-muted uk-text-small">Usage Status</span>
                             </div>
                             <div class="uk-width-large-2-3">
-                                @(Model.UsageStatus == true ? "Used" : "New")
+                                @(Model.UsageStatus? "Used" : "New")
                             </div>
                         </div>
                         <hr class="uk-grid-divider uk-hidden-large">
@@ -124,6 +124,11 @@
                         <p>
                             <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Sale</span>
                             <span class="uk-badge uk-badge-success">@(Model.Sale ?? 0)</span>
+                        </p>
+                        <hr class="uk-grid-divider">
+                        <p>
+                            <span class="uk-text-muted uk-text-small uk-display-block uk-margin-small-bottom">Show In Default Page?</span>
+                            @Model.DisplayInDefault
                         </p>
                         <hr class="uk-grid-divider">
                         <p>
