@@ -209,6 +209,8 @@
     <Content Include="Public\img\four-Season.jpg" />
     <Content Include="Public\img\globus.svg" />
     <Content Include="Public\img\Group-3.png" />
+    <Content Include="Public\img\logo new.svg" />
+    <Content Include="Public\img\logo-white.svg" />
     <Content Include="Public\img\Logo-blue.svg" />
     <Content Include="Public\img\logo-white.png" />
     <Content Include="Public\img\mapicon.svg" />
